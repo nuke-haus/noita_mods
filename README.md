@@ -5,7 +5,7 @@
 3. Start the game and open the pause menu. There should be a mods button you can click. 
 4. In the mods menu, click on mods to enable/disable them.
 
-You might have to start a new game after doing all of this.
+You will have to start a new game after doing all of this in order for the game to register the mods.
 
 ## Random starter wand
 
