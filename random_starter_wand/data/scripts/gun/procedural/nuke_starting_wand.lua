@@ -38,21 +38,39 @@ local gun = { }
 gun.name = {"Bolt staff"}
 gun.deck_capacity = {2,3}
 gun.actions_per_round = 1
-gun.reload_time = {20,28}
+gun.reload_time = {20,30}
 gun.shuffle_deck_when_empty = 0
 gun.fire_rate_wait = {9,15}
 gun.spread_degrees = 0
 gun.speed_multiplier = 1
 gun.mana_charge_speed = {25,40}
 gun.mana_max = {100,140}
-gun.actions = {"LIGHT_BULLET", "LIGHT_BULLET_TRIGGER", "LIGHT_BULLET_TIMER", "SPITTER", "SPITTER_TIMER", "RUBBER_BALL", "ARROW", "BOUNCY_ORB", "BUBBLESHOT", "BUBBLESHOT_TRIGGER"}
+gun.actions = {"LIGHT_BULLET", "LIGHT_BULLET_TRIGGER", "LIGHT_BULLET_TIMER", "SPITTER", "SPITTER_TIMER", "RUBBER_BALL", "ARROW", "BUBBLESHOT", "BUBBLESHOT_TRIGGER"}
 
-if (Random(1,10) == 1) then
-	table.insert(gun.actions, "DISC_BULLET")
+if ( Random(1,5) == 1 ) then
+
+	table.insert( gun.actions, "DISC_BULLET" )
+	table.insert( gun.actions, "BOUNCY_ORB" )
+	
 end
 
+local gun_action = get_random_from( gun.actions )
 local mana_max = get_random_between_range( gun.mana_max )
 local deck_capacity = get_random_between_range( gun.deck_capacity )
+local action_count = math.min( Random( 1, 3 ), tonumber( deck_capacity ) )
+
+if ( gun_action == "BOUNCY_ORB" or gun_action == "DISC_BULLET" ) then
+
+	gun.reload_time = {30,40}
+	deck_capacity = math.min( 2, deck_capacity )
+	action_count = math.min( 2, action_count )
+
+elseif ( gun_action == "RUBBER_BALL" ) then
+
+	deck_capacity = math.max( 2, deck_capacity )
+	action_count = math.max( 2, action_count )
+
+end
 
 ComponentSetValue( ability_comp, "ui_name", get_random_from( gun.name ) )
 
@@ -69,10 +87,8 @@ ComponentObjectSetValue( ability_comp, "gunaction_config", "speed_multiplier", g
 ComponentSetValue( ability_comp, "mana_max", mana_max )
 ComponentSetValue( ability_comp, "mana", mana_max )
 
-local action_count = math.min(Random(1,3), tonumber(deck_capacity))
-local gun_action = get_random_from( gun.actions )
+for i=1, action_count do
 
-for i=1,action_count do
-	--AddGunActionPermanent( entity_id, gun_action )
 	AddGunAction( entity_id, gun_action )
+	
 end
