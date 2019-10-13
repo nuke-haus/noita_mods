@@ -14,4 +14,4 @@ function OnPlayerSpawned( player_entity ) -- this
 	--GamePrint( "Mods says: Player entity id: " .. tostring(player_entity) )
 end
 
-print("First floor wand mod initialization done.")
+print("Better procedural wands mod initialization done.")

@@ -57,9 +57,13 @@ function do_level1( level )
 		"SINEWAVE",
 		"Y_SHAPE",
 		"I_SHAPE",
+		"T_SHAPE",
 		"HEAVY_SHOT",
 		"SCATTER_2",
-		"BURST_2"
+		"SCATTER_3",
+		"BURST_2",
+		"BURST_3",
+		"TORCH"
 	}
 
 	local card_count = Random( 1, 5 ) 
@@ -73,7 +77,7 @@ function do_level1( level )
 			"BOMB",
 		}
 		
-		card_count = 1
+		card_count =  Random( 1, 2 ) 
 		
 	end
 
@@ -87,10 +91,10 @@ function do_level1( level )
 			"CLOUD_BLOOD", --new
 			"MIST_SLIME", --new
 			"MIST_BLOOD", --new
+			"MIST_ALCOHOL", --new
 			"X_RAY",
 			"FREEZE_FIELD",
-			"BLACK_HOLE",
-			"TORCH"
+			"BLACK_HOLE"
 		}
 		
 		card_count = 1
@@ -104,7 +108,7 @@ function do_level1( level )
 		
 	end
 	
-	if ( Random( 0, 100 ) < 10 and card_count > 1) then
+	if ( Random( 0, 100 ) < 15 and card_count > 1 ) then
 	
 		local mod = RandomFromArray( level_1_mods )
 		card_count = card_count - 1

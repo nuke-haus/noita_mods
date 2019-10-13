@@ -61,7 +61,7 @@ local action_count = math.min( Random( 1, 3 ), tonumber( deck_capacity ) )
 
 if ( gun_action == "BOUNCY_ORB" or gun_action == "DISC_BULLET" ) then
 
-	gun.reload_time = {30,40}
+	gun.reload_time = {30,45}
 	deck_capacity = math.min( 2, deck_capacity )
 	action_count = math.min( 2, action_count )
 
@@ -69,6 +69,11 @@ elseif ( gun_action == "RUBBER_BALL" ) then
 
 	deck_capacity = math.max( 2, deck_capacity )
 	action_count = math.max( 2, action_count )
+
+elseif ( gun_action == "BUBBLESHOT" or gun_action == "BUBBLESHOT_TRIGGER" ) then
+
+	gun.spread_degrees = -6
+	gun.reload_time = {15,25}
 
 end
 
