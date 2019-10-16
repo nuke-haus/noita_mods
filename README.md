@@ -17,3 +17,7 @@ This mod basically just does what daily runs do, except for normal runs. Your wa
 This mod increases the variety of spells that found wands on the first floor will have. It also introduces a small chance for projectile wands to have a projectile mod (such as double shot, etc).
 
 I tried to keep this mod balanced so that the wands you find aren't too powerful. It just makes the wands a bit more interesting.
+
+## Better procedural wands
+
+This mod improves the algorithm the game uses to generate random wands found on pedestals. With this mod active, wands that are spawned without any sort of projectile spell will have one added so that you don't end up finding a useless wand that can't cast anything.
