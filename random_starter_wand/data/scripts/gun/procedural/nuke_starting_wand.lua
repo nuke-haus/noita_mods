@@ -38,7 +38,7 @@ local gun = { }
 gun.name = {"Bolt staff"}
 gun.deck_capacity = {2,3}
 gun.actions_per_round = 1
-gun.reload_time = {20,30}
+gun.reload_time = {20,35}
 gun.shuffle_deck_when_empty = 0
 gun.fire_rate_wait = {9,15}
 gun.spread_degrees = 0
@@ -74,6 +74,12 @@ elseif ( gun_action == "BUBBLESHOT" or gun_action == "BUBBLESHOT_TRIGGER" ) then
 
 	gun.spread_degrees = -6
 	gun.reload_time = {15,25}
+
+elseif ( (string.find(gun_action, "TRIGGER") ~= nil or string.find(gun_action, "TIMER") ~= nil) and action_count > 1 ) then
+
+	gun.reload_time = {45,60}
+	deck_capacity = math.min( 2, deck_capacity )
+	action_count = math.min( 2, action_count )
 
 end
 
