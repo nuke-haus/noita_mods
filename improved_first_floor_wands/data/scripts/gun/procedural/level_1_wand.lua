@@ -48,7 +48,7 @@ function do_level1( level )
 		"BULLET"
 	}	
 
-	local level_1_mods = --all of this is new
+	local level_1_mods = 
 	{
 		"FLY_UPWARDS",
 		"FLY_DOWNWARDS",
@@ -58,11 +58,16 @@ function do_level1( level )
 		"Y_SHAPE",
 		"I_SHAPE",
 		"T_SHAPE",
-		"HEAVY_SHOT",
 		"SCATTER_2",
 		"SCATTER_3",
 		"BURST_2",
 		"BURST_3",
+		"TORCH_ELECTRIC",
+		"TORCH",
+		"TORCH",
+		"TORCH",
+		"TORCH",
+		"TORCH",
 		"TORCH"
 	}
 
