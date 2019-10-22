@@ -45,12 +45,14 @@ gun.spread_degrees = 0
 gun.speed_multiplier = 1
 gun.mana_charge_speed = {25,40}
 gun.mana_max = {100,140}
-gun.actions = {"LIGHT_BULLET", "LIGHT_BULLET_TRIGGER", "LIGHT_BULLET_TIMER", "SPITTER", "SPITTER_TIMER", "RUBBER_BALL", "ARROW", "BUBBLESHOT", "BUBBLESHOT_TRIGGER"}
+gun.actions = { "LIGHT_BULLET", "LIGHT_BULLET_TRIGGER", "LIGHT_BULLET_TIMER", "SPITTER", "SPITTER_TIMER", "RUBBER_BALL", "ARROW"}
 
-if ( Random(1,5) == 1 ) then
+if ( Random(1,3) == 1 ) then
 
 	table.insert( gun.actions, "DISC_BULLET" )
 	table.insert( gun.actions, "BOUNCY_ORB" )
+	table.insert( gun.actions, "BUBBLESHOT" )
+	table.insert( gun.actions, "BUBBLESHOT_TRIGGER" )
 	
 end
 
@@ -61,7 +63,8 @@ local action_count = math.min( Random( 1, 3 ), tonumber( deck_capacity ) )
 
 if ( gun_action == "BOUNCY_ORB" or gun_action == "DISC_BULLET" ) then
 
-	gun.reload_time = {30,45}
+	gun.reload_time = {45,50}
+	gun.fire_rate_wait = {20,30}
 	deck_capacity = math.min( 2, deck_capacity )
 	action_count = math.min( 2, action_count )
 
@@ -72,12 +75,12 @@ elseif ( gun_action == "RUBBER_BALL" ) then
 
 elseif ( gun_action == "BUBBLESHOT" or gun_action == "BUBBLESHOT_TRIGGER" ) then
 
-	gun.spread_degrees = -6
+	gun.spread_degrees = -8
 	gun.reload_time = {15,25}
 
 elseif ( (string.find(gun_action, "TRIGGER") ~= nil or string.find(gun_action, "TIMER") ~= nil) and action_count > 1 ) then
 
-	gun.reload_time = {45,60}
+	gun.reload_time = {45,50}
 	deck_capacity = math.min( 2, deck_capacity )
 	action_count = math.min( 2, action_count )
 

@@ -796,53 +796,38 @@ function generate_gun( cost, level, force_unshuffle )
 		AddGunActionPermanent( entity_id, card )
 	end
 
-	local last_card_mod = false
 
-	for i=1,card_count do
-		if( Random(0,100) < good_cards ) then
-			-- if actions_per_round == 1 and the first good card, then make sure it's a draw x
-			local card = 0
-			if( good_card_count == 0 and actions_per_round == 1 ) then
-				card = GetRandomActionWithType( x, y, level, ACTION_TYPE_DRAW_MANY, i )
-				good_card_count = good_card_count + 1
-			else
-				if( Random(0,100) < 83 ) then
-					card = GetRandomActionWithType( x, y, level, ACTION_TYPE_MODIFIER, i )
-				else
-					card = GetRandomActionWithType( x, y, level, ACTION_TYPE_DRAW_MANY, i )
-				end
-			end
-		
-			AddGunAction( entity_id, card )
-			last_card_mod = true
-		else
-			AddGunAction( entity_id, bullet_card )
-			if( random_bullets == 1 ) then
-				bullet_card = GetRandomActionWithType( x, y, level, ACTION_TYPE_PROJECTILE, i )
-			end
-			last_card_mod = false
-		end
-	end
-
-	if ( card_count == 1 and last_card_mod == true ) then -- good lord this lua file is a mess
-		
-		if (deck_capacity < 2) then
-		
-			deck_capacity = 2
-			ComponentObjectSetValue( ability_comp, "gun_config", "deck_capacity", deck_capacity )
-		
-		end
-		
-		bullet_card = GetRandomActionWithType( x, y, level, ACTION_TYPE_PROJECTILE, 2 )
+	if (card_count <= 1) then
+	
 		AddGunAction( entity_id, bullet_card )
-		
-		print("Detected a wand without projectile spell, added additional spell: " .. bullet_card.name)
-		
+	
 	else
 	
-		--print("Wand was generated without issues")
-	
-	end
+		for i=1,card_count do
+			if( Random(0,100) < good_cards ) then
+			-- if actions_per_round == 1 and the first good card, then make sure it's a draw x
+				local card = 0
+				if( good_card_count == 0 and actions_per_round == 1 ) then
+					card = GetRandomActionWithType( x, y, level, ACTION_TYPE_DRAW_MANY, i )
+					good_card_count = good_card_count + 1
+				else
+					if( Random(0,100) < 83 ) then
+						card = GetRandomActionWithType( x, y, level, ACTION_TYPE_MODIFIER, i )
+					else
+						card = GetRandomActionWithType( x, y, level, ACTION_TYPE_DRAW_MANY, i )
+					end
+				end
+			
+				AddGunAction( entity_id, card )
+			else
+				AddGunAction( entity_id, bullet_card )
+				if( random_bullets == 1 ) then
+					bullet_card = GetRandomActionWithType( x, y, level, ACTION_TYPE_PROJECTILE, i )
+				end
+			end
+		end	
+		
+	end 
 
 	-- Set wand sprite
 	-- print(gun)
