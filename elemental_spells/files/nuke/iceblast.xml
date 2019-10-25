@@ -1,0 +1,273 @@
+<Entity name="$projectile_default">
+
+	<Base file="data/entities/base_projectile.xml" >
+
+		<VelocityComponent
+		  air_friction="0"
+		  gravity_y="1"
+		  mass="0.08"
+			>
+		</VelocityComponent>
+
+	</Base>
+
+  <ProjectileComponent 
+    _enabled="1" 
+	speed_min="600"
+    speed_max="600"
+    on_collision_die="1"
+    on_death_explode="1"
+    on_death_gfx_leave_sprite="0"
+    on_lifetime_out_explode="1"
+    explosion_dont_damage_shooter="0"
+	die_on_liquid_collision="0"
+    lifetime="6"
+    damage="2.2"
+    shoot_light_flash_r="255"
+    shoot_light_flash_g="140"
+    shoot_light_flash_b="10"
+    shoot_light_flash_radius="200"
+	damage_game_effect_entities="data/entities/misc/effect_frozen.xml,"
+	knockback_force="1.5"
+    >
+	<damage_by_type ice="0.4" >
+    </damage_by_type>
+	<config_explosion
+      never_cache="0" 
+      camera_shake="0.1" 
+      explosion_radius="35"
+      explosion_sprite="data/particles/explosion_012_poof.xml" 
+	  load_this_entity="files/nuke/main_ice.xml"
+      explosion_sprite_lifetime="0" 
+      create_cell_probability="1.5" 
+	  create_cell_material="blood_cold" 
+      hole_destroy_liquid="0"
+      explosion_sprite_emissive="1"
+      explosion_sprite_additive="1"
+      ray_energy="500"
+	  hole_enabled="1" 
+      hole_image="data/temp/explosion_hole.png" 
+      damage="0"
+	  audio_event_name="icethrower"
+      particle_effect="0"
+      damage_mortals="1"
+      physics_explosion_power.min="0.02" 
+      physics_explosion_power.max="0.04"
+      physics_throw_enabled="1"
+      shake_vegetation="1" 
+      sparks_count_min="20" 
+      sparks_count_max="40" 
+      sparks_enabled="1" 
+	  spark_material="blood_cold"
+      stains_enabled="0"
+      stains_radius="12"
+      >
+    </config_explosion>
+  </ProjectileComponent>
+  
+  <LuaComponent
+    execute_on_removed="1"
+    execute_every_n_frame="99999999"
+    script_source_file="files/nuke/ice_explosion.lua"
+    remove_after_executed="1">
+  </LuaComponent>
+  
+  <ParticleEmitterComponent 
+    emitted_material_name="blood_cold"
+    count_min="2"
+    count_max="4"
+    offset.x="0"
+    offset.y="0"
+	gravity.y="-100"
+    x_pos_offset_min="-4"
+    y_pos_offset_min="-4"
+    x_pos_offset_max="4"
+    y_pos_offset_max="4"
+    x_vel_min="-5000"
+    x_vel_max="5000"
+    y_vel_min="-5000"
+    y_vel_max="5000"
+    lifetime_min="2.5"
+    lifetime_max="4.5"
+    create_real_particles="1"
+    emit_cosmetic_particles="0"
+    emission_interval_min_frames="1"
+    emission_interval_max_frames="1"
+    is_emitting="1" >
+  </ParticleEmitterComponent>
+  
+  <ParticleEmitterComponent 
+    emitted_material_name="snow"
+    offset.x="-4"
+    offset.y="0"
+	gravity.y="-100"
+    x_pos_offset_min="-4"
+    y_pos_offset_min="-4"
+    x_pos_offset_max="4"
+    y_pos_offset_max="4"
+    x_vel_min="-10"
+    x_vel_max="10"
+    y_vel_min="-1"
+    y_vel_max="1"
+    count_min="3"
+    count_max="6"
+    lifetime_min="0.5"
+    lifetime_max="2.5"
+	is_trail="1"
+	trail_gap="1.5"
+    create_real_particles="1"
+    emit_cosmetic_particles="0"
+    emission_interval_min_frames="1"
+    emission_interval_max_frames="8"
+    is_emitting="1" >
+  </ParticleEmitterComponent>
+  
+  <MagicConvertMaterialComponent
+    kill_when_finished="0"
+    from_material="water"
+    steps_per_frame="25"
+    to_material="ice_static"
+    is_circle="1"
+    radius="18" >
+  </MagicConvertMaterialComponent>
+	
+  <MagicConvertMaterialComponent
+    kill_when_finished="0"
+    from_material="water_ice"
+    steps_per_frame="25"
+    to_material="ice_static"
+    is_circle="1"
+    radius="18" >
+  </MagicConvertMaterialComponent>
+	
+  <MagicConvertMaterialComponent
+    kill_when_finished="0"
+    from_material="water_salt"
+    steps_per_frame="25"
+    to_material="ice_static"
+    is_circle="1"
+    radius="18" >
+  </MagicConvertMaterialComponent>
+	
+  <MagicConvertMaterialComponent
+    kill_when_finished="0"
+    from_material="water_fading"
+    steps_per_frame="25"
+    to_material="ice_static"
+    is_circle="1"
+    radius="18" >
+  </MagicConvertMaterialComponent>
+	
+  <MagicConvertMaterialComponent
+    kill_when_finished="0"
+    from_material="water_static"
+    steps_per_frame="25"
+    to_material="ice_static"
+    is_circle="1"
+    radius="18" >
+  </MagicConvertMaterialComponent>
+	
+  <MagicConvertMaterialComponent
+    kill_when_finished="0"
+    extinguish_fire="1"
+    is_circle="1"
+    radius="18" >
+  </MagicConvertMaterialComponent>
+	
+  <MagicConvertMaterialComponent
+    from_material="fire"
+    to_material="air"
+    steps_per_frame="25"
+    loop="1"
+	is_circle="1"
+    radius="18" >
+  </MagicConvertMaterialComponent>
+	
+  <MagicConvertMaterialComponent
+    from_material="lava"
+    to_material="rock_static"
+    steps_per_frame="25"
+    loop="1"
+    is_circle="1"
+    radius="18" >
+  </MagicConvertMaterialComponent>
+	
+  <MagicConvertMaterialComponent
+    from_material="water_swamp"
+    to_material="ice_static"
+    steps_per_frame="25"
+    loop="1"
+	is_circle="1"
+    radius="18" >
+  </MagicConvertMaterialComponent>
+	
+  <MagicConvertMaterialComponent
+    from_material="radioactive_liquid"
+    to_material="ice_radioactive_static"
+    steps_per_frame="25"
+    loop="1"
+    is_circle="1"
+    radius="18" >
+  </MagicConvertMaterialComponent>
+	
+  <MagicConvertMaterialComponent
+    from_material="acid"
+    to_material="ice_acid_static"
+    steps_per_frame="25"
+    loop="1"
+    is_circle="1"
+    radius="18" >
+  </MagicConvertMaterialComponent>
+	
+  <MagicConvertMaterialComponent
+    from_material="blood"
+    to_material="ice_blood_static"
+    steps_per_frame="25"
+    loop="1"
+    is_circle="1"
+    radius="18" >
+  </MagicConvertMaterialComponent>
+	
+  <MagicConvertMaterialComponent
+    from_material="poison"
+    to_material="ice_poison_static"
+    steps_per_frame="5"
+    loop="1"
+    is_circle="1"
+    radius="18" >
+  </MagicConvertMaterialComponent>
+	
+  <MagicConvertMaterialComponent
+    from_material="slime"
+    to_material="ice_slime_static"
+    steps_per_frame="25"
+    loop="1"
+    is_circle="1"
+    radius="18" >
+  </MagicConvertMaterialComponent>
+  
+  <HitboxComponent 
+    _enabled="1" 
+    aabb_min_x="-2" 
+    aabb_max_x="2" 
+    aabb_min_y="-2" 
+    aabb_max_y="2" >
+  </HitboxComponent>
+  
+  <SpriteComponent 
+		_enabled="1" 
+		alpha="1" 
+		image_file="data/projectiles_gfx/ice.xml" 
+		next_rect_animation="" 
+		offset_x="8" 
+		offset_y="6" 
+		rect_animation="" 
+		>
+  </SpriteComponent>
+
+  <AudioComponent
+      file="data/audio/Desktop/projectiles.snd"
+      event_root="projectiles/icethrower">
+  </AudioComponent>
+
+</Entity>
