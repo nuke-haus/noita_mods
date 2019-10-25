@@ -21,3 +21,10 @@ I tried to keep this mod balanced so that the wands you find aren't too powerful
 ## Better procedural wands
 
 This mod improves the algorithm the game uses to generate random wands found on pedestals. With this mod active, wands that are spawned without any sort of projectile spell will have one added so that you don't end up finding a useless wand that can't cast anything.
+
+## Elemental power spells
+
+This mod adds 2 new elemental spells that are just as powerful and dangerous as the lightning spell. Hooray, more exciting ways to kill yourself and ruin a perfectly good run.
+
+- Magma Blast: A projectile that quickly explodes into a shower of magma.
+- Flash Freeze: A projectile that freezes liquids nearby before exploding and freezing everything caught in the blast.
