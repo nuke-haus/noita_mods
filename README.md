@@ -14,7 +14,7 @@ This mod basically just does what daily runs do, except for normal runs. Your wa
 
 ## Improved first floor wands
 
-This mod increases the variety of spells that found wands on the first floor will have. It also introduces a small chance for projectile wands to have a projectile mod (such as double shot, etc).
+This mod increases the variety of spells that wands on the first floor will have. It also introduces a small chance for projectile wands to have a projectile mod (such as double shot, etc).
 
 I tried to keep this mod balanced so that the wands you find aren't too powerful. It just makes the wands a bit more interesting.
 
