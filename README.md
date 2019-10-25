@@ -28,3 +28,9 @@ This mod adds 2 new elemental spells that are just as powerful and dangerous as 
 
 - Magma Blast: A projectile that quickly explodes into a shower of magma.
 - Flash Freeze: A projectile that freezes liquids nearby before exploding and freezing everything caught in the blast.
+
+## More perks
+
+This mod adds more perks to the game.
+
+- Upgraded Wands: All of your wands have a random stat improved, with a 25% chance that an additional stat will be improved.
