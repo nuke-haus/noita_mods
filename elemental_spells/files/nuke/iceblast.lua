@@ -13,6 +13,7 @@ table.insert( actions,
 	action 		= function()
 	    add_projectile("files/nuke/iceblast.xml")
 		c.fire_rate_wait = c.fire_rate_wait + 50
+		c.extra_entities = c.extra_entities .. "data/entities/particles/freeze_charge.xml,"
 		shot_effects.recoil_knockback = 50.0
 	end,
 } )

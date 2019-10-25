@@ -73,7 +73,7 @@
   </LuaComponent>
   
   <ParticleEmitterComponent 
-    emitted_material_name="blood_cold"
+    emitted_material_name="blood_cold_vapour"
     count_min="2"
     count_max="4"
     offset.x="0"
