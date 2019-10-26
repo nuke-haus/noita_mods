@@ -29,6 +29,9 @@ table.insert( perk_list,
 				fire = fire * 2.5
 				ComponentObjectSetValue( damagemodel, "damage_multipliers", "fire", tostring(fire) )
 				
+				ComponentSetValue( damagemodel, "fire_damage_ignited_amount", "2" )
+				ComponentSetValue( damagemodel, "fire_probability_of_ignition", "0.8" )
+				
 			end
 		end
 			

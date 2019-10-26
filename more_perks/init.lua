@@ -29,6 +29,12 @@ if ENABLE_BLEED_PHEROMONES_PERK then
 
 end
 
+if ENABLE_BLEED_BERSERKIUM_PERK then
+
+	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/more_perks/files/nuke/scripts/bleed_berserk.lua" )
+
+end
+
 if ENABLE_LAVA_IMMUNE_PERK then
 
 	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/more_perks/files/nuke/scripts/prot_lava.lua" )

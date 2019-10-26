@@ -11,8 +11,11 @@ table.insert( perk_list,
 	func = function( entity_perk_item, entity_who_picked, item_name )
 		
 		local damagemodels = EntityGetComponent( entity_who_picked, "DamageModelComponent" )
+		
 		if( damagemodels ~= nil ) then
+		
 			for i,damagemodel in ipairs(damagemodels) do
+			
 				ComponentSetValue( damagemodel, "blood_material", "magic_liquid_charm" )
 				ComponentSetValue( damagemodel, "blood_spray_material", "magic_liquid_charm" )
 				ComponentSetValue( damagemodel, "blood_multiplier", "4" )
@@ -22,7 +25,9 @@ table.insert( perk_list,
 				local resistance = tonumber(ComponentObjectGetValue( damagemodel, "damage_multipliers", "melee" ))
 				resistance = resistance * 0.6
 				ComponentObjectSetValue( damagemodel, "damage_multipliers", "melee", tostring(resistance) )
+				
 			end
+			
 		end
 			
 	end,
