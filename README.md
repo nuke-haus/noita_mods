@@ -33,7 +33,7 @@ This mod adds 2 new elemental spells that are just as powerful and dangerous as 
 
 This mod adds more perks to the game.
 
-- Upgraded Wands: All of your wands have a random stat improved, with a 25% chance that an additional stat will be improved.
+- Upgraded Wands: All of your wands have one random stat improved, with a 25% chance that an additional stat will be improved.
 - Pheromone Blood: You bleed pheromones.
 - Berserker Blood: You bleed berserkium.
 - Tremor Step: The earth crumbles beneath your feet.
