@@ -35,3 +35,5 @@ This mod adds more perks to the game.
 
 - Upgraded Wands: All of your wands have a random stat improved, with a 25% chance that an additional stat will be improved.
 - Pheromone Blood: You bleed pheromones.
+
+You can toggle individual perks in CONFIG.lua, open it with Notepad++ or some other text editor.
