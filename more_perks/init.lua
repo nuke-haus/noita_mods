@@ -47,5 +47,17 @@ if ENABLE_STOMPY_PERK then
 
 end
 
+if ENABLE_BARKSKIN_PERK then
+
+	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/more_perks/files/nuke/scripts/skin_bark.lua" )
+
+end
+
+if ENABLE_IRONSKIN_PERK then
+
+	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/more_perks/files/nuke/scripts/skin_iron.lua" )
+
+end
+
 print("More perks mod initialization done.")
 
