@@ -34,7 +34,7 @@
         steps_per_frame="20"
         loop="1"
 		is_circle="1"
-        radius="14" >
+        radius="16" >
     </MagicConvertMaterialComponent>
 	
 	<MagicConvertMaterialComponent
@@ -43,7 +43,7 @@
         steps_per_frame="20"
         loop="1"
 		is_circle="1"
-        radius="14" >
+        radius="16" >
     </MagicConvertMaterialComponent>
 
 </Entity>
