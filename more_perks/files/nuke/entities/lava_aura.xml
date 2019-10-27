@@ -1,0 +1,40 @@
+<Entity>
+	<InheritTransformComponent>
+    </InheritTransformComponent>
+	
+	<SpriteParticleEmitterComponent
+		sprite_file="files/nuke/particles/minispark.xml"
+		lifetime="2.5"
+		color.r="1.0" color.g="0.3" color.b="0.0" color.a="1.0"
+		color_change.r="-0.1" color_change.g="0.4" color_change.b="0.2" color_change.a="-0.9"
+		gravity.x="0" gravity.y="0"
+		velocity.x="0" velocity.y="-2"
+		velocity_slowdown="0.5"
+		count_min="1" count_max="1"
+		emission_interval_min_frames="12"
+        emission_interval_max_frames="24"
+		randomize_angular_velocity.min="-30"
+		randomize_angular_velocity.max="30"
+		randomize_velocity.min_x="-2"
+		randomize_velocity.max_x="2"
+		randomize_velocity.min_y="-10"
+		randomize_velocity.max_y="2"
+		randomize_position.min_x="-12"
+		randomize_position.max_x="12"
+		randomize_position.min_y="-12"
+		randomize_position.max_y="12"
+		randomize_rotation.min="-3.1415"
+		randomize_rotation.max="3.1415">
+	</SpriteParticleEmitterComponent>
+	
+
+	<MagicConvertMaterialComponent
+        from_material="lava"
+        to_material="alcohol"
+        steps_per_frame="22"
+        loop="1"
+		is_circle="1"
+        radius="14" >
+    </MagicConvertMaterialComponent>
+
+</Entity>

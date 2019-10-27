@@ -65,5 +65,23 @@ if ENABLE_IRONSKIN_PERK then
 
 end
 
+if ENABLE_ACID_AURA_PERK then
+
+	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/more_perks/files/nuke/scripts/acid_aura.lua" )
+
+end
+
+if ENABLE_LAVA_AURA_PERK then
+
+	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/more_perks/files/nuke/scripts/lava_aura.lua" )
+
+end
+
+if ENABLE_TOXIN_AURA_PERK then
+
+	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/more_perks/files/nuke/scripts/toxin_aura.lua" )
+
+end
+
 print("More perks mod initialization done.")
 
