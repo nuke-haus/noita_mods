@@ -39,5 +39,8 @@ This mod adds more perks to the game.
 - Tremor Step: The earth crumbles beneath your feet.
 - Ironskin: You gain 20% physical damage reduction but become vulnerable to electricity.
 - Barkskin: You gain 20% physical damage reduction but become vulnerable to fire.
+- Acid Transmutation: You convert nearby acid to oil.
+- Lava Transmutation: You convert nearby lava to alcohol.
+- Toxin Transmutation: You convert nearby poison and toxic sludge to water.
 
 You can toggle individual perks in CONFIG.lua, open it with Notepad++ or some other text editor.
