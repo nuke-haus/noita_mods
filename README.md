@@ -44,3 +44,7 @@ This mod adds more perks to the game.
 - Toxin Transmutation: You convert nearby poison and toxic sludge to water.
 
 You can toggle individual perks in CONFIG.lua, open it with Notepad++ or some other text editor.
+
+## Fancy jetpack
+
+This mod tweaks the jetpack particles to be affected by airflow. They look cooler.
