@@ -5,8 +5,8 @@ table.insert( perk_list,
 	id = "WAND_BUFF",
 	ui_name = "Upgraded Wands",
 	ui_description = "Your wands have become more powerful.",
-	ui_icon = "mods/more_perks/files/nuke/perks_gfx/ui/wand_buff.png",
-	perk_icon = "mods/more_perks/files/nuke/perks_gfx/ig/wand_buff.png",
+	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/wand_buff.png",
+	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/wand_buff.png",
 	--not_in_default_perk_pool = cfg_disable_wandbuff,
 	func = function(entity_perk_item, player_entity, item_name)
 	

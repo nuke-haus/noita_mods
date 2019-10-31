@@ -5,8 +5,8 @@ table.insert( perk_list,
 	id = "STOMPY",
 	ui_name = "Tremor Step",
 	ui_description = "The earth crumbles beneath your feet.",
-	ui_icon = "mods/more_perks/files/nuke/perks_gfx/ui/tremor.png",
-	perk_icon = "mods/more_perks/files/nuke/perks_gfx/ig/tremor.png",
+	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/tremor.png",
+	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/tremor.png",
 	--not_in_default_perk_pool = cfg_disable_wandbuff,
 	func = function(entity_perk_item, player_entity, item_name)
 	

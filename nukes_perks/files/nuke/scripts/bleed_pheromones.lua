@@ -5,8 +5,8 @@ table.insert( perk_list,
 	id = "BLEED_PHEROMONES",
 	ui_name = "Pheromone Blood",
 	ui_description = "You bleed pheromones.",
-	ui_icon = "mods/more_perks/files/nuke/perks_gfx/ui/pher_blood.png",
-	perk_icon = "mods/more_perks/files/nuke/perks_gfx/ig/pher_blood.png",
+	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/pher_blood.png",
+	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/pher_blood.png",
 	--not_in_default_perk_pool = cfg_disable_wandbuff,
 	func = function( entity_perk_item, entity_who_picked, item_name )
 		

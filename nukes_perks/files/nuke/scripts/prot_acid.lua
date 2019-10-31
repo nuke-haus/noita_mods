@@ -5,8 +5,8 @@ table.insert( perk_list,
 	id = "PROT_ACID",
 	ui_name = "Acid Immunity",
 	ui_description = "You take no damage from acid.",
-	ui_icon = "mods/more_perks/files/nuke/perks_gfx/ui/prot_acid.png",
-	perk_icon = "mods/more_perks/files/nuke/perks_gfx/ig/prot_acid.png",
+	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/prot_acid.png",
+	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/prot_acid.png",
 	--not_in_default_perk_pool = cfg_disable_wandbuff,
 	func = function(entity_perk_item, player_entity, item_name)
 	

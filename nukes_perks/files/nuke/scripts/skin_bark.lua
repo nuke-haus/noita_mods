@@ -5,8 +5,8 @@ table.insert( perk_list,
 	id = "SKIN_BARK",
 	ui_name = "Barkskin",
 	ui_description = "Physical damage is reduced by 20%. You have become vulnerable to fire.",
-	ui_icon = "mods/more_perks/files/nuke/perks_gfx/ui/skin_bark.png",
-	perk_icon = "mods/more_perks/files/nuke/perks_gfx/ig/skin_bark.png",
+	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/skin_bark.png",
+	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/skin_bark.png",
 	--not_in_default_perk_pool = cfg_disable_wandbuff,
 	func = function( entity_perk_item, entity_who_picked, item_name )
 		

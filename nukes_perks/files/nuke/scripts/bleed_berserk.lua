@@ -5,8 +5,8 @@ table.insert( perk_list,
 	id = "BLEED_BERSERK",
 	ui_name = "Berserker Blood",
 	ui_description = "You bleed a lot of berserkium.",
-	ui_icon = "mods/more_perks/files/nuke/perks_gfx/ui/berz_blood.png",
-	perk_icon = "mods/more_perks/files/nuke/perks_gfx/ig/berz_blood.png",
+	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/berz_blood.png",
+	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/berz_blood.png",
 	--not_in_default_perk_pool = cfg_disable_wandbuff,
 	func = function( entity_perk_item, entity_who_picked, item_name )
 		
