@@ -29,6 +29,12 @@ This mod adds 2 new elemental spells that are just as powerful and dangerous as 
 - Magma Blast: A projectile that quickly explodes into a shower of magma.
 - Flash Freeze: A projectile that freezes liquids nearby before exploding and freezing everything caught in the blast.
 
+## More spells
+
+This mod is where i throw all the new spells and modifiers i've made that don't fit any other category.
+
+- Gravity Well: Your projectiles pull nearby objects and projectiles towards them.
+
 ## More perks
 
 This mod adds more perks to the game.
