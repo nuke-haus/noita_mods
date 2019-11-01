@@ -1,9 +1,9 @@
 dofile( "data/scripts/lib/coroutines.lua" )
 dofile( "data/scripts/lib/utilities.lua" )
 
-local RADIUS = 130.0
-local MAX_STRENGTH = 75
-local MIN_STRENGTH = 10
+local RADIUS = 120.0
+local MAX_STRENGTH = 65.0
+local MIN_STRENGTH = 5.0
 
 local function distance(x, y, x2, y2)
 
