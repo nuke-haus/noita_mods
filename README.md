@@ -48,6 +48,7 @@ This mod adds more perks to the game.
 - Acid Transmutation: You convert nearby acid to oil.
 - Lava Transmutation: You convert nearby lava to alcohol.
 - Toxin Transmutation: You convert nearby poison and toxic sludge to water.
+- Repelling Field: An invisible field pushes objects and projectiles away from you.
 
 You can toggle individual perks in CONFIG.lua, open it with Notepad++ or some other text editor.
 
