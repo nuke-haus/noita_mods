@@ -18,7 +18,7 @@ local function get_valid_ents(me, x, y, rad)
 		local is_good = false
 		local parent = EntityGetParent(v) 
 
-		if (EntityHasTag(v, "tablet") and parent == nil) then
+		if (EntityHasTag(v, "tablet") and (parent == nil or parent == 0)) then
 
 			table.insert(good, v)
 			is_good = true
