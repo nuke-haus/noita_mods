@@ -63,3 +63,5 @@ This mod adds 3 altars to the first 2 levels. They have a small chance to appear
 - Blood Altar: The Gods desire an offering of flesh.
 - Stone Altar: The Gods desire an offering of stone tablets.
 - Magic Altar: The Gods desire an offering of wands or magic spells.
+
+The wrong offering may offend the Gods.
