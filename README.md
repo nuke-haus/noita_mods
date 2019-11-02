@@ -55,3 +55,13 @@ You can toggle individual perks in CONFIG.lua, open it with Notepad++ or some ot
 ## Fancy jetpack
 
 This mod tweaks the jetpack particles to be affected by airflow. They look cooler.
+
+## More altars
+
+This mod adds 3 altars to the first 2 levels. They have a small chance to appear so you won't find them very often.
+
+- Blood Altar: The Gods desire an offering of flesh.
+- Stone Altar: The Gods desire an offering of stone tablets.
+- Magic Altar: The Gods desire an offering of wands or magic spells.
+
+The wrong offering may offend the Gods.
