@@ -1,0 +1,150 @@
+<Entity>
+
+  <!-- sacrifice logic -->
+
+  <!--<AltarComponent
+    recognized_entity_tags="sacred_barrel"
+    uses_remaining="100" >
+  </AltarComponent>
+
+  <Entity name="on_sacrifice" >
+
+    <MagicConvertMaterialComponent
+      _enabled="0"
+      kill_when_finished="0"
+      from_material="glowstone_altar"
+      steps_per_frame="1"
+      to_material="blood"
+      radius="128" >
+    </MagicConvertMaterialComponent>
+
+    <LuaComponent
+      _enabled="0"
+      script_source_file="data/scripts/buildings/altar_collapse.lua"
+      vm_type="ONE_PER_COMPONENT_INSTANCE"
+      enable_coroutines="1"
+      execute_on_added="1"
+      execute_every_n_frame="-1"
+      execute_times="1" >
+    </LuaComponent>
+
+    <InheritTransformComponent>
+    </InheritTransformComponent>
+
+  </Entity>
+  
+  -->
+
+  <LuaComponent 
+      _enabled="1" 
+      execute_every_n_frame="15"
+      script_source_file="files/nuke/scripts/altar_blood_logic.lua">
+  </LuaComponent>
+
+  <MagicConvertMaterialComponent
+      _enabled="1"
+      is_circle="1"
+      kill_when_finished="0"
+      from_material="meat"
+      steps_per_frame="20"
+      to_material="gold"
+      radius="26" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _enabled="1"
+      is_circle="1"
+      kill_when_finished="0"
+      from_material="rotten_meat"
+      steps_per_frame="20"
+      to_material="gold"
+      radius="26" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _enabled="1"
+      is_circle="1"
+      kill_when_finished="0"
+      from_material="rotten_meat_radioactive"
+      steps_per_frame="20"
+      to_material="gold"
+      radius="26" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _enabled="1"
+      is_circle="1"
+      kill_when_finished="0"
+      from_material="meat_worm"
+      steps_per_frame="20"
+      to_material="gold"
+      radius="26" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _enabled="1"
+      is_circle="1"
+      kill_when_finished="0"
+      from_material="meat_slime"
+      steps_per_frame="20"
+      to_material="gold"
+      radius="26" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _enabled="1"
+      is_circle="1"
+      kill_when_finished="0"
+      from_material="meat_slime_green"
+      steps_per_frame="20"
+      to_material="gold"
+      radius="26" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _enabled="1"
+      is_circle="1"
+      kill_when_finished="0"
+      from_material="meat_slime_orange"
+      steps_per_frame="20"
+      to_material="gold"
+      radius="26" >
+  </MagicConvertMaterialComponent>
+
+  <ParticleEmitterComponent
+    emitted_material_name="blood"
+    offset.x="0"
+    offset.y="0"
+    x_pos_offset_min="-30"
+    x_pos_offset_max="30"
+    y_pos_offset_min="-18"
+    y_pos_offset_max="-18"
+    x_vel_min="0"
+    x_vel_max="0"
+    y_vel_min="0"
+    y_vel_max="0"
+    count_min="2"
+    count_max="6"
+    lifetime_min="2.0"
+    lifetime_max="3.0"
+		fade_based_on_lifetime="1"
+    create_real_particles="0"
+    emit_cosmetic_particles="1"
+    emission_interval_min_frames="10"
+    emission_interval_max_frames="20"
+    is_emitting="1" >
+  </ParticleEmitterComponent>
+  
+  <!--
+    
+    gravity.y="0"
+    
+    <HitboxComponent 
+    aabb_min_x="-18" 
+    aabb_max_x="18" 
+    aabb_min_y="-10"
+    aabb_max_y="10" >
+  </HitboxComponent>-->
+
+</Entity>
+
