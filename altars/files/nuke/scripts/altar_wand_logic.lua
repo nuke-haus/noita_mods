@@ -150,9 +150,7 @@ for k,v in pairs(wands) do
 
 	local x2, y2 = EntityGetTransform(v)
 	local actions = get_actions(v)
-	local count = math.max(math.floor(#actions / 4), 1)
-
-	print("gonna give you a pile of shit " .. count)
+	local count = math.max(math.floor(#actions / 2), 1)
 
 	EntityLoad("data/entities/particles/image_emitters/chest_effect.xml", x2, y2)
 
@@ -167,8 +165,6 @@ for k,v in pairs(wands) do
 			EntityAddTag(card, "ignore_altar")
 
 		else
-
-			print("generating a " .. tostring(str))
 
 			local card = CreateItemActionEntity( str, x2, y2 )
 			EntityAddTag(card, "ignore_altar")
