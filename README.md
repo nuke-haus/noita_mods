@@ -56,7 +56,7 @@ You can toggle individual perks in CONFIG.lua, open it with Notepad++ or some ot
 
 This mod tweaks the jetpack particles to be affected by airflow. They look cooler.
 
-##More altars
+## More altars
 
 This mod adds 3 altars to the first 2 levels. They have a small chance to appear so you won't find them very often.
 
