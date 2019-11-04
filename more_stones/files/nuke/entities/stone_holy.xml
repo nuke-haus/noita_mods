@@ -70,7 +70,7 @@
   <!-- cool shit -->
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       extinguish_fire="1"
       loop="1"
       is_circle="1"
@@ -78,7 +78,7 @@
     </MagicConvertMaterialComponent>
 	
 	<MagicConvertMaterialComponent
-        _tags="enabled_in_world"
+        _tags="enabled_in_world,enabled_in_hand"
         from_material="fire"
         to_material="smoke"
         steps_per_frame="2"
@@ -88,7 +88,7 @@
     </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="blood"
       to_material="water"
       steps_per_frame="2"
@@ -98,7 +98,7 @@
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="blood_worm"
       to_material="water"
       steps_per_frame="2"
@@ -108,7 +108,7 @@
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="alcohol"
       to_material="water"
       steps_per_frame="2"
@@ -118,7 +118,7 @@
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="oil"
       to_material="water"
       steps_per_frame="2"
@@ -128,7 +128,7 @@
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="slime"
       to_material="water"
       steps_per_frame="2"
@@ -138,7 +138,7 @@
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="acid"
       to_material="water"
       steps_per_frame="2"
@@ -148,7 +148,7 @@
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="poison"
       to_material="water"
       steps_per_frame="2"
@@ -158,7 +158,7 @@
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="radioactive_liquid"
       to_material="water"
       steps_per_frame="2"
@@ -168,7 +168,7 @@
   </MagicConvertMaterialComponent>
 
     <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="water_swamp"
       to_material="water"
       steps_per_frame="2"
@@ -178,7 +178,7 @@
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="magic_liquid_polymorph"
       to_material="water"
       steps_per_frame="2"
@@ -188,7 +188,7 @@
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="magic_liquid_random_polymorph"
       to_material="water"
       steps_per_frame="2"
@@ -198,7 +198,7 @@
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="magic_liquid_berserk"
       to_material="water"
       steps_per_frame="2"
@@ -208,7 +208,7 @@
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="magic_liquid_charm"
       to_material="water"
       steps_per_frame="2"
@@ -218,7 +218,7 @@
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="magic_liquid_invisibility"
       to_material="water"
       steps_per_frame="2"

@@ -94,7 +94,7 @@
   <!-- cool shit -->
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       extinguish_fire="1"
       loop="1"
       is_circle="1"
@@ -102,7 +102,7 @@
     </MagicConvertMaterialComponent>
 	
 	<MagicConvertMaterialComponent
-        _tags="enabled_in_world"
+        _tags="enabled_in_world,enabled_in_hand"
         from_material="fire"
         to_material="smoke"
         steps_per_frame="2"
@@ -112,7 +112,7 @@
     </MagicConvertMaterialComponent>
 	
 	<MagicConvertMaterialComponent
-        _tags="enabled_in_world"
+        _tags="enabled_in_world,enabled_in_hand"
         from_material="lava"
         to_material="rock_static"
         steps_per_frame="2"
@@ -122,7 +122,7 @@
     </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="blood"
       to_material="ice_blood_static"
       steps_per_frame="2"
@@ -132,7 +132,7 @@
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="slime"
       to_material="ice_slime_static"
       steps_per_frame="2"
@@ -142,7 +142,7 @@
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="acid"
       to_material="ice_acid_static"
       steps_per_frame="2"
@@ -152,7 +152,7 @@
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="poison"
       to_material="ice_poison_static"
       steps_per_frame="2"
@@ -162,7 +162,7 @@
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="radioactive_liquid"
       to_material="ice_radioactive_static"
       steps_per_frame="2"
@@ -172,7 +172,7 @@
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="water"
       steps_per_frame="5"
       to_material="ice_static"
@@ -182,7 +182,7 @@
     </MagicConvertMaterialComponent>
 
     <MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="water_swamp"
       to_material="ice_static"
       steps_per_frame="2"
@@ -192,7 +192,7 @@
   </MagicConvertMaterialComponent>
 	
 	<MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="water_ice"
       steps_per_frame="5"
       to_material="ice_static"
@@ -202,7 +202,7 @@
     </MagicConvertMaterialComponent>
 	
 	<MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="water_salt"
       steps_per_frame="5"
       to_material="ice_static"
@@ -212,7 +212,7 @@
     </MagicConvertMaterialComponent>
 	
 	<MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="water_fading"
       steps_per_frame="5"
       to_material="ice_static"
@@ -222,7 +222,7 @@
     </MagicConvertMaterialComponent>
 	
 	<MagicConvertMaterialComponent
-      _tags="enabled_in_world"
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="water_static"
       steps_per_frame="5"
       to_material="ice_static"
