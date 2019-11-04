@@ -1,7 +1,7 @@
 <Entity tags="ice_trail">
 
 	<LifetimeComponent
-		lifetime="420"
+		lifetime="400"
 	></LifetimeComponent>
 
 	<SpriteComponent 
