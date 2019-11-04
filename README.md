@@ -47,8 +47,10 @@ This mod adds more perks to the game.
 - Barkskin: You gain 20% physical damage reduction but become vulnerable to fire.
 - Acid Transmutation: You convert nearby acid to oil.
 - Lava Transmutation: You convert nearby lava to alcohol.
-- Toxin Transmutation: You convert nearby poison and toxic sludge to water.
+- Alchemical Transmutation: You purify nearby toxins and convert harmful magical liquids to safer magical liquids.
 - Repelling Field: An invisible field pushes objects and projectiles away from you.
+- Burning Afterimage: You leave a trail of magical flames wherever you go.
+- Freezing Afterimage: You leave a trail of freezing magic wherever you go.
 
 You can toggle individual perks in CONFIG.lua, open it with Notepad++ or some other text editor.
 
