@@ -65,3 +65,11 @@ This mod adds 3 altars to the first 2 levels. They have a small chance to appear
 - Magic Altar: The Gods desire an offering of wands or magic spells.
 
 The wrong offering may offend the Gods.
+
+## More magical stones
+
+This mod adds 3 new magical stones to the game and also slightly increases your chance of finding a magical stone on a pedestal.
+
+- Emberstone: A stone imbued with the elemental power of fire.
+- Rimestone: A stone imbued with the elemental power of ice.
+- Angelstone: A purifying stone blessed by the Gods.
