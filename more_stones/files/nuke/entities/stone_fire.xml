@@ -276,8 +276,78 @@
 
   <MagicConvertMaterialComponent
       _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_poison_glass"
+      to_material="poison"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="5" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_acid_glass"
+      to_material="acid"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="5" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
       from_material="ice_static"
       to_material="water"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="5" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_blood_static"
+      to_material="blood"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="5" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_radioactive_static"
+      to_material="radioactive_liquid"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="5" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_slime_static"
+      to_material="slime"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="5" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_poison_static"
+      to_material="poison"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="5" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_acid_static"
+      to_material="acid"
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"

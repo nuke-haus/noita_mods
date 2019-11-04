@@ -1,0 +1,157 @@
+<Entity>
+
+	<InheritTransformComponent>
+    </InheritTransformComponent>
+
+    <LifetimeComponent
+		lifetime="2">
+    </LifetimeComponent>
+
+    <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="air"
+      to_material="spark"
+      steps_per_frame="60"
+      loop="1"
+		  is_circle="1"
+      radius="4" >
+  </MagicConvertMaterialComponent>
+
+    <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_glass"
+      to_material="air"
+      steps_per_frame="60"
+      loop="1"
+		  is_circle="1"
+      radius="4" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_blood_glass"
+      to_material="air"
+      steps_per_frame="60"
+      loop="1"
+		  is_circle="1"
+      radius="4" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_radioactive_glass"
+      to_material="air"
+      steps_per_frame="60"
+      loop="1"
+		  is_circle="1"
+      radius="4" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_slime_glass"
+      to_material="air"
+      steps_per_frame="60"
+      loop="1"
+		  is_circle="1"
+      radius="4" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_poison_glass"
+      to_material="air"
+      steps_per_frame="60"
+      loop="1"
+		  is_circle="1"
+      radius="4" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_acid_glass"
+      to_material="air"
+      steps_per_frame="60"
+      loop="1"
+		  is_circle="1"
+      radius="4" >
+  </MagicConvertMaterialComponent>
+
+	<MagicConvertMaterialComponent
+	  _enabled="1" 
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_static"
+      to_material="air"
+      steps_per_frame="60"
+      loop="1"
+		  is_circle="1"
+      radius="4" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _enabled="1" 
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_blood_static"
+      to_material="air"
+      steps_per_frame="60"
+      loop="1"
+		  is_circle="1"
+      radius="4" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _enabled="1" 
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_radioactive_static"
+      to_material="air"
+      steps_per_frame="60"
+      loop="1"
+		  is_circle="1"
+      radius="4" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _enabled="1" 
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_slime_static"
+      to_material="air"
+      steps_per_frame="60"
+      loop="1"
+		  is_circle="1"
+      radius="4" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _enabled="1" 
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_poison_static"
+      to_material="air"
+      steps_per_frame="60"
+      loop="1"
+		  is_circle="1"
+      radius="4" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _enabled="1" 
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_acid_static"
+      to_material="air"
+      steps_per_frame="60"
+      loop="1"
+		  is_circle="1"
+      radius="4" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _enabled="1" 
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice"
+      to_material="air"
+      steps_per_frame="60"
+      loop="1"
+		  is_circle="1"
+      radius="4" >
+  </MagicConvertMaterialComponent>
+
+</Entity>
