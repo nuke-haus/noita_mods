@@ -89,5 +89,17 @@ if ENABLE_REPEL_FIELD_PERK then
 
 end
 
+if ENABLE_ICE_TRAIL_PERK then
+
+	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/nukes_perks/files/nuke/scripts/trail_ice.lua" )
+
+end
+
+if ENABLE_FIRE_TRAIL_PERK then
+
+	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/nukes_perks/files/nuke/scripts/trail_fire.lua" )
+
+end
+
 print("More perks mod initialization done.")
 

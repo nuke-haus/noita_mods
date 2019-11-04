@@ -2,7 +2,7 @@
 	<InheritTransformComponent>
     </InheritTransformComponent>
 	
-	<SpriteParticleEmitterComponent
+	<!--<SpriteParticleEmitterComponent
 		sprite_file="files/nuke/particles/minispark.xml"
 		lifetime="2.5"
 		color.r="0.7" color.g="0.0" color.b="0.9" color.a="1.0"
@@ -25,8 +25,7 @@
 		randomize_position.max_y="12"
 		randomize_rotation.min="-3.1415"
 		randomize_rotation.max="3.1415">
-	</SpriteParticleEmitterComponent>
-	
+	</SpriteParticleEmitterComponent>-->
 	
 	<MagicConvertMaterialComponent
         from_material="poison"
@@ -41,6 +40,33 @@
         from_material="radioactive_liquid"
         to_material="water"
         steps_per_frame="20"
+        loop="1"
+		is_circle="1"
+        radius="16" >
+    </MagicConvertMaterialComponent>
+
+	<MagicConvertMaterialComponent
+        from_material="magic_liquid_teleportation"
+        to_material="magic_liquid_charm"
+        steps_per_frame="22"
+        loop="1"
+		is_circle="1"
+        radius="16" >
+    </MagicConvertMaterialComponent>
+
+	<MagicConvertMaterialComponent
+        from_material="magic_liquid_polymorph"
+        to_material="magic_liquid_invisibility"
+        steps_per_frame="22"
+        loop="1"
+		is_circle="1"
+        radius="16" >
+    </MagicConvertMaterialComponent>
+
+	<MagicConvertMaterialComponent
+        from_material="magic_liquid_random_polymorph"
+        to_material="magic_liquid_berserk"
+        steps_per_frame="22"
         loop="1"
 		is_circle="1"
         radius="16" >

@@ -3,8 +3,8 @@ dofile( "data/scripts/lib/utilities.lua" )
 table.insert( perk_list, 
 {
 	id = "TOX_AURA",
-	ui_name = "Toxin Transmutation",
-	ui_description = "You convert nearby poison and toxic sludge to water.",
+	ui_name = "Alchemical Transmutation",
+	ui_description = "You purify nearby toxins and convert harmful magical liquids to safer magical liquids.",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/toxin_aura.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/toxin_aura.png",
 	func = function(perk_item, player, item_name)
