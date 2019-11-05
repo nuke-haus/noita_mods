@@ -75,3 +75,7 @@ This mod adds 3 new magical stones to the game and also slightly increases your 
 - Emberstone: A stone imbued with the elemental power of fire.
 - Rimestone: A stone imbued with the elemental power of ice.
 - Angelstone: A purifying stone blessed by the Gods.
+
+## Ice collision fix
+
+This mod makes it easier to get unstuck when you get caught on pixels of ice. If you find yourself encased in ice somehow, you can dig upwards slowly to escape.
