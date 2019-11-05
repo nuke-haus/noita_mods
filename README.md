@@ -51,6 +51,7 @@ This mod adds more perks to the game.
 - Repelling Field: An invisible field pushes objects and projectiles away from you.
 - Burning Afterimage: You leave a trail of magical flames wherever you go.
 - Freezing Afterimage: You leave a trail of freezing magic wherever you go.
+- Inferno: You are immune to fire, but you are constantly shrouded in flames.
 
 You can toggle individual perks in CONFIG.lua, open it with Notepad++ or some other text editor.
 
