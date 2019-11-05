@@ -1,0 +1,408 @@
+<Entity>
+
+	<InheritTransformComponent>
+    </InheritTransformComponent>
+	
+	 <ParticleEmitterComponent 
+        _tags="enabled_in_world,enabled_in_hand,fire"
+        emitted_material_name="smoke"
+        offset.x="0"
+        offset.y="0"
+        x_pos_offset_min="-8"
+        x_pos_offset_max="8"
+        y_pos_offset_min="-10"
+        y_pos_offset_max="4"
+        x_vel_min="-10"
+        x_vel_max="10"
+        y_vel_min="0"
+        y_vel_max="2"
+        count_min="1"
+        count_max="2"
+        lifetime_min="0.1"
+        lifetime_max="1"
+        create_real_particles="1"
+        emit_cosmetic_particles="0"
+        emission_interval_min_frames="40"
+        emission_interval_max_frames="80"
+        is_emitting="1" >
+    </ParticleEmitterComponent>
+
+    <ParticleEmitterComponent 
+        _tags="enabled_in_world,enabled_in_hand,fire"
+		emitted_material_name="lava"
+		gravity.y="-2"
+		lifetime_min="1.2"
+		lifetime_max="2.2"
+		count_min="1"
+		count_max="4"
+		render_on_grid="1"
+		render_back="0"
+		fade_based_on_lifetime="1"
+        x_pos_offset_min="-4"
+        x_pos_offset_max="4"
+        y_pos_offset_min="-10"
+        y_pos_offset_max="4"
+		airflow_force="0.35"
+		airflow_time="0.90"
+		airflow_scale="0.15"
+		emission_interval_min_frames="4"
+		emission_interval_max_frames="8"
+		emit_cosmetic_particles="1"
+		is_emitting="1" >
+	</ParticleEmitterComponent>
+
+    <ParticleEmitterComponent 
+        _tags="enabled_in_world,enabled_in_hand,fire"
+        emitted_material_name="spark"
+        offset.x="0"
+        offset.y="0"
+        x_pos_offset_min="-6"
+        x_pos_offset_max="6"
+        y_pos_offset_min="-10"
+        y_pos_offset_max="4"
+        x_vel_min="-2"
+        x_vel_max="2"
+        y_vel_min="-20"
+        y_vel_max="-10"
+        count_min="4"
+        count_max="6"
+        lifetime_min="0.3"
+        lifetime_max="0.4"
+        create_real_particles="1"
+        emit_cosmetic_particles="0"
+        emission_interval_min_frames="4"
+        emission_interval_max_frames="8"
+        is_emitting="1" >
+    </ParticleEmitterComponent>
+      
+    <ParticleEmitterComponent 
+        _tags="enabled_in_world,enabled_in_hand,fire"
+        emitted_material_name="fire"
+        offset.x="0"
+        offset.y="0"
+        x_pos_offset_min="-6"
+        x_pos_offset_max="6"
+        y_pos_offset_min="-10"
+        y_pos_offset_max="4"
+        x_vel_min="-2"
+        x_vel_max="2"
+        y_vel_min="-20"
+        y_vel_max="-10"
+        count_min="4"
+        count_max="6"
+        lifetime_min="0.3"
+        lifetime_max="0.8"
+        create_real_particles="1"
+        emit_cosmetic_particles="0"
+        emission_interval_min_frames="4"
+        emission_interval_max_frames="8"
+        fire_cells_dont_ignite_damagemodel="1"
+		is_emitting="1" >
+    </ParticleEmitterComponent>
+
+    <ParticleEmitterComponent 
+        _tags="enabled_in_world,enabled_in_hand,fire"
+        emitted_material_name="spark"
+        custom_style="FIRE"
+        offset.x="0"
+        offset.y="0"
+        x_pos_offset_min="-6"
+        x_pos_offset_max="6"
+        y_pos_offset_min="-10"
+        y_pos_offset_max="2"
+        x_vel_min="-2"
+        x_vel_max="2"
+        y_vel_min="-20"
+        y_vel_max="-10"
+        count_min="10"
+        count_max="14"
+        lifetime_min="0.3"
+        lifetime_max="0.4"
+        create_real_particles="1"
+        emit_cosmetic_particles="0"
+        emission_interval_min_frames="4"
+        emission_interval_max_frames="8"
+        is_emitting="1" >
+    </ParticleEmitterComponent>
+
+	<MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="oil"
+      to_material="fire"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="alcohol"
+      to_material="fire"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_glass"
+      to_material="water"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_blood_glass"
+      to_material="blood"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_radioactive_glass"
+      to_material="radioactive_liquid"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_slime_glass"
+      to_material="slime"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_poison_glass"
+      to_material="poison"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_acid_glass"
+      to_material="acid"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_static"
+      to_material="water"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_blood_static"
+      to_material="blood"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_radioactive_static"
+      to_material="radioactive_liquid"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_slime_static"
+      to_material="slime"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_poison_static"
+      to_material="poison"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice_acid_static"
+      to_material="acid"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="ice"
+      to_material="water"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="snow"
+      to_material="water"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="snow_static"
+      to_material="water"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="snow_sticky"
+      to_material="water"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="water"
+      to_material="steam"
+      steps_per_frame="2"
+      loop="1"
+	  is_circle="1"
+      radius="6" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="water_salt"
+      to_material="steam"
+      steps_per_frame="2"
+      loop="1"
+	  is_circle="1"
+      radius="6" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="water_ice"
+      to_material="steam"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="6" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="water_fading"
+      to_material="steam"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="6" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="water_static"
+      to_material="steam"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="6" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="water_swamp"
+      to_material="steam"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="6" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="blood"
+      to_material="steam"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="6" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="acid"
+      to_material="acid_gas"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="radioactive_liquid"
+      to_material="radioactive_gas"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="poison"
+      to_material="poison_gas"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="8" >
+  </MagicConvertMaterialComponent>
+
+</Entity>

@@ -101,5 +101,11 @@ if ENABLE_FIRE_TRAIL_PERK then
 
 end
 
+if ENABLE_INFERNO_PERK then
+
+	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/nukes_perks/files/nuke/scripts/inferno.lua" )
+
+end
+
 print("More perks mod initialization done.")
 
