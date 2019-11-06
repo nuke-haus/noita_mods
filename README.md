@@ -34,6 +34,10 @@ This mod adds 2 new elemental spells that are just as powerful and dangerous as 
 This mod is where i throw all the new spells and modifiers i've made that don't fit any other category.
 
 - Gravity Well: Your projectiles pull nearby objects and projectiles towards them.
+- Repelling Field: Your projectiles repel nearby objects and projectiles.
+- Petrify: A terrifying spell that turns almost everything nearby to stone.
+- Chaotic Trail: Projectiles leave a trail of random materials.
+- Chaotic Cloud: A strange cloud that rains random liquids.
 
 ## More perks
 
@@ -41,7 +45,7 @@ This mod adds more perks to the game.
 
 - Upgraded Wands: All of your wands have one random stat improved, with a 25% chance that an additional stat will be improved.
 - Pheromone Blood: You bleed pheromones and gain 40% melee damage resistance.
-- Berserker Blood: You bleed a lot of berserkium.
+- Berserker Blood: You bleed a lot of berserkium and gain 40% slice damage resistance.
 - Tremor Step: The earth crumbles beneath your feet.
 - Ironskin: You gain 20% physical damage reduction but become vulnerable to electricity.
 - Barkskin: You gain 20% physical damage reduction but become vulnerable to fire.
