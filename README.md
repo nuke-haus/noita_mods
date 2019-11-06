@@ -12,22 +12,6 @@
 
 You will have to start a new game after doing all of this in order for the game to register the mods.
 
-
-
-## Random starter wand
-
-This mod basically just does what daily runs do, except for normal runs. Your wand will have a randomized low-level spell as well as semi-random stats.
-
-## Improved first floor wands
-
-This mod increases the variety of spells that wands on the first floor will have. It also introduces a small chance for projectile wands to have a projectile mod (such as double shot, etc).
-
-I tried to keep this mod balanced so that the wands you find aren't too powerful. It just makes the wands a bit more interesting.
-
-## Better procedural wands
-
-This mod improves the algorithm the game uses to generate random wands found on pedestals. With this mod active, wands that are spawned without any sort of projectile spell will have one added so that you don't end up finding a useless wand that can't cast anything.
-
 ## Elemental power spells
 
 This mod adds 2 new elemental spells that are just as powerful and dangerous as the lightning spell. Hooray, more exciting ways to kill yourself and ruin a perfectly good run.
@@ -87,6 +71,24 @@ This mod adds 3 new magical stones to the game and also slightly increases your 
 - Rimestone: A stone imbued with the elemental power of ice.
 - Angelstone: A purifying stone blessed by the Gods.
 
+## Random starter wand
+
+This mod basically just does what daily runs do, except for normal runs. Your wand will have a randomized low-level spell as well as semi-random stats.
+
+## Improved first floor wands
+
+This mod increases the variety of spells that wands on the first floor will have. It also introduces a small chance for projectile wands to have a projectile mod (such as double shot, etc).
+
+I tried to keep this mod balanced so that the wands you find aren't too powerful. It just makes the wands a bit more interesting.
+
 ## Ice collision fix
 
 This mod makes it easier to get unstuck when you get caught on pixels of ice. If you find yourself encased in ice somehow, you can dig upwards slowly to escape.
+
+## Better procedural wands
+
+This mod improves the algorithm the game uses to generate random wands found on pedestals. With this mod active, wands that are spawned without any sort of projectile spell will have one added so that you don't end up finding a useless wand that can't cast anything.
+
+NOTE: This mod seems to not be working currently. 
+
+
