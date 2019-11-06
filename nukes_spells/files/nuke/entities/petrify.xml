@@ -1,0 +1,181 @@
+<Entity name="$projectile_default">
+
+	<VelocityComponent
+		gravity_y="0">
+    </VelocityComponent> 
+
+	<LuaComponent
+        script_source_file="files/nuke/petrify_loop.lua"
+        execute_on_added="1"
+        execute_every_n_frame="1"
+        execute_times="9999999" >
+    </LuaComponent>
+
+	<AudioComponent
+        file="data/audio/Desktop/projectiles.snd"
+        event_root="player_projectiles/crumbling_earth">
+    </AudioComponent>
+
+	<LightComponent 
+		_enabled="1" 
+		update_properties="1"
+		r="220"
+		g="240"
+		b="220"
+		radius="8" >
+    </LightComponent>
+
+	<SpriteComponent 
+		_enabled="1" 
+		alpha="0.5" 
+		image_file="files/nuke/sprites/petrify_back.xml" 
+		next_rect_animation="" 
+		offset_x="0" 
+		offset_y="0" 
+		has_special_scale="1"
+		special_scale_x="0.01"
+		special_scale_y="0.01"
+		rect_animation="">
+    </SpriteComponent>
+
+	<ParticleEmitterComponent 
+    	_tags="enabled_in_world"
+		emitted_material_name="spark_green"
+		gravity.y="4"
+		lifetime_min="1.4"
+		lifetime_max="4.2"
+		count_min="12"
+		count_max="24"
+		collide_with_grid="0"
+		fade_based_on_lifetime="1"
+		x_pos_offset_min="-2"
+		x_pos_offset_max="2"
+		y_pos_offset_min="-2"
+		y_pos_offset_max="2"
+		x_vel_min="-5"
+        x_vel_max="5"
+        y_vel_min="-5"
+        y_vel_max="5"
+		airflow_force="0.30"
+		airflow_time="1.50"
+		airflow_scale="0.15"
+		emission_interval_min_frames="2"
+		emission_interval_max_frames="4"
+		velocity_always_away_from_center="1"
+		emit_cosmetic_particles="1"
+		is_emitting="1" >
+	</ParticleEmitterComponent>
+
+    <!-- this wood/lava rock stuff is a hack to make it convert certain enemy corpses to rock-->
+	<MagicConvertMaterialComponent
+      _tags="enabled_in_world"
+      from_material="lavarock_static"
+      to_material="rock_static_petrify2_breakable" 
+      steps_per_frame="40"
+      loop="1"
+	  is_circle="1"
+      radius="1" >
+    </MagicConvertMaterialComponent>
+
+	<MagicConvertMaterialComponent
+      _tags="enabled_in_world"
+      from_material="wood_static"
+      to_material="rock_static_petrify2_breakable" 
+      steps_per_frame="40"
+      loop="1"
+	  is_circle="1"
+      radius="1" >
+    </MagicConvertMaterialComponent>
+
+	<MagicConvertMaterialComponent
+      _tags="enabled_in_world"
+      from_material="wood_static_wet"
+      to_material="rock_static_petrify2_breakable" 
+      steps_per_frame="40"
+      loop="1"
+	  is_circle="1"
+      radius="1" >
+    </MagicConvertMaterialComponent>
+
+	<MagicConvertMaterialComponent
+      _tags="enabled_in_world"
+      from_material="wood_static_vertical"
+      to_material="rock_static_petrify2_breakable" 
+      steps_per_frame="40"
+      loop="1"
+	  is_circle="1"
+      radius="1" >
+    </MagicConvertMaterialComponent>
+
+    <MagicConvertMaterialComponent
+      _tags="enabled_in_world"
+      from_material_tag="[meltable_to_lava]"
+      to_material="rock_static_petrify2_breakable" 
+      steps_per_frame="40"
+      loop="1"
+	  is_circle="1"
+      radius="1" >
+    </MagicConvertMaterialComponent>
+
+    <MagicConvertMaterialComponent
+      _tags="enabled_in_world"
+      from_material_tag="[box2d]"
+      to_material="rock_static_petrify2_breakable" 
+      steps_per_frame="40"
+      loop="1"
+	  is_circle="1"
+      radius="1" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world"
+      from_material_tag="[sand_ground]"
+      to_material="rock_static_petrify2_breakable" 
+      steps_per_frame="40"
+      loop="1"
+	  is_circle="1"
+      radius="1" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world"
+      from_material_tag="[sand_other]"
+      to_material="rock_static_petrify2_breakable" 
+      steps_per_frame="40"
+      loop="1"
+	  is_circle="1"
+      radius="1" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world"
+      from_material_tag="[plant]"
+      to_material="rock_static_petrify2_breakable" 
+      steps_per_frame="40"
+      loop="1"
+	  is_circle="1"
+      radius="1" >
+  </MagicConvertMaterialComponent>
+
+   <MagicConvertMaterialComponent
+      _tags="enabled_in_world"
+      from_material_tag="[meat]"
+      to_material="rock_static_petrify2_breakable" 
+      steps_per_frame="40"
+      loop="1"
+	  is_circle="1"
+      radius="1" >
+  </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world"
+      from_material_tag="[gold]"
+      to_material="rock_static_petrify2_breakable" 
+      steps_per_frame="40"
+      loop="1"
+	  is_circle="1"
+      radius="1" >
+  </MagicConvertMaterialComponent>
+
+</Entity>
+

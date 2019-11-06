@@ -1,7 +1,7 @@
 <Entity>
 
     <LuaComponent
-        script_source_file="files/nuke/suck_loop.lua"
+        script_source_file="files/nuke/repel_loop.lua"
         enable_coroutines="1"
         execute_on_added="1"
         execute_every_n_frame="1"
@@ -11,7 +11,7 @@
 	<SpriteComponent 
 		_enabled="1" 
 		alpha="0.3" 
-		image_file="files/nuke/sprites/blast_in.xml" 
+		image_file="files/nuke/sprites/blast_repel.xml" 
 		offset_x="0" 
 		offset_y="0" 
 		special_scale_x="2.0"
@@ -19,12 +19,6 @@
 		update_transform_rotation="0"
 		>
 	</SpriteComponent>
-
-	<!--<BlackHoleComponent
-		particle_attractor_force="0.01"
-		damage_probability="0"
-		radius="1">
-    </BlackHoleComponent>-->
 
 	<InheritTransformComponent
 		only_position="1">

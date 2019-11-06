@@ -1,0 +1,67 @@
+<Entity name="$projectile_default">
+
+  <InheritTransformComponent
+		only_position="1">
+  </InheritTransformComponent>
+
+  <LuaComponent
+    script_source_file="files/nuke/chaos_loop_trail.lua"
+    execute_on_added="1"
+    execute_every_n_frame="2"
+    execute_times="9999999" >
+  </LuaComponent>
+
+  <ParticleEmitterComponent 
+	emitted_material_name="water"
+	offset.x="0"
+	offset.y="0"
+	x_pos_offset_min="-5"
+	x_pos_offset_max="-5"
+	y_pos_offset_min="-1"
+	y_pos_offset_max="1"
+	x_vel_min="0"
+	x_vel_max="0"
+	y_vel_min="0"
+	y_vel_max="0"
+	count_min="1"
+	count_max="10"
+	emission_interval_min_frames="1"
+	emission_interval_max_frames="2"
+	emit_cosmetic_particles="0"
+	collide_with_gas_and_fire="0"
+	create_real_particles="1" >
+  </ParticleEmitterComponent>
+
+  <ParticleEmitterComponent 
+	emitted_material_name="spark_blue"
+	offset.x="0"
+	offset.y="0"
+	fade_based_on_lifetime="1"
+	x_pos_offset_min="-1"
+	x_pos_offset_max="1"
+	y_pos_offset_min="-1"
+	y_pos_offset_max="1"
+	gravity.y="0.0"
+	x_vel_min="0"
+	x_vel_max="0"
+	y_vel_min="0"
+	y_vel_max="0"
+	count_min="1"
+	count_max="1"
+	is_trail="1"
+	trail_gap="1"
+	lifetime_min="2.2"
+	lifetime_max="4.4"
+	airflow_force="0.20"
+	airflow_scale="0.01"
+	airflow_time="0.50"
+	render_on_grid="1"
+	cosmetic_force_create="0"
+	emission_interval_min_frames="1"
+	emission_interval_max_frames="1"
+	emit_cosmetic_particles="1"
+	create_real_particles="0" >
+  </ParticleEmitterComponent>
+
+</Entity>
+

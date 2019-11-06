@@ -68,6 +68,8 @@ async_loop(function()
 
 			end
 
+			power = power * -1
+
 			local dir_x = x - x2
 			local dir_y = y - y2
 					
@@ -144,8 +146,8 @@ async_loop(function()
 					local dir_x = dir_x / len
 					local dir_y = dir_y / len
 
-					local vel_x_fix = (vel_x * 0.95) + (dir_x * power)
-					local vel_y_fix = (vel_y * 0.95) + (dir_y * power)
+					local vel_x_fix = (vel_x * 0.95) + (dir_x * power * -1)
+					local vel_y_fix = (vel_y * 0.95) + (dir_y * power * -1)
 			
 					--local force_x = (velocityX*0.96) + (dir_x * Speed)
 					--local force_y = (velocityY*0.96) + (dir_y * Speed)
