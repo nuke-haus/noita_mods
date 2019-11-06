@@ -21,6 +21,10 @@ table.insert( perk_list,
 				ComponentSetValue( damagemodel, "blood_multiplier", "5.5" )
 				ComponentSetValue( damagemodel, "blood_sprite_directional", "files/nuke/perks_gfx/bloodsplatter_directional_purple_1.xml" )
 				ComponentSetValue( damagemodel, "blood_sprite_large", "files/nuke/perks_gfx/bloodsplatter_purple_1.xml" )
+
+				local resistance = tonumber(ComponentObjectGetValue( damagemodel, "damage_multipliers", "slice" ))
+				resistance = resistance * 0.6
+				ComponentObjectSetValue( damagemodel, "damage_multipliers", "slice", tostring(resistance) )
 				
 			end
 			
