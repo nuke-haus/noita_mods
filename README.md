@@ -45,7 +45,7 @@ This mod adds more perks to the game.
 
 - Upgraded Wands: All of your wands have one random stat improved, with a 25% chance that an additional stat will be improved.
 - Pheromone Blood: You bleed pheromones and gain 40% melee damage resistance.
-- Berserker Blood: You bleed a lot of berserkium.
+- Berserker Blood: You bleed a lot of berserkium and gain 40% slice damage resistance.
 - Tremor Step: The earth crumbles beneath your feet.
 - Ironskin: You gain 20% physical damage reduction but become vulnerable to electricity.
 - Barkskin: You gain 20% physical damage reduction but become vulnerable to fire.
