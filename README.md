@@ -1,3 +1,7 @@
+# Noita Enhanced
+
+
+
 # How to install
 
 1. Go to Noita's properties tab in Steam and open the beta tab. Make sure you're on the noita beta branch.
@@ -7,6 +11,8 @@
 5. In the mods menu, click on mods to enable/disable them.
 
 You will have to start a new game after doing all of this in order for the game to register the mods.
+
+
 
 ## Random starter wand
 
