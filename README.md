@@ -34,6 +34,10 @@ This mod adds 2 new elemental spells that are just as powerful and dangerous as 
 This mod is where i throw all the new spells and modifiers i've made that don't fit any other category.
 
 - Gravity Well: Your projectiles pull nearby objects and projectiles towards them.
+- Repelling Field: Your projectiles repel nearby objects and projectiles.
+- Petrify: A terrifying spell that turns almost everything nearby to stone.
+- Chaotic Trail: Projectiles leave a trail of random materials.
+- Chaotic Cloud: A strange cloud that rains random liquids.
 
 ## More perks
 
