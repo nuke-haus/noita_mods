@@ -5,7 +5,7 @@
 # How to install
 
 1. Go to Noita's properties tab in Steam and open the beta tab. Make sure you're on the noita beta branch.
-2. Your game's install folder will now have a tools_modding folder in it. Open the readme file from that folder and follow its instructions.
+2. Your game's install folder will now have a tools_modding folder in it. Open the readme file from that folder and follow its instructions. This step may become obsolete in the future.
 3. Download this repository as a zip file and place the desired mods from it (for example, random_starter_wand) in the mods folder in your game's install directory.
 4. Start the game and open the pause menu. There should be a mods button you can click. 
 5. In the mods menu, click on mods to enable/disable them.
