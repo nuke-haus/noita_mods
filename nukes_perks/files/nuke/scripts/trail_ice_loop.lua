@@ -42,4 +42,9 @@ end
 
 local blob = EntityLoad("files/nuke/entities/blob_ice.xml", x, y - 3)
 
+edit_component(blob, "ProjectileComponent", function(comp,vars)
+	vars.mWhoShot       = me
+	vars.mShooterHerdId = get_herd_id(me)
+end)
+
 ::skips::
