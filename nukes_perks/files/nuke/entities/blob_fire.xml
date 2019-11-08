@@ -33,6 +33,7 @@
         collide_with_shooter_frames="999999"
         friendly_fire="0"
         never_hit_player="1"
+        play_damage_sounds="0"
 		damage_game_effect_entities="data/entities/misc/effect_apply_on_fire.xml,">
 	</ProjectileComponent>
 
