@@ -15,7 +15,7 @@ local function length(x, y)
 
 end
 
-local me = GetUpdatedEntityID() -- the player
+local me = GetUpdatedEntityID() 
 local x, y = EntityGetTransform(me)
 local ents = EntityGetInRadiusWithTag(x, y, RADIUS, "fires_trail")
 
@@ -40,11 +40,7 @@ for k,v in pairs(ents) do
 
 end
 
-local blob = EntityLoad("files/nuke/entities/blob_fire.xml", x, y - 3)
-
-edit_component(blob, "ProjectileComponent", function(comp,vars)
-	vars.mWhoShot       = me
-	vars.mShooterHerdId = get_herd_id(me)
-end)
+local parent = EntityGetParent(me)
+local pp = shoot_projectile(parent, "files/nuke/entities/blob_fire.xml", x, y - 3, 0, 0, nil)
 
 ::skips::
