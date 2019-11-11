@@ -15,6 +15,25 @@ local function length(x, y)
 
 end
 
+local function shoot( who_shot, entity_file, x, y, vel_x, vel_y, send_message )
+	local entity_id = EntityLoad( entity_file, x, y )
+	local herd_id = 0
+	if( send_message == nil ) then send_message = true end
+
+	GameShootProjectile( who_shot, x, y, x+vel_x, y+vel_y, entity_id, send_message )
+
+	edit_component( entity_id, "ProjectileComponent", function(comp,vars)
+		vars.mWhoShot       = who_shot
+		vars.mShooterHerdId = herd_id
+	end)
+
+	edit_component( entity_id, "VelocityComponent", function(comp,vars)
+		ComponentSetValueVector2( comp, "mVelocity", vel_x, vel_y )
+	end)
+
+	return entity_id
+end
+
 local me = GetUpdatedEntityID() -- player
 local x, y = EntityGetTransform(me)
 local ents = EntityGetInRadiusWithTag(x, y, RADIUS, "ice_trail")
@@ -40,6 +59,6 @@ for k,v in pairs(ents) do
 
 end
 
-local pp = shoot_projectile(me, "files/nuke/entities/blob_ice.xml", x, y - 3, 0, 0, nil)
+shoot(me, "files/nuke/entities/blob_ice.xml", x, y - 3, 0, 0, nil)
 
 ::skips::
