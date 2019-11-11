@@ -15,7 +15,7 @@ local function length(x, y)
 
 end
 
-local me = GetUpdatedEntityID()
+local me = GetUpdatedEntityID() -- player
 local x, y = EntityGetTransform(me)
 local ents = EntityGetInRadiusWithTag(x, y, RADIUS, "ice_trail")
 
@@ -40,7 +40,6 @@ for k,v in pairs(ents) do
 
 end
 
-local parent = EntityGetParent(me)
-local pp = shoot_projectile(parent, "files/nuke/entities/blob_ice.xml", x, y - 3, 0, 0, nil)
+local pp = shoot_projectile(me, "files/nuke/entities/blob_ice.xml", x, y - 3, 0, 0, nil)
 
 ::skips::

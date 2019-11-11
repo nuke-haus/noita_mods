@@ -8,11 +8,14 @@ table.insert( perk_list,
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/trail_fire.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/trail_fire.png",
 	func = function(perk_item, player, item_name)
-		
-		local x,y = EntityGetTransform(player)
-		local child_id = EntityLoad("files/nuke/entities/trail_fire.xml", x, y)
-		
-		EntityAddChild(player, child_id)
+
+		local tbl = {
+			script_source_file="files/nuke/scripts/trail_fire_loop.lua",
+			execute_on_added="1",
+			execute_every_n_frame="2",
+			execute_times="-1" }
+	
+		EntityAddComponent(player, "LuaComponent", tbl ) 
 		
 	end,
 })
