@@ -87,7 +87,7 @@ This mod makes it easier to get unstuck when you get caught on pixels of ice. If
 
 ## Simple invincibility frames
 
-This mod makes the player invincible for a very short time span when they take damage. You can tweak the iframe settings in CONFIG_IFRAMES.lua, open it with Notepad++ or some other text editor.
+This mod makes the player invincible for a very short time span when they take damage. You can tweak the settings in CONFIG_IFRAMES.lua, open it with Notepad++ or some other text editor.
 
 ## Better procedural wands
 
