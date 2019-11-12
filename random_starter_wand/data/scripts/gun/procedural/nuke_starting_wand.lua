@@ -38,9 +38,9 @@ local gun = { }
 gun.name = {"Bolt staff"}
 gun.deck_capacity = {2,3}
 gun.actions_per_round = 1
-gun.reload_time = {20,35}
+gun.reload_time = {20,30}
 gun.shuffle_deck_when_empty = 0
-gun.fire_rate_wait = {9,15}
+gun.fire_rate_wait = {10,15}
 gun.spread_degrees = 0
 gun.speed_multiplier = 1
 gun.mana_charge_speed = {25,40}
@@ -51,9 +51,11 @@ if ( Random(1,3) == 1 ) then
 
 	table.insert( gun.actions, "DISC_BULLET" )
 	table.insert( gun.actions, "BOUNCY_ORB" )
+	table.insert( gun.actions, "BULLET" )
+	table.insert( gun.actions, "LIGHT_BULLET_TRIGGER_2" )
 	table.insert( gun.actions, "BUBBLESHOT" )
 	table.insert( gun.actions, "BUBBLESHOT_TRIGGER" )
-	
+
 end
 
 local gun_action = get_random_from( gun.actions )
@@ -61,12 +63,12 @@ local mana_max = get_random_between_range( gun.mana_max )
 local deck_capacity = get_random_between_range( gun.deck_capacity )
 local action_count = math.min( Random( 1, 3 ), tonumber( deck_capacity ) )
 
-if ( gun_action == "BOUNCY_ORB" or gun_action == "DISC_BULLET" ) then
+if ( gun_action == "BOUNCY_ORB" or gun_action == "DISC_BULLET" or gun_action == "BULLET" ) then
 
-	gun.reload_time = {45,50}
-	gun.fire_rate_wait = {20,30}
+	gun.reload_time = {45,55}
+	gun.fire_rate_wait = {30,45}
 	deck_capacity = math.min( 2, deck_capacity )
-	action_count = math.min( 2, action_count )
+	action_count = 1
 
 elseif ( gun_action == "RUBBER_BALL" ) then
 
@@ -75,14 +77,36 @@ elseif ( gun_action == "RUBBER_BALL" ) then
 
 elseif ( gun_action == "BUBBLESHOT" or gun_action == "BUBBLESHOT_TRIGGER" ) then
 
-	gun.spread_degrees = -8
+	gun.spread_degrees = -14
 	gun.reload_time = {15,25}
 
-elseif ( (string.find(gun_action, "TRIGGER") ~= nil or string.find(gun_action, "TIMER") ~= nil) and action_count > 1 ) then
+elseif ( gun_action == "LIGHT_BULLET_TRIGGER" or gun_action == "LIGHT_BULLET_TIMER" ) then
 
-	gun.reload_time = {45,50}
-	deck_capacity = math.min( 2, deck_capacity )
-	action_count = math.min( 2, action_count )
+	gun.reload_time = {30,40}
+	deck_capacity = math.max( 2, deck_capacity )
+	action_count = math.max( 2, action_count )
+
+elseif ( gun_action == "SPITTER_TIMER" or gun_action == "SPITTER" ) then
+
+	gun.reload_time = {40,50}
+	deck_capacity = math.max( 2, deck_capacity )
+	action_count = Random( 1, deck_capacity )
+	gun.spread_degrees = -1
+
+elseif ( gun_action == "LIGHT_BULLET_TRIGGER_2" ) then
+
+	gun.reload_time = {30,40}
+	deck_capacity = math.max( 2, deck_capacity )
+	action_count = Random( 1, deck_capacity )
+
+elseif ( gun_action == "LIGHT_BULLET" ) then
+
+	deck_capacity = math.max( 2, deck_capacity )
+	action_count = math.max( 2, action_count )
+
+elseif ( gun_action == "ARROW" ) then
+
+	gun.reload_time = {35,45}
 
 end
 
