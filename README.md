@@ -85,6 +85,10 @@ I tried to keep this mod balanced so that the wands you find aren't too powerful
 
 This mod makes it easier to get unstuck when you get caught on pixels of ice. If you find yourself encased in ice somehow, you can dig upwards slowly to escape.
 
+## Simple invincibility frames
+
+This mod makes the player invincible for a very short time span when they take damage. You can tweak the iframe settings in CONFIG_IFRAMES.lua, open it with Notepad++ or some other text editor.
+
 ## Better procedural wands
 
 This mod improves the algorithm the game uses to generate random wands found on pedestals. With this mod active, wands that are spawned without any sort of projectile spell will have one added so that you don't end up finding a useless wand that can't cast anything.
