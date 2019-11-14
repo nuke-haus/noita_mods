@@ -55,11 +55,12 @@ This mod tweaks the jetpack particles to be affected by airflow. They look coole
 
 ## More altars
 
-This mod adds 3 altars to the first 2 levels. They have a small chance to appear so you won't find them very often.
+This mod adds 4 altars to the first 2 levels. They have a small chance to appear so you won't find them very often.
 
 - Blood Altar: The Gods desire an offering of flesh.
 - Stone Altar: The Gods desire an offering of stone tablets.
 - Magic Altar: The Gods desire an offering of wands or magic spells.
+- Corrupted Altar: ???
 
 The wrong offering may offend the Gods.
 
