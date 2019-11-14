@@ -1,0 +1,48 @@
+<Materials>
+
+    <CellDataChild
+
+        _parent="aluminium"
+        _inherit_reactions="1"
+        tags="[box2d]"
+        name="gorgon_box2d"
+        ui_name="Dense Stone"
+        platform_type="1"
+        requires_oxygen="0"
+        hp="900000" 
+        durability="900000"
+        wang_color="ff2d2269"
+        electrical_conductivity="0"
+        audio_physics_material_wall="rock"
+        audio_physics_material_solid="rock"
+        audio_size_multiplier="3.0" >
+
+        <Graphics
+            texture_file="data/materials_gfx/rock.png"
+            color="ff2d2dac" >
+        </Graphics>
+
+  </CellDataChild>
+
+  <CellDataChild
+
+  	_parent="aluminium"
+  	_inherit_reactions="1"
+  	tags="[box2d]"
+  	name="gorgon_box2d_nohit"
+	  ui_name="Dense Stone"
+	  electrical_conductivity="0"
+	  hp="1200" 
+    durability="10"
+	  wang_color="ff3d24bc"
+	  audio_physics_material_wall="rock"
+	  audio_physics_material_solid="rock" >
+
+  	<Graphics
+		texture_file="data/materials_gfx/rock.png"
+		color="ff2d2dac" >
+    </Graphics>
+
+  </CellDataChild>
+
+</Materials>

@@ -63,7 +63,7 @@ end
 if (spr ~= nil and spr ~= 0) then
 
 	local size = (cur_rad / RADIUS) * 2.0
-	local a = 0.6 - ((cur_rad / RADIUS) * 0.6)
+	local a = 1.0 - ((cur_rad / RADIUS) * 1.0)
 
 	ComponentSetValue(spr, "special_scale_x", size)
 	ComponentSetValue(spr, "special_scale_y", size)
@@ -86,27 +86,14 @@ for k,v in pairs(ents) do
 
 	end
 
+	local is_alive = false
+	local hit_me_already = false
+	local valid_dmg = true
+
 	if (dmg == nil) then
 
 		dmg = {}
-
-	end
-
-	local is_alive = false
-
-	if (EntityHasTag(v, "boss_centipede") == false) then
-
-		local px, py = EntityGetTransform(v)
-		local hit_me_already = false
-
-		edit_component_with_tag(me, "VariableStorageComponent", ("hit_once_" .. v), function(comp, vars) hit_me_already = true end )
-
-		if (hit_me_already == false) then
-
-			EntityAddComponent(me, "VariableStorageComponent", {name="hit_once_" .. v})
-			EntityLoad("files/nuke/entities/instagib.xml", px, py)
-
-		end
+		valid_dmg = false
 
 	end
 
@@ -115,22 +102,20 @@ for k,v in pairs(ents) do
 		ComponentSetValue(n, "drop_items_on_death", "0")
 		ComponentSetValue(n, "blood_multiplier", "0")
 
-		is_alive = true
-
 	end
 
 	local px, py = EntityGetTransform(v)
-	local hit_me_already = false
 
 	edit_component_with_tag(me, "VariableStorageComponent", ("hit_once_" .. v), function(comp, vars) hit_me_already = true end )
 
-	if (is_alive and hit_me_already == false) then
+	if (hit_me_already == false and valid_dmg) then -- using some var storage tricks to make sure we dont instakill enemies like the boss
 
-		EntityAddComponent(me, "VariableStorageComponent", {name="hit_once_" .. v})
+		EntityAddComponent(me, "VariableStorageComponent", {name=("hit_once_" .. v), _tags=("hit_once_" .. v)})
+
 		EntityAddComponent(v, "VariableStorageComponent", {name="no_gold_drop", _tags="no_gold_drop"})
 		EntityLoad("files/nuke/entities/instagib.xml", px, py)
 
-	end 
+	end
 
 	if (proj ~= nil and proj ~= 0) then
 

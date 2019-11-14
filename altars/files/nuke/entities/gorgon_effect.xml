@@ -1,0 +1,193 @@
+<Entity>
+
+  <InheritTransformComponent>
+  </InheritTransformComponent>
+
+  <ParticleEmitterComponent
+      emitted_material_name="spark_green"
+			offset.x="0"
+			offset.y="0"
+			x_pos_offset_min="-9"
+			x_pos_offset_max="-6"
+			y_pos_offset_min="4"
+			y_pos_offset_max="6"
+			x_vel_min="-2"
+			x_vel_max="2"
+			y_vel_min="-10"
+			y_vel_max="-6"
+			count_min="4"
+			count_max="8"
+			lifetime_min="2.6"
+			lifetime_max="3.8"
+			fade_based_on_lifetime="1"
+			create_real_particles="0"
+			emit_cosmetic_particles="1"
+			collide_with_grid="0"
+			emission_interval_min_frames="4"
+			emission_interval_max_frames="6"
+			gravity.y="0"
+			airflow_force="0.36"
+			airflow_time="1.20"
+			airflow_scale="0.28"
+			is_emitting="1" >
+  </ParticleEmitterComponent>
+
+   <ParticleEmitterComponent
+      emitted_material_name="spark_green"
+			offset.x="0"
+			offset.y="0"
+			x_pos_offset_min="6"
+			x_pos_offset_max="9"
+			y_pos_offset_min="4"
+			y_pos_offset_max="6"
+			x_vel_min="-2"
+			x_vel_max="2"
+			y_vel_min="-10"
+			y_vel_max="-6"
+			count_min="4"
+			count_max="8"
+			lifetime_min="2.6"
+			lifetime_max="3.8"
+			fade_based_on_lifetime="1"
+			create_real_particles="0"
+			emit_cosmetic_particles="1"
+			collide_with_grid="0"
+			emission_interval_min_frames="4"
+			emission_interval_max_frames="6"
+			gravity.y="0"
+			airflow_force="0.36"
+			airflow_time="1.20"
+			airflow_scale="0.28"
+			is_emitting="1" >
+  </ParticleEmitterComponent>
+
+  <ParticleEmitterComponent
+      emitted_material_name="spark_green"
+			offset.x="0"
+			offset.y="0"
+			x_pos_offset_min="-41"
+			x_pos_offset_max="-41"
+			y_pos_offset_min="-17"
+			y_pos_offset_max="-17"
+			x_vel_min="-4"
+			x_vel_max="4"
+			y_vel_min="-10"
+			y_vel_max="-6"
+			count_min="2"
+			count_max="6"
+			lifetime_min="2.6"
+			lifetime_max="3.8"
+			fade_based_on_lifetime="1"
+			create_real_particles="0"
+			emit_cosmetic_particles="1"
+			collide_with_grid="0"
+			emission_interval_min_frames="8"
+			emission_interval_max_frames="16"
+			gravity.y="0"
+			airflow_force="0.36"
+			airflow_time="1.20"
+			airflow_scale="0.28"
+			is_emitting="1" >
+  </ParticleEmitterComponent>
+
+  <ParticleEmitterComponent
+      emitted_material_name="spark_green"
+			offset.x="0"
+			offset.y="0"
+			x_pos_offset_min="41"
+			x_pos_offset_max="41"
+			y_pos_offset_min="-17"
+			y_pos_offset_max="-17"
+			x_vel_min="-4"
+			x_vel_max="4"
+			y_vel_min="-10"
+			y_vel_max="-6"
+			count_min="2"
+			count_max="6"
+			lifetime_min="2.6"
+			lifetime_max="3.8"
+			fade_based_on_lifetime="1"
+			create_real_particles="0"
+			emit_cosmetic_particles="1"
+			collide_with_grid="0"
+			emission_interval_min_frames="8"
+			emission_interval_max_frames="16"
+			gravity.y="0"
+			airflow_force="0.36"
+			airflow_time="1.20"
+			airflow_scale="0.28"
+			is_emitting="1" >
+  </ParticleEmitterComponent>
+
+  <ParticleEmitterComponent
+      emitted_material_name="spark_green"
+			offset.x="0"
+			offset.y="0"
+			x_pos_offset_min="-4"
+			x_pos_offset_max="4"
+			y_pos_offset_min="-8"
+			y_pos_offset_max="-6"
+			x_vel_min="-4"
+			x_vel_max="4"
+			y_vel_min="-12"
+			y_vel_max="-8"
+			count_min="6"
+			count_max="8"
+			lifetime_min="3.6"
+			lifetime_max="4.8"
+			fade_based_on_lifetime="1"
+			create_real_particles="0"
+			emit_cosmetic_particles="1"
+			collide_with_grid="0"
+			emission_interval_min_frames="4"
+			emission_interval_max_frames="8"
+			gravity.y="0"
+			airflow_force="0.38"
+			airflow_time="1.20"
+			airflow_scale="0.32"
+			is_emitting="1" >
+  </ParticleEmitterComponent>
+
+    <MusicEnergyAffectorComponent
+    	energy_target="1"
+		trigger_danger_music="1">
+    </MusicEnergyAffectorComponent>
+
+    <AudioLoopComponent
+	    _tags="enabled_in_world"
+		_enabled="1"
+		file="data/audio/Desktop/projectiles.snd"
+		event_name="player_projectiles/torch/loop"
+		auto_play_if_enabled="1"
+		play_on_component_enable="1" >
+	</AudioLoopComponent>
+
+	<AudioLoopComponent
+	    _tags="enabled_in_world"
+		_enabled="1"
+		file="data/audio/Desktop/projectiles.snd"
+		event_name="player_projectiles/torch/loop"
+		auto_play_if_enabled="1"
+		play_on_component_enable="1" >
+	</AudioLoopComponent>
+
+	<AudioLoopComponent
+	    _tags="enabled_in_world"
+		_enabled="1"
+		file="data/audio/Desktop/projectiles.snd"
+		event_name="player_projectiles/torch/loop"
+		auto_play_if_enabled="1"
+		play_on_component_enable="1" >
+	</AudioLoopComponent>
+
+	<AudioLoopComponent
+	    _tags="enabled_in_world"
+		_enabled="1"
+		file="data/audio/Desktop/projectiles.snd"
+		event_name="player_projectiles/torch/loop"
+		auto_play_if_enabled="1"
+		play_on_component_enable="1" >
+	</AudioLoopComponent>
+
+</Entity>
+
