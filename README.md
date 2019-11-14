@@ -64,6 +64,8 @@ This mod adds 4 altars to the first 2 levels. They have a small chance to appear
 
 The wrong offering may offend the Gods.
 
+NOTE: This mod requires the more spells mod in order to work properly.
+
 ## More magical stones
 
 This mod adds 3 new magical stones to the game and also slightly increases your chance of finding a magical stone on a pedestal.
