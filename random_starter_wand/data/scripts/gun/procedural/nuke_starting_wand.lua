@@ -63,9 +63,9 @@ local mana_max = get_random_between_range( gun.mana_max )
 local deck_capacity = get_random_between_range( gun.deck_capacity )
 local action_count = math.min( Random( 1, 3 ), tonumber( deck_capacity ) )
 
-if ( gun_action == "BOUNCY_ORB" or gun_action == "DISC_BULLET" or gun_action == "BULLET" ) then
+if ( gun_action == "BOUNCY_ORB" or gun_action == "DISC_BULLET" or gun_action == "BULLET" or gun_action == "LIGHT_BULLET_TRIGGER_2" ) then
 
-	gun.reload_time = {45,55}
+	gun.reload_time = {60,70}
 	gun.fire_rate_wait = {30,45}
 	deck_capacity = math.min( 2, deck_capacity )
 	action_count = 1
@@ -82,7 +82,12 @@ elseif ( gun_action == "BUBBLESHOT" or gun_action == "BUBBLESHOT_TRIGGER" ) then
 
 elseif ( gun_action == "LIGHT_BULLET_TRIGGER" or gun_action == "LIGHT_BULLET_TIMER" ) then
 
-	gun.reload_time = {30,40}
+	gun.reload_time = {25,35}
+	deck_capacity = math.max( 2, deck_capacity )
+	action_count = math.max( 2, action_count )
+
+elseif ( gun_action == "LIGHT_BULLET" ) then
+
 	deck_capacity = math.max( 2, deck_capacity )
 	action_count = math.max( 2, action_count )
 
@@ -92,17 +97,6 @@ elseif ( gun_action == "SPITTER_TIMER" or gun_action == "SPITTER" ) then
 	deck_capacity = math.max( 2, deck_capacity )
 	action_count = Random( 1, deck_capacity )
 	gun.spread_degrees = -1
-
-elseif ( gun_action == "LIGHT_BULLET_TRIGGER_2" ) then
-
-	gun.reload_time = {30,40}
-	deck_capacity = math.max( 2, deck_capacity )
-	action_count = Random( 1, deck_capacity )
-
-elseif ( gun_action == "LIGHT_BULLET" ) then
-
-	deck_capacity = math.max( 2, deck_capacity )
-	action_count = math.max( 2, action_count )
 
 elseif ( gun_action == "ARROW" ) then
 
