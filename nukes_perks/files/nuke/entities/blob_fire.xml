@@ -146,7 +146,7 @@
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
@@ -156,37 +156,37 @@
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
       _tags="enabled_in_world,enabled_in_hand"
       from_material="ice_glass"
-      to_material="water"
+      to_material="steam"
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
       _tags="enabled_in_world,enabled_in_hand"
       from_material="ice_blood_glass"
-      to_material="blood"
+      to_material="steam"
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
       _tags="enabled_in_world,enabled_in_hand"
       from_material="ice_radioactive_glass"
-      to_material="radioactive_liquid"
+      to_material="radioactive_gas"
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
@@ -196,57 +196,57 @@
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
       _tags="enabled_in_world,enabled_in_hand"
       from_material="ice_poison_glass"
-      to_material="poison"
+      to_material="poison_gas"
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
       _tags="enabled_in_world,enabled_in_hand"
       from_material="ice_acid_glass"
-      to_material="acid"
+      to_material="acid_gas"
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
       _tags="enabled_in_world,enabled_in_hand"
       from_material="ice_static"
-      to_material="water"
+      to_material="steam"
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
       _tags="enabled_in_world,enabled_in_hand"
       from_material="ice_blood_static"
-      to_material="blood"
+      to_material="steam"
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
       _tags="enabled_in_world,enabled_in_hand"
       from_material="ice_radioactive_static"
-      to_material="radioactive_liquid"
+      to_material="radioactive_gas"
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
@@ -256,67 +256,67 @@
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
       _tags="enabled_in_world,enabled_in_hand"
       from_material="ice_poison_static"
-      to_material="poison"
+      to_material="poison_gas"
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
       _tags="enabled_in_world,enabled_in_hand"
       from_material="ice_acid_static"
-      to_material="acid"
+      to_material="acid_gas"
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
       _tags="enabled_in_world,enabled_in_hand"
       from_material="ice"
-      to_material="water"
+      to_material="steam"
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
       _tags="enabled_in_world,enabled_in_hand"
       from_material="snow"
-      to_material="water"
+      to_material="steam"
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
       _tags="enabled_in_world,enabled_in_hand"
       from_material="snow_static"
-      to_material="water"
+      to_material="steam"
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
       _tags="enabled_in_world,enabled_in_hand"
       from_material="snow_sticky"
-      to_material="water"
+      to_material="steam"
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
@@ -396,7 +396,7 @@
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
@@ -406,7 +406,7 @@
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
@@ -416,7 +416,7 @@
       steps_per_frame="2"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
 </Entity>

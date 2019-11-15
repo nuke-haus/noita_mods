@@ -74,19 +74,30 @@
 	<MagicConvertMaterialComponent
 		_tags="enabled_in_world,enabled_in_hand"
 		extinguish_fire="1"
+        steps_per_frame="1"
 		loop="1"
 		is_circle="1"
-		radius="6" >
+		radius="10" >
     </MagicConvertMaterialComponent>
 	
 	<MagicConvertMaterialComponent
+        _tags="enabled_in_world,enabled_in_hand"
+        from_material="fire"
+        to_material="smoke"
+        steps_per_frame="1"
+        loop="1"
+		is_circle="1"
+        radius="8" >
+    </MagicConvertMaterialComponent>
+
+    <MagicConvertMaterialComponent
         _tags="enabled_in_world,enabled_in_hand"
         from_material="lava"
         to_material="rock_static"
         steps_per_frame="1"
         loop="1"
 		is_circle="1"
-        radius="5" >
+        radius="6" >
     </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
@@ -96,7 +107,7 @@
       steps_per_frame="1"
       loop="1"
 	  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
@@ -106,7 +117,7 @@
       steps_per_frame="1"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
@@ -116,7 +127,7 @@
       steps_per_frame="1"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
@@ -126,7 +137,7 @@
       steps_per_frame="1"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
@@ -136,7 +147,7 @@
       steps_per_frame="1"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 
   <MagicConvertMaterialComponent
@@ -146,7 +157,7 @@
       to_material="ice_static"
       is_circle="1"
       loop="1"
-      radius="5" >
+      radius="6" >
     </MagicConvertMaterialComponent>
 
     <MagicConvertMaterialComponent
@@ -156,7 +167,7 @@
       steps_per_frame="1"
       loop="1"
 		  is_circle="1"
-      radius="5" >
+      radius="6" >
   </MagicConvertMaterialComponent>
 	
 	<MagicConvertMaterialComponent
@@ -166,7 +177,7 @@
       to_material="ice_static"
       is_circle="1"
       loop="1"
-      radius="5" >
+      radius="6" >
     </MagicConvertMaterialComponent>
 	
 	<MagicConvertMaterialComponent
@@ -176,7 +187,7 @@
       to_material="ice_static"
       is_circle="1"
       loop="1"
-      radius="5" >
+      radius="6" >
     </MagicConvertMaterialComponent>
 	
 	<MagicConvertMaterialComponent
@@ -186,7 +197,7 @@
       to_material="ice_static"
       is_circle="1"
       loop="1"
-      radius="5" >
+      radius="6" >
     </MagicConvertMaterialComponent>
 	
 	<MagicConvertMaterialComponent
@@ -196,7 +207,7 @@
       to_material="ice_static"
       is_circle="1"
       loop="1"
-      radius="5" >
+      radius="6" >
     </MagicConvertMaterialComponent>
 
 </Entity>

@@ -45,7 +45,8 @@ function do_level1( level )
 		"ARROW",
 		"DISC_BULLET",
 		"BOUNCY_ORB",
-		"BULLET"
+		"BULLET",
+		"BULLET_TIMER",
 	}	
 
 	local level_1_mods = 
@@ -62,6 +63,8 @@ function do_level1( level )
 		"SCATTER_3",
 		"BURST_2",
 		"BURST_3",
+		"AIR_BULLET",
+		"LIGHT_BULLET_TRIGGER_2",
 		"TORCH_ELECTRIC",
 		"TORCH",
 		"TORCH",
@@ -99,6 +102,8 @@ function do_level1( level )
 			"MIST_ALCOHOL", --new
 			"X_RAY",
 			"FREEZE_FIELD",
+			"LEVITATION_FIELD",
+			"SUMMON_ROCK",
 			"BLACK_HOLE"
 		}
 		

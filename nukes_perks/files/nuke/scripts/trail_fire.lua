@@ -16,6 +16,12 @@ table.insert( perk_list,
 			execute_times="-1" }
 	
 		EntityAddComponent(player, "LuaComponent", tbl ) 
+
+		local tbl2 = {
+			name="trailstuff",
+			value_string="0,0" }
+
+		EntityAddComponent(player, "VariableStorageComponent", tbl2)
 		
 	end,
 })
