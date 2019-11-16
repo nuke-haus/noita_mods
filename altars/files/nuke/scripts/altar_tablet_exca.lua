@@ -6,7 +6,7 @@ local tab_altar = {
 	material_file 	= "files/nuke/biome_impl/exca_altar_tablet.png",
 	visual_file		= "files/nuke/biome_impl/exca_altar_tablet_visual.png",
 	background_file	= "",
-	is_unique		= 0,
+	is_unique		= 1,
 }
 
 local tab_altar2 = {
@@ -14,7 +14,7 @@ local tab_altar2 = {
 	material_file 	= "files/nuke/biome_impl/exca_altar_tablet.png",
 	visual_file		= "files/nuke/biome_impl/exca_altar_tablet_visual.png",
 	background_file	= "",
-	is_unique		= 0,
+	is_unique		= 1,
 }
 
 table.insert(g_pixel_scene_04, tab_altar)
