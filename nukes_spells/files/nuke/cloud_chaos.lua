@@ -7,9 +7,9 @@ table.insert( actions,
 	type 		= ACTION_TYPE_STATIC_PROJECTILE,
 	spawn_level                       = "2,3,4,5", 
 	spawn_probability                 = "1,1,1,1", 
-	price = 180,
-	mana = 30,
-	uses = 2,
+	price = 190,
+	mana = 60,
+	max_uses = 3,
 	action 		= function()
 		add_projectile("files/nuke/entities/cloud_chaos.xml")
 		c.fire_rate_wait = c.fire_rate_wait + 35
