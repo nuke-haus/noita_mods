@@ -10,7 +10,7 @@ table.insert( actions,
 	price = 200,
 	mana = 60,
 	max_uses = 4,
-	custom_xml_file = "data/entities/misc/custom_cards/bomb.xml",
+	custom_xml_file = "files/nuke/entities/bomb_cluster_hand.xml",
 	action = function()
 		add_projectile("files/nuke/entities/bomb_cluster.xml")
 		c.fire_rate_wait = c.fire_rate_wait + 100

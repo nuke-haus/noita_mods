@@ -1,0 +1,40 @@
+<Entity>
+	
+	<Base file="data/entities/base_custom_card.xml" > 
+	    <ItemComponent
+	        _tags="enabled_in_world,enabled_in_hand,enabled_in_world"
+    		is_equipable_forced="1" >
+	    </ItemComponent>
+
+		<SpriteComponent 
+			image_file="files/nuke/spell_gfx/bomb_cluster.png" 
+		></SpriteComponent>
+		
+		<ItemActionComponent 
+			_tags="enabled_in_world"
+			action_id="BOMB_CLUSTER" >
+		</ItemActionComponent>
+	</Base>
+
+	<SpriteComponent
+		_tags="enabled_in_hand,not_enabled_in_wand"
+		_enabled="false"
+		offset_x="2.5"
+		offset_y="2.0"
+    	image_file="files/nuke/sprites/bomb_cluster_hand.png" >
+	</SpriteComponent>
+
+	<AbilityComponent
+		_tags="enabled_in_hand"
+		ui_name="TNT Bundle"
+		entity_file="files/nuke/entities/bomb_cluster.xml"
+		rotate_hand_amount="0.05"
+		throw_as_item="1" 
+		simulate_throw_as_item="1"
+		use_entity_file_as_projectile_info_proxy="1"
+	><gun_config
+		deck_capacity="0"
+	></gun_config>
+	</AbilityComponent>
+
+</Entity>

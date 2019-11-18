@@ -26,7 +26,7 @@
       direction_random_rad="3.14"
 	    damage="0"
       on_death_explode="1"
-      lifetime="160"
+      lifetime="140"
       bounce_energy="0.8"
 	  ><config_explosion
 		  damage="2.8"
