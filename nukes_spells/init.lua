@@ -21,6 +21,7 @@ ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "files/nuke/repelling_fiel
 ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "files/nuke/petrify.lua")
 ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "files/nuke/cloud_chaos.lua")
 ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "files/nuke/trail_chaos.lua")
+ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "files/nuke/bomb_cluster.lua")
 
 print("More spells mod initialization done.")
 

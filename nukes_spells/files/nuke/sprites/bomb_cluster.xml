@@ -1,0 +1,22 @@
+<Sprite 
+	filename="files/nuke/sprites/bomb_cluster.png" 
+	offset_x="3" 
+	offset_y="3" 
+	>
+	
+  <RectAnimation 
+	name="default" 
+	pos_x="1" 
+	pos_y="1" 
+	offset_x="6" 
+	offset_y="6" 
+	has_offset="1"
+	frame_count="1" 
+	frame_width="11" 
+	frame_height="12" 
+	frame_wait="0.2" 
+	frames_per_row="1" 
+	loop="0"  >
+  </RectAnimation>
+  
+</Sprite>
