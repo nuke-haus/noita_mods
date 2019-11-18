@@ -28,6 +28,7 @@ This mod is where i throw all the new spells and modifiers i've made that don't 
 - Petrify: A terrifying spell that turns almost everything nearby to stone.
 - Chaotic Trail: Projectiles leave a trail of random materials.
 - Chaotic Cloud: A strange cloud that rains random liquids.
+- Dynamite Bundle: A bomb that explodes and scatters several sticks of dynamite.
 
 ## More perks
 
