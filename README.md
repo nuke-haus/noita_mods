@@ -93,6 +93,10 @@ This mod makes it easier to get unstuck when you get caught on pixels of ice. If
 
 This mod makes the player invincible for a very short time span when they take damage. You can tweak the settings in CONFIG_IFRAMES.lua, open it with Notepad++ or some other text editor.
 
+## Improved Workshop
+
+This mod changes the logic used in the workshops for spawning items you can buy. It ensures that there will always be 2 or 3 wands you can purchase. The rest of the shop items will be spells.
+
 ## Better procedural wands
 
 This mod improves the algorithm the game uses to generate random wands found on pedestals. With this mod active, wands that are spawned without any sort of projectile spell will have one added so that you don't end up finding a useless wand that can't cast anything.
