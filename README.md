@@ -97,6 +97,10 @@ This mod makes the player invincible for a very short time span when they take d
 
 This mod changes the logic used in the workshops for spawning items you can buy. It ensures that there will always be 2 or 3 wands you can purchase. The rest of the shop items will be spells.
 
+## Peaceful shopping
+
+This mod moves the angry god spawn point to the temple exit so you can buy wands in peace. He will still be pissed off and waiting for you.
+
 ## Better procedural wands
 
 This mod improves the algorithm the game uses to generate random wands found on pedestals. With this mod active, wands that are spawned without any sort of projectile spell will have one added so that you don't end up finding a useless wand that can't cast anything.
