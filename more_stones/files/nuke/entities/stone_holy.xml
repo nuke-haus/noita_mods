@@ -226,6 +226,16 @@
 		  is_circle="1"
       radius="12" >
   </MagicConvertMaterialComponent>
+
+  <MagicConvertMaterialComponent
+      _tags="enabled_in_world,enabled_in_hand"
+      from_material="magic_liquid_teleportation"
+      to_material="water"
+      steps_per_frame="2"
+      loop="1"
+		  is_circle="1"
+      radius="12" >
+  </MagicConvertMaterialComponent>
 	
   <!-- item crap -->
 
