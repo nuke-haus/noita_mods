@@ -116,7 +116,7 @@ function generate_shop_item( x, y, cheap_item, biomeid_, is_stealable )
 	-- this makes the shop items deterministic
 	SetRandomSeed( x, y )
 
-	if (GlobalsGetValue("PERKS_4_SALE") == "true" and Random(1,20) <= 5) then -- 25% chance items are replaced with perks
+	if (GlobalsGetValue("PERKS_4_SALE") == "true" and Random(1,20) <= 6) then -- 30% chance items are replaced with perks
 
 		generate_shop_perk(x, y, cheap_item)
 		return
