@@ -119,5 +119,12 @@ if ENABLE_BLOODPACT_PERK then
 
 end
 
+if ENABLE_PERKS_4_SALE_PERK then
+
+	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/nukes_perks/files/nuke/scripts/perks_4_sale.lua" )
+	ModLuaFileAppend( "data/scripts/items/generate_shop_item.lua", "mods/nukes_perks/files/nuke/scripts/perks_shop.lua" )
+
+end
+
 print("More perks mod initialization done.")
 
