@@ -47,6 +47,8 @@ This mod adds more perks to the game.
 - Burning Afterimage: You leave a trail of magical flames wherever you go.
 - Freezing Afterimage: You leave a trail of freezing magic wherever you go.
 - Inferno: You are immune to fire, but you are constantly shrouded in flames.
+- Perk Gamble: You gain two random perks.
+- Blood Pact: You gain four random perks but your maximum health is halved.
 
 You can toggle individual perks in CONFIG.lua, open it with Notepad++ or some other text editor.
 
