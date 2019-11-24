@@ -49,6 +49,7 @@ This mod adds more perks to the game.
 - Inferno: You are immune to fire, but you are constantly shrouded in flames.
 - Perk Gamble: You gain two random perks.
 - Blood Pact: You gain four random perks but your maximum health is halved.
+- Perks For Sale: Perks are sometimes available for purchase in the temple shop.
 
 You can toggle individual perks in CONFIG.lua, open it with Notepad++ or some other text editor.
 
