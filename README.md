@@ -105,6 +105,10 @@ This mod changes the logic used in the workshops for spawning items you can buy.
 
 This mod moves the angry god spawn point to the temple exit so you can buy wands in peace. He will still be pissed off and waiting for you.
 
+## Angry god bounty
+
+This mod makes the temple guardian drop a random perk when killed.
+
 ## Better procedural wands
 
 This mod improves the algorithm the game uses to generate random wands found on pedestals. With this mod active, wands that are spawned without any sort of projectile spell will have one added so that you don't end up finding a useless wand that can't cast anything.
