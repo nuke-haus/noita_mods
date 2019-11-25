@@ -47,6 +47,7 @@ function do_level1( level )
 		"BOUNCY_ORB",
 		"BULLET",
 		"BULLET_TIMER",
+		"AIR_BULLET"
 	}	
 
 	local level_1_mods = 
@@ -63,7 +64,6 @@ function do_level1( level )
 		"SCATTER_3",
 		"BURST_2",
 		"BURST_3",
-		"AIR_BULLET",
 		"LIGHT_BULLET_TRIGGER_2",
 		"TORCH_ELECTRIC",
 		"TORCH",

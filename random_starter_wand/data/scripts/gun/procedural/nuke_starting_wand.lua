@@ -45,7 +45,7 @@ gun.spread_degrees = 0
 gun.speed_multiplier = 1
 gun.mana_charge_speed = {25,40}
 gun.mana_max = {100,140}
-gun.actions = { "LIGHT_BULLET", "LIGHT_BULLET_TRIGGER", "LIGHT_BULLET_TIMER", "SPITTER", "SPITTER_TIMER", "RUBBER_BALL", "ARROW"}
+gun.actions = { "LIGHT_BULLET", "LIGHT_BULLET_TRIGGER", "LIGHT_BULLET_TIMER", "SPITTER", "SPITTER_TIMER", "RUBBER_BALL", "ARROW", "AIR_BULLET" }
 
 if ( Random(1,3) == 1 ) then
 
@@ -101,6 +101,13 @@ elseif ( gun_action == "SPITTER_TIMER" or gun_action == "SPITTER" ) then
 elseif ( gun_action == "ARROW" ) then
 
 	gun.reload_time = {35,45}
+
+elseif ( gun_action == "AIR_BULLET" ) then
+
+	gun.reload_time = {40,50}
+	gun.fire_rate_wait = {20,30}
+	deck_capacity = Random( 2, 3 )
+	action_count = Random( 1, 2 )
 
 end
 
