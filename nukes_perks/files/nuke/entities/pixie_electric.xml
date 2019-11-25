@@ -118,7 +118,7 @@
 		damage_game_effect_entities="data/entities/misc/effect_electricity.xml,"
 		lifetime="1800"
 		lifetime_randomness="30"
-		damage="0.4"
+		damage="0.3"
 		velocity_sets_scale="0"
 		lifetime_randomness="0"
 		ragdoll_force_multiplier="0.04"
