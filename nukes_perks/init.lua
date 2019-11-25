@@ -15,7 +15,7 @@ function OnPlayerSpawned( player_entity )
 
 end
 
-dofile( "mods/nukes_perks/CONFIG.lua")
+dofile( "mods/nukes_perks/NUKES_PERKS_CONFIG.lua")
 
 if ENABLE_WAND_BUFF_PERK then
 
