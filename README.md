@@ -50,6 +50,7 @@ This mod adds more perks to the game.
 - Perk Gamble: You gain two random perks.
 - Blood Pact: You gain four random perks but your maximum health is halved.
 - Perks For Sale: Perks are sometimes available for purchase in the temple shop.
+- Sprite Summoning: Mischievous sprites are summoned to fight for you.
 
 You can toggle individual perks in CONFIG.lua, open it with Notepad++ or some other text editor.
 
