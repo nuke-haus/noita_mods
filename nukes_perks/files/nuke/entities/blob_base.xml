@@ -9,12 +9,6 @@
     additive="1"
      >
   </SpriteComponent>
-  
-	<VelocityComponent
-		gravity_y="0"
-		mass="0.07"
-		>
-	</VelocityComponent> 
 
   <LifetimeComponent lifetime="400">
   </LifetimeComponent>
