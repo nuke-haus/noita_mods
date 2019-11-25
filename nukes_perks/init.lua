@@ -126,5 +126,11 @@ if ENABLE_PERKS_4_SALE_PERK then
 
 end
 
+if ENABLE_PIXIE_PERK then
+
+	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/nukes_perks/files/nuke/scripts/pixies.lua" )
+
+end
+
 print("More perks mod initialization done.")
 
