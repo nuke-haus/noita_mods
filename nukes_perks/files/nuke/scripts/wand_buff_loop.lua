@@ -115,55 +115,36 @@ local function buff_wand(wand, rand)
 
 end
 
-table.insert( perk_list,
-{
-	id = "WAND_BUFF",
-	ui_name = "Upgraded Wands",
-	ui_description = "Wands become more powerful in your hands.",
-	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/wand_buff.png",
-	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/wand_buff.png",
-	--not_in_default_perk_pool = cfg_disable_wandbuff,
-	func = function(entity_perk_item, player_entity, item_name)
-
-		local tbl = {
-			script_source_file="files/nuke/scripts/wand_buff_loop.lua",
-			execute_on_added="0",
-			execute_every_n_frame="30",
-			execute_times="-1" }
-	
-		EntityAddComponent(player_entity, "LuaComponent", tbl) 
-	
-		local childs = EntityGetAllChildren(player_entity)
-		local upgraded = false
+local me = GetUpdatedEntityID()
+local childs = EntityGetAllChildren(me)
+local upgraded = false
 		
-		for key, child in pairs(childs) do
+for key, child in pairs(childs) do
 		
-			if EntityGetName(child) == "inventory_quick" then
+	if EntityGetName(child) == "inventory_quick" then
 			
-				local wands = EntityGetAllChildren(child)
+		local wands = EntityGetAllChildren(child)
 			
-				for key2, wand in pairs(wands) do
+		for key2, wand in pairs(wands) do
 		
-					if EntityHasTag(wand, "wand") then
+			if (EntityHasTag(wand, "wand") and EntityHasTag(wand, "wand_upgraded") == false) then
 					
-						local rand = Random(1,8)
-						buff_wand(wand, rand)
-						upgraded = true
+				local rand = Random(1,8)
+				buff_wand(wand, rand)
+				upgraded = true
+			
+			end
 					
-					end
-					
-				end
+		end
 				
-			end 
+	end 
 			
-		end
+end
 
-		if (upgraded) then
+if (upgraded) then
 
-			local x, y = EntityGetTransform(player_entity)
-			EntityLoad("files/nuke/entities/wand_up_effect.xml", x, y)
+	local x, y = EntityGetTransform(me)
+	EntityLoad("files/nuke/entities/wand_up_effect.xml", x, y)
 
-		end
-		
-	end,
-})
+end
+
