@@ -34,7 +34,7 @@ This mod is where i throw all the new spells and modifiers i've made that don't 
 
 This mod adds more perks to the game.
 
-- Upgraded Wands: All of your wands have one random stat improved, with a 25% chance that an additional stat will be improved.
+- Upgraded Wands: Wands become more powerful in your hands.
 - Pheromone Blood: You bleed pheromones and gain 40% melee damage resistance.
 - Berserker Blood: You bleed a lot of berserkium and gain 40% slice damage resistance.
 - Tremor Step: The earth crumbles beneath your feet.
