@@ -1,0 +1,39 @@
+<Entity>
+
+	<InheritTransformComponent>
+    </InheritTransformComponent>
+
+  	<ParticleEmitterComponent 
+		emitted_material_name="spark_purple_bright"
+		gravity.y="0.0"
+		lifetime_min="0.20"
+		lifetime_max="0.30"
+		count_min="12"
+		count_max="12"
+		is_trail="1"
+		trail_gap="0"
+		render_on_grid="1"
+		fade_based_on_lifetime="1"
+		area_circle_radius.min="0"
+		area_circle_radius.max="0"
+		cosmetic_force_create="0"
+		airflow_force="22.5"
+		airflow_time="1.25"
+		airflow_scale="0.45"
+		emission_interval_min_frames="1"
+		emission_interval_max_frames="1"
+		emit_cosmetic_particles="1"
+		image_animation_file="files/nuke/sprites/adaptive_field.png"
+		image_animation_speed="6000"
+		image_animation_raytrace_from_center="0"
+		image_animation_emission_probability="0.85"
+		image_animation_loop="1"
+		is_emitting="1" >
+	</ParticleEmitterComponent>
+
+	<LifetimeComponent
+		lifetime="300" >
+	</LifetimeComponent>
+
+</Entity>
+
