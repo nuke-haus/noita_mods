@@ -34,7 +34,7 @@ This mod is where i throw all the new spells and modifiers i've made that don't 
 
 This mod adds more perks to the game.
 
-- Upgraded Wands: All of your wands have one random stat improved, with a 25% chance that an additional stat will be improved.
+- Upgraded Wands: Wands become more powerful in your hands.
 - Pheromone Blood: You bleed pheromones and gain 40% melee damage resistance.
 - Berserker Blood: You bleed a lot of berserkium and gain 40% slice damage resistance.
 - Tremor Step: The earth crumbles beneath your feet.
@@ -97,7 +97,7 @@ This mod makes it easier to get unstuck when you get caught on pixels of ice. If
 
 This mod makes the player invincible for a very short time span when they take damage. You can tweak the settings in CONFIG_IFRAMES.lua, open it with Notepad++ or some other text editor.
 
-## Improved Workshop
+## Improved workshop
 
 This mod changes the logic used in the workshops for spawning items you can buy. It ensures that there will always be 2 or 3 wands you can purchase. The rest of the shop items will be spells.
 
