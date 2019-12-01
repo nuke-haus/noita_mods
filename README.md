@@ -51,6 +51,7 @@ This mod adds more perks to the game.
 - Blood Pact: You gain four random perks but your maximum health is halved.
 - Perks For Sale: Perks are sometimes available for purchase in the temple shop.
 - Sprite Summoning: Mischievous sprites are summoned to fight for you.
+- Adaptive Protection: After taking damage, you gain 80% resistance to that damage type for 5 seconds.
 
 You can toggle individual perks in CONFIG.lua, open it with Notepad++ or some other text editor.
 
