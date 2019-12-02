@@ -7,6 +7,8 @@ local function add_resist(me, dmg_type, scale)
 
 	end
 
+	--print("update " .. dmg_type.. " " .. tostring(scale))
+
 	local damagemodels = EntityGetComponent(me, "DamageModelComponent")
 		
 	if (damagemodels ~= nil) then
