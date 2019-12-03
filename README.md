@@ -19,7 +19,7 @@ This mod adds 2 new elemental spells that are just as powerful and dangerous as 
 - Magma Blast: A projectile that quickly explodes into a shower of magma.
 - Flash Freeze: A projectile that freezes liquids nearby before exploding and freezing everything caught in the blast.
 
-## More spells
+## Nuke's spells
 
 This mod is where i throw all the new spells and modifiers i've made that don't fit any other category.
 
@@ -30,7 +30,7 @@ This mod is where i throw all the new spells and modifiers i've made that don't 
 - Chaotic Cloud: A strange cloud that rains random liquids.
 - Dynamite Bundle: A bomb that explodes and scatters several sticks of dynamite.
 
-## More perks
+## Nuke's perks
 
 This mod adds more perks to the game.
 
@@ -53,7 +53,7 @@ This mod adds more perks to the game.
 - Sprite Summoning: Mischievous sprites are summoned to fight for you.
 - Adaptive Protection: After taking damage, you gain 80% resistance to that damage type for 5 seconds.
 
-You can toggle individual perks in CONFIG.lua, open it with Notepad++ or some other text editor.
+You can toggle individual perks in **NUKES_PERKS_CONFIG.lua**, open it with Notepad++ or some other text editor.
 
 ## Fancy jetpack
 
@@ -70,7 +70,7 @@ This mod adds 4 altars to the first 2 levels. They have a small chance to appear
 
 The wrong offering may offend the Gods.
 
-NOTE: This mod requires the _more spells_ mod in order to work properly.
+NOTE: This mod requires the **nukes_spells** mod in order to work properly.
 
 ## More magical stones
 
@@ -114,6 +114,6 @@ This mod makes the temple guardian drop a random perk when killed.
 
 This mod improves the algorithm the game uses to generate random wands found on pedestals. With this mod active, wands that are spawned without any sort of projectile spell will have one added so that you don't end up finding a useless wand that can't cast anything.
 
-NOTE: This mod seems to not be working currently. 
+**NOTE:** This mod seems to not be working currently. 
 
 
