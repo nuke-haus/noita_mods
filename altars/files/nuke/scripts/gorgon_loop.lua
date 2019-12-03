@@ -51,7 +51,7 @@ function damage_received(damage, message, entity_thats_responsible, is_fatal)
 		local tbl = {
 			script_source_file="files/nuke/scripts/gorgon_spawn_enemy.lua",
 			execute_on_added="1",
-			execute_every_n_frame="460",
+			execute_every_n_frame="400",
 			execute_times="-1" }
 
 		EntityAddComponent(me, "LuaComponent", tbl) 
