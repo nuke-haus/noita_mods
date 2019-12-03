@@ -70,7 +70,7 @@ This mod adds 4 altars to the first 2 levels. They have a small chance to appear
 
 The wrong offering may offend the Gods.
 
-NOTE: This mod requires the **nukes_spells** mod in order to work properly.
+NOTE: This mod requires the **nukes_spells** mod from this pack in order to work properly.
 
 ## More magical stones
 
