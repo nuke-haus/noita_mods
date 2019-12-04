@@ -10,7 +10,7 @@ table.insert( perk_list,
 	func = function(perk_item, player, item_name)
 
 		local tbl = {
-			script_source_file="files/nuke/scripts/trail_ice_loop.lua",
+			script_source_file="mods/nukes_perks/files/nuke/scripts/trail_ice_loop.lua",
 			execute_on_added="1",
 			execute_every_n_frame="2",
 			execute_times="-1" }

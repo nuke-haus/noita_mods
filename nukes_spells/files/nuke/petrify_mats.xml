@@ -16,7 +16,7 @@
         audio_physics_material_solid="rock"
         >
         <Graphics
-            texture_file="files/nuke/materials_gfx/rock.png"
+            texture_file="mods/nukes_spells/files/nuke/materials_gfx/rock.png"
             color="ff313b36"
             pixel_all_around="ff313b36">
             <Edge>
@@ -75,7 +75,7 @@
         audio_physics_material_solid="rock"
         >
         <Graphics
-            texture_file="files/nuke/materials_gfx/rock2.png"
+            texture_file="mods/nukes_spells/files/nuke/materials_gfx/rock2.png"
             color="ff313b36"
             pixel_all_around="ff313b36">
             <Edge>

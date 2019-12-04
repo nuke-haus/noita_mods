@@ -1,7 +1,7 @@
 <Entity>
 
     <LuaComponent
-        script_source_file="files/nuke/suck_loop.lua"
+        script_source_file="mods/nukes_spells/files/nuke/suck_loop.lua"
         enable_coroutines="1"
         execute_on_added="1"
         execute_every_n_frame="1"
@@ -11,7 +11,7 @@
 	<SpriteComponent 
 		_enabled="1" 
 		alpha="0.3" 
-		image_file="files/nuke/sprites/blast_in.xml" 
+		image_file="mods/nukes_spells/files/nuke/sprites/blast_in.xml" 
 		offset_x="0" 
 		offset_y="0" 
 		special_scale_x="2.0"

@@ -144,7 +144,7 @@ end
 if (upgraded) then
 
 	local x, y = EntityGetTransform(me)
-	EntityLoad("files/nuke/entities/wand_up_effect.xml", x, y)
+	EntityLoad("mods/nukes_perks/files/nuke/entities/wand_up_effect.xml", x, y)
 
 end
 

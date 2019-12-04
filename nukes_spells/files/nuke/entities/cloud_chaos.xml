@@ -23,7 +23,7 @@
   </ProjectileComponent>
 
   <LuaComponent
-    script_source_file="files/nuke/chaos_loop.lua"
+    script_source_file="mods/nukes_spells/files/nuke/chaos_loop.lua"
     execute_on_added="1"
     execute_every_n_frame="5"
     execute_times="9999999" >

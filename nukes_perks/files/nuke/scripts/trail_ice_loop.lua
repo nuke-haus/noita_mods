@@ -93,7 +93,7 @@ for k,v in pairs(vars) do
 
 		if (dist >= RADIUS) then
 
-			shoot(me, "files/nuke/entities/blob_ice.xml", pos_x, pos_y - 3, nil, get_genome(me))
+			shoot(me, "mods/nukes_perks/files/nuke/entities/blob_ice.xml", pos_x, pos_y - 3, nil, get_genome(me))
 			ComponentSetValue(v, "value_string", pos_x .. "," .. pos_y)
 
 		end

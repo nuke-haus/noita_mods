@@ -7,7 +7,7 @@
 	    </ItemComponent>
 
 		<SpriteComponent 
-			image_file="files/nuke/spell_gfx/bomb_cluster.png" 
+			image_file="mods/nukes_spells/files/nuke/spell_gfx/bomb_cluster.png" 
 		></SpriteComponent>
 		
 		<ItemActionComponent 
@@ -21,13 +21,13 @@
 		_enabled="false"
 		offset_x="2.5"
 		offset_y="2.0"
-    	image_file="files/nuke/sprites/bomb_cluster_hand.png" >
+    	image_file="mods/nukes_spells/files/nuke/sprites/bomb_cluster_hand.png" >
 	</SpriteComponent>
 
 	<AbilityComponent
 		_tags="enabled_in_hand"
 		ui_name="TNT Bundle"
-		entity_file="files/nuke/entities/bomb_cluster.xml"
+		entity_file="mods/nukes_spells/files/nuke/entities/bomb_cluster.xml"
 		rotate_hand_amount="0.05"
 		throw_as_item="1" 
 		simulate_throw_as_item="1"

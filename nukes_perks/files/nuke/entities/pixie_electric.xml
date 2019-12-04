@@ -176,7 +176,7 @@
 	</PhysicsBodyComponent>
 
 	<PhysicsImageShapeComponent 
-		image_file="files/nuke/sprites/pixie_electric.png"
+		image_file="mods/nukes_perks/files/nuke/sprites/pixie_electric.png"
 		centered="1"
 		material="rock_box2d_nohit"  >
 	</PhysicsImageShapeComponent>

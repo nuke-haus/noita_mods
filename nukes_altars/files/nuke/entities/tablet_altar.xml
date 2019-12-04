@@ -1,0 +1,81 @@
+<Entity>
+
+  <!-- sacrifice logic -->
+
+  <!--<AltarComponent
+    recognized_entity_tags="sacred_barrel"
+    uses_remaining="100" >
+  </AltarComponent>
+
+  <Entity name="on_sacrifice" >
+
+    <MagicConvertMaterialComponent
+      _enabled="0"
+      kill_when_finished="0"
+      from_material="glowstone_altar"
+      steps_per_frame="1"
+      to_material="blood"
+      radius="128" >
+    </MagicConvertMaterialComponent>
+
+    <LuaComponent
+      _enabled="0"
+      script_source_file="data/scripts/buildings/altar_collapse.lua"
+      vm_type="ONE_PER_COMPONENT_INSTANCE"
+      enable_coroutines="1"
+      execute_on_added="1"
+      execute_every_n_frame="-1"
+      execute_times="1" >
+    </LuaComponent>
+
+    <InheritTransformComponent>
+    </InheritTransformComponent>
+
+  </Entity>
+  
+  -->
+
+  <LuaComponent 
+      _enabled="1" 
+      execute_every_n_frame="15"
+      script_source_file="mods/nukes_altars/files/nuke/scripts/altar_tablet_logic.lua">
+  </LuaComponent>
+
+  <ParticleEmitterComponent
+    emitted_material_name="spark_green"
+    offset.x="0"
+    offset.y="0"
+    x_pos_offset_min="-30"
+    x_pos_offset_max="30"
+    y_pos_offset_min="18"
+    y_pos_offset_max="18"
+    x_vel_min="-6"
+    x_vel_max="6"
+    y_vel_min="-12"
+    y_vel_max="-8"
+    count_min="2"
+    count_max="6"
+    lifetime_min="2.2"
+    lifetime_max="4.4"
+		fade_based_on_lifetime="1"
+    create_real_particles="0"
+    emit_cosmetic_particles="1"
+    collide_with_grid="0"
+    emission_interval_min_frames="8"
+    emission_interval_max_frames="18"
+		gravity.y="0"
+		airflow_force="0.18"
+		airflow_time="0.80"
+		airflow_scale="0.24"
+    is_emitting="1" >
+  </ParticleEmitterComponent>
+  
+  <!--<HitboxComponent 
+    aabb_min_x="-18" 
+    aabb_max_x="18" 
+    aabb_min_y="-10"
+    aabb_max_y="10" >
+  </HitboxComponent>-->
+
+</Entity>
+

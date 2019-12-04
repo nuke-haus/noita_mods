@@ -126,7 +126,7 @@ table.insert( perk_list,
 	func = function(entity_perk_item, player_entity, item_name)
 
 		local tbl = {
-			script_source_file="files/nuke/scripts/wand_buff_loop.lua",
+			script_source_file="mods/nukes_perks/files/nuke/scripts/wand_buff_loop.lua",
 			execute_on_added="0",
 			execute_every_n_frame="30",
 			execute_times="-1" }
@@ -161,7 +161,7 @@ table.insert( perk_list,
 		if (upgraded) then
 
 			local x, y = EntityGetTransform(player_entity)
-			EntityLoad("files/nuke/entities/wand_up_effect.xml", x, y)
+			EntityLoad("mods/nukes_perks/files/nuke/entities/wand_up_effect.xml", x, y)
 
 		end
 		

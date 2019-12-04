@@ -5,7 +5,7 @@
     offset_x="0"
     offset_y="0"
     alpha="0.001"
-    image_file="files/nuke/sprites/circle_16.xml"
+    image_file="mods/nukes_perks/files/nuke/sprites/circle_16.xml"
     additive="1"
      >
   </SpriteComponent>

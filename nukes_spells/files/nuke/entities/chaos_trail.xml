@@ -5,7 +5,7 @@
   </InheritTransformComponent>
 
   <LuaComponent
-    script_source_file="files/nuke/chaos_loop_trail.lua"
+    script_source_file="mods/nukes_spells/files/nuke/chaos_loop_trail.lua"
     execute_on_added="1"
     execute_every_n_frame="2"
     execute_times="9999999" >

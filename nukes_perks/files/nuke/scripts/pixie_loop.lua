@@ -56,7 +56,7 @@ if (Random(1,2) == 1) then
 
     if (tbl1 == nil or #tbl1 == 0) then
 
-        shoot(me, "files/nuke/entities/pixie_fire.xml", x, y, nil, genome)
+        shoot(me, "mods/nukes_perks/files/nuke/entities/pixie_fire.xml", x, y, nil, genome)
     
         return
     
@@ -64,7 +64,7 @@ if (Random(1,2) == 1) then
     
     if (tbl2 == nil or #tbl2 == 0) then
     
-        shoot(me, "files/nuke/entities/pixie_ice.xml", x, y, nil, genome)
+        shoot(me, "mods/nukes_perks/files/nuke/entities/pixie_ice.xml", x, y, nil, genome)
     
         return
     
@@ -72,7 +72,7 @@ if (Random(1,2) == 1) then
     
     if (tbl3 == nil or #tbl3 == 0) then
     
-        shoot(me, "files/nuke/entities/pixie_electric.xml", x, y, nil, genome)
+        shoot(me, "mods/nukes_perks/files/nuke/entities/pixie_electric.xml", x, y, nil, genome)
     
         return
     
@@ -80,7 +80,7 @@ if (Random(1,2) == 1) then
     
     if (tbl4 == nil or #tbl4 == 0) then
     
-        shoot(me, "files/nuke/entities/pixie_poison.xml", x, y, nil, genome)
+        shoot(me, "mods/nukes_perks/files/nuke/entities/pixie_poison.xml", x, y, nil, genome)
     
         return
     
@@ -90,7 +90,7 @@ else
 
     if (tbl4 == nil or #tbl4 == 0) then
     
-        shoot(me, "files/nuke/entities/pixie_poison.xml", x, y, nil, genome)
+        shoot(me, "mods/nukes_perks/files/nuke/entities/pixie_poison.xml", x, y, nil, genome)
     
         return
     
@@ -98,7 +98,7 @@ else
 
     if (tbl3 == nil or #tbl3 == 0) then
     
-        shoot(me, "files/nuke/entities/pixie_electric.xml", x, y, nil, genome)
+        shoot(me, "mods/nukes_perks/files/nuke/entities/pixie_electric.xml", x, y, nil, genome)
     
         return
     
@@ -106,7 +106,7 @@ else
 
     if (tbl2 == nil or #tbl2 == 0) then
     
-        shoot(me, "files/nuke/entities/pixie_ice.xml", x, y, nil, genome)
+        shoot(me, "mods/nukes_perks/files/nuke/entities/pixie_ice.xml", x, y, nil, genome)
     
         return
     
@@ -114,7 +114,7 @@ else
 
     if (tbl1 == nil or #tbl1 == 0) then
 
-        shoot(me, "files/nuke/entities/pixie_fire.xml", x, y, nil, genome)
+        shoot(me, "mods/nukes_perks/files/nuke/entities/pixie_fire.xml", x, y, nil, genome)
     
         return
     

@@ -138,7 +138,7 @@ if ENABLE_ADAPTIVE_RESIST_PERK then
 
 end
 
-ModMaterialsFileAdd( "files/nuke/perk_mats.xml" )
+ModMaterialsFileAdd( "mods/nukes_perks/files/nuke/perk_mats.xml" )
 
 print("More perks mod initialization done.")
 

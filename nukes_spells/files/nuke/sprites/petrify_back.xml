@@ -1,5 +1,5 @@
 <Sprite
-  filename="files/nuke/sprites/petrify_back.png"
+  filename="mods/nukes_spells/files/nuke/sprites/petrify_back.png"
   offset_x="35.5"
   offset_y="35.5"
   default_animation="explosion">

@@ -1,5 +1,5 @@
 <Sprite
-filename="files/nuke/sprites/circle_16.png"
+filename="mods/nukes_perks/files/nuke/sprites/circle_16.png"
 offset_x="8.5"
 offset_y="8.5"
 default_animation="explosion"

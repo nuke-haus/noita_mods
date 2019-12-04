@@ -41,7 +41,7 @@
   </Base>
 
   <LuaComponent
-    script_source_file="files/nuke/bomb_cluster_loop.lua"
+    script_source_file="mods/nukes_spells/files/nuke/bomb_cluster_loop.lua"
     execute_on_added="1"
     execute_every_n_frame="1"
     execute_times="1" >

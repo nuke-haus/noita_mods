@@ -27,7 +27,7 @@ end
 
 local function generate_shop_perk(x, y, cheap)
 
-	local entity_id = EntityLoad( "files/nuke/entities/shop_perk.xml", x, y - 4 )
+	local entity_id = EntityLoad( "mods/nukes_perks/files/nuke/entities/shop_perk.xml", x, y - 4 )
 	local perk_id = get_perk_id()
 	local perk_data = get_perk_with_id( perk_list, perk_id )
 
@@ -106,7 +106,7 @@ local function generate_shop_perk(x, y, cheap)
 		--} )
 
 	EntityAddComponent( entity_id, "LuaComponent", { 
-		script_item_picked_up="files/nuke/scripts/buy_perk.lua",
+		script_item_picked_up="mods/nukes_perks/files/nuke/scripts/buy_perk.lua",
 		} )
 
 end

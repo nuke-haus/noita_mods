@@ -229,7 +229,7 @@
 	</PhysicsBodyComponent>
 
 	<PhysicsImageShapeComponent 
-		image_file="files/nuke/sprites/pixie_fire.png"
+		image_file="mods/nukes_perks/files/nuke/sprites/pixie_fire.png"
 		centered="1"
 		material="rock_box2d_nohit"  >
 	</PhysicsImageShapeComponent>

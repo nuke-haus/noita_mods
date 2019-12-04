@@ -47,8 +47,6 @@ local rare = {
 	"meat_slime_green",
 	"meat_slime_orange",
 	"meat_worm",
-	"mushroom",
-	"glowshroom",
 	"sand_herb",
 	"soil",
 	"fungisoil"

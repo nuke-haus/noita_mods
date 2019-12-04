@@ -150,7 +150,7 @@
 	</PhysicsBodyComponent>
 
 	<PhysicsImageShapeComponent 
-		image_file="files/nuke/sprites/pixie_poison.png"
+		image_file="mods/nukes_perks/files/nuke/sprites/pixie_poison.png"
 		centered="1"
 		material="rock_box2d_nohit"  >
 	</PhysicsImageShapeComponent>

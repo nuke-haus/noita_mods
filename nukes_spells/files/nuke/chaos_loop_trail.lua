@@ -59,8 +59,6 @@ local rare = {
 	"fungi",
 	"fungi_green",
 	"moss",
-	"mushroom",
-	"glowshroom",
 	"sand_herb",
 	"sand",
 	"sand_blue",

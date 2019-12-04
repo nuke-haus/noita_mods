@@ -113,7 +113,7 @@ for k,v in pairs(ents) do
 		EntityAddComponent(me, "VariableStorageComponent", {name=("hit_once_" .. v), _tags=("hit_once_" .. v)})
 
 		EntityAddComponent(v, "VariableStorageComponent", {name="no_gold_drop", _tags="no_gold_drop"})
-		EntityLoad("files/nuke/entities/instagib.xml", px, py)
+		EntityLoad("mods/nukes_spells/files/nuke/entities/instagib.xml", px, py)
 
 	end
 

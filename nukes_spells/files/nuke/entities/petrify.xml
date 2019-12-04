@@ -5,7 +5,7 @@
     </VelocityComponent> 
 
 	<LuaComponent
-        script_source_file="files/nuke/petrify_loop.lua"
+        script_source_file="mods/nukes_spells/files/nuke/petrify_loop.lua"
         execute_on_added="1"
         execute_every_n_frame="1"
         execute_times="9999999" >
@@ -28,7 +28,7 @@
 	<SpriteComponent 
 		_enabled="1" 
 		alpha="0.5" 
-		image_file="files/nuke/sprites/petrify_back.xml" 
+		image_file="mods/nukes_spells/files/nuke/sprites/petrify_back.xml" 
 		next_rect_animation="" 
 		offset_x="0" 
 		offset_y="0" 

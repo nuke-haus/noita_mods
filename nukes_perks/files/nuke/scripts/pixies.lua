@@ -11,7 +11,7 @@ table.insert( perk_list,
 	func = function(perk_item, player, item_name)
 		
 		local tbl = {
-			script_source_file="files/nuke/scripts/pixie_loop.lua",
+			script_source_file="mods/nukes_perks/files/nuke/scripts/pixie_loop.lua",
 			execute_on_added="1",
 			execute_every_n_frame="200",
 			execute_times="-1" }

@@ -2,7 +2,7 @@
 	
 	<Base file="data/entities/base_custom_card.xml" > 
 		<SpriteComponent 
-			image_file="files/nuke/spell_gfx/trail_chaos.png"
+			image_file="mods/nukes_spells/files/nuke/spell_gfx/trail_chaos.png"
 			>
 		</SpriteComponent>
 		

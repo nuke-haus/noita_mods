@@ -1,5 +1,5 @@
 <Sprite
-  filename="files/nuke/sprites/blast_repel.png"
+  filename="mods/nukes_spells/files/nuke/sprites/blast_repel.png"
   offset_x="32"
   offset_y="32"
   default_animation="explosion">

@@ -6,7 +6,7 @@
     >
     </GameAreaEffectComponent>
 
-	<Base file="files/nuke/entities/blob_base.xml">
+	<Base file="mods/nukes_perks/files/nuke/entities/blob_base.xml">
 
 		<ProjectileComponent 
 			damage_game_effect_entities="data/entities/misc/effect_frozen.xml,"

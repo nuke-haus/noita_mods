@@ -1,6 +1,6 @@
 <Sprite 
   default_animation="succ" 
-  filename="files/nuke/sprites/suck.png" 
+  filename="mods/nukes_spells/files/nuke/sprites/suck.png" 
   offset_x="32" 
   offset_y="32" >
 

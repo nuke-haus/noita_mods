@@ -1,5 +1,5 @@
 <Sprite
-filename="files/nuke/particles/minispark.png"
+filename="mods/nukes_perks/files/nuke/particles/minispark.png"
 offset_x="4"
 offset_y="4"
 default_animation="explosion"

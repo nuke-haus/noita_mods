@@ -104,18 +104,18 @@ function damage_received(damage, message, entity, is_fatal)
 				ComponentSetValue(comp, "value_string", v)
 
 				local x,y = EntityGetTransform(me)
-				local child_id = EntityLoad("files/nuke/entities/adaptive_field.xml", x, y - 18)
+				local child_id = EntityLoad("mods/nukes_perks/files/nuke/entities/adaptive_field.xml", x, y - 18)
 		
 				EntityAddChild(me, child_id)
 
 				local lua = { 
-					script_source_file="files/nuke/scripts/adaptive_field.lua",
+					script_source_file="mods/nukes_perks/files/nuke/scripts/adaptive_field.lua",
 					execute_on_added="1",
 					execute_every_n_frame="-1",
 					execute_times="-1" }
 
 				local lua2 = { 
-					script_source_file="files/nuke/scripts/adaptive_field_die.lua",
+					script_source_file="mods/nukes_perks/files/nuke/scripts/adaptive_field_die.lua",
 					execute_on_added="0",
 					execute_every_n_frame="297",
 					execute_times="1" }

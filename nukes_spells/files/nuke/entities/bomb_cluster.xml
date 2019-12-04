@@ -7,7 +7,7 @@
     </PhysicsThrowableComponent>
 
     <PhysicsImageShapeComponent 
-      image_file="files/nuke/sprites/bomb_cluster.png"
+      image_file="mods/nukes_spells/files/nuke/sprites/bomb_cluster.png"
       material="fuse_tnt" >
     </PhysicsImageShapeComponent>
   
@@ -27,7 +27,7 @@
 		    explosion_sprite="data/particles/explosion_032.xml" 
 		    audio_event_name="explosion_tnt"
         explosion_sprite_lifetime="0" 
-        load_this_entity="files/nuke/entities/bomb_baby.xml,files/nuke/entities/bomb_baby.xml,files/nuke/entities/bomb_baby.xml,files/nuke/entities/bomb_baby.xml,data/entities/misc/loose_ground.xml"
+        load_this_entity="mods/nukes_spells/files/nuke/entities/bomb_baby.xml,mods/nukes_spells/files/nuke/entities/bomb_baby.xml,mods/nukes_spells/files/nuke/entities/bomb_baby.xml,mods/nukes_spells/files/nuke/entities/bomb_baby.xml,data/entities/misc/loose_ground.xml"
         create_cell_probability="40" 
         hole_destroy_liquid="0" 
         hole_enabled="1" 

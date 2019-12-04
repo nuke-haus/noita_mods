@@ -1,8 +1,6 @@
 
 local function add_resist(me, dmg_type, scale)
 
-    
-
 	if (dmg_type == "") then
 
 		return

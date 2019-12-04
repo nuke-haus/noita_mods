@@ -11,7 +11,7 @@ table.insert( perk_list,
 
 		local tbl = {
 			script_source_file="",
-			script_damage_received="files/nuke/scripts/adaptive_loop.lua",
+			script_damage_received="mods/nukes_perks/files/nuke/scripts/adaptive_loop.lua",
 			execute_on_added="0",
 			execute_every_n_frame="-1",
 			execute_times="-1" }
