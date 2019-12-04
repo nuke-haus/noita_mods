@@ -114,6 +114,6 @@ This mod makes the temple guardian drop a random perk when killed.
 
 This mod improves the algorithm the game uses to generate random wands found on pedestals. With this mod active, wands that are spawned without any sort of projectile spell will have one added so that you don't end up finding a useless wand that can't cast anything.
 
-**NOTE:** This mod seems to not be working currently. 
+**NOTE:** This mod seems to not be working currently. Removed for the time being.
 
 
