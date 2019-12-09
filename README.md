@@ -108,7 +108,7 @@ This mod moves the angry god spawn point to the temple exit so you can buy wands
 
 ## Angry god bounty
 
-This mod makes the temple guardian drop a random perk when killed.
+This mod makes the angry god drop a random perk when killed.
 
 ## Better procedural wands
 
