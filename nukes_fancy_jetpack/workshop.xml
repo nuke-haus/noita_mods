@@ -1,0 +1,7 @@
+<Mod
+	name="Fancy Jetpack"
+	description="This mod tweaks the jetpack particles to be affected by airflow."
+	tags="gameplay,graphics,tweaks"
+	dont_upload_folders=""
+	dont_upload_files=""> 
+</Mod>

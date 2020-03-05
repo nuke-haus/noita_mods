@@ -170,7 +170,7 @@
 		</Base>
 	</Entity>
     
-    	<LuaComponent script_death="files/necromancer_shop_death.lua">
+    	<LuaComponent script_death="mods/nukes_angry_god_bounty/files/nuke/entities/necromancer_shop_death.lua">
 	</LuaComponent>
 
 </Entity>

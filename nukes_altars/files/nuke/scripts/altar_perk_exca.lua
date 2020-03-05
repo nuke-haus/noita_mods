@@ -2,19 +2,19 @@
 RegisterSpawnFunction( 0xff43ff07, "load_perk_altar" )
 
 local altar = {
-	prob   			= 1.5, 
+	prob   			= ModIsEnabled("commonifier") and 1 or 1.5,
 	material_file 	= "mods/nukes_altars/files/nuke/biome_impl/exca_altar_perk.png",
 	visual_file		= "mods/nukes_altars/files/nuke/biome_impl/exca_altar_perk_visual.png",
 	background_file	= "",
-	is_unique		= 1,
+	is_unique		= ModIsEnabled("commonifier") and 0 or 1,
 }
 
 local altar2 = {
-	prob   			= 1.5, 
+	prob   			= ModIsEnabled("commonifier") and 1 or 1.5, 
 	material_file 	= "mods/nukes_altars/files/nuke/biome_impl/exca_altar_perk_alt.png",
 	visual_file		= "mods/nukes_altars/files/nuke/biome_impl/exca_altar_perk_visual.png",
 	background_file	= "",
-	is_unique		= 1,
+	is_unique		= ModIsEnabled("commonifier") and 0 or 1,
 }
 
 table.insert(g_pixel_scene_04, altar)

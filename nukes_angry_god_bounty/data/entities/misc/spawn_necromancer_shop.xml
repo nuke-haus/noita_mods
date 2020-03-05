@@ -55,7 +55,7 @@
         count.max="1"
         timeout_frames="180"
         kill_entity="1"
-        entity_file="files/necromancer_shop.xml" >
+        entity_file="mods/nukes_angry_god_bounty/files/nuke/entities/necromancer_shop.xml" >
     </LoadEntitiesComponent>
     
 </Entity>

@@ -1,10 +1,11 @@
+
 function spawn_all_perks( x, y )
 
 	SetRandomSeed( x, y )
 
     if ( GlobalsGetValue( "TEMPLE_SPAWN_GUARDIAN" ) == "1" ) then
         
-        EntityLoad( "data/entities/misc/spawn_necromancer_shop.xml", x + 200, y + 110 )
+        EntityLoad( "data/entities/misc/spawn_necromancer_shop.xml", x + 190, y + 110 )
         
     end
 
