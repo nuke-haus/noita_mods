@@ -71,5 +71,23 @@
 		is_circle="1"
         radius="16" >
     </MagicConvertMaterialComponent>
+	
+	<MagicConvertMaterialComponent
+        from_material="magic_liquid_worm_attractor"
+        to_material="magic_liquid_protection_all"
+        steps_per_frame="22"
+        loop="1"
+		is_circle="1"
+        radius="16" >
+    </MagicConvertMaterialComponent>
+	
+	<MagicConvertMaterialComponent
+        from_material="material_confusion"
+        to_material="magic_liquid_movement_faster"
+        steps_per_frame="22"
+        loop="1"
+		is_circle="1"
+        radius="16" >
+    </MagicConvertMaterialComponent>
 
 </Entity>
