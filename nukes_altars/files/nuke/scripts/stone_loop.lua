@@ -38,7 +38,7 @@ function damage_received(damage, message, entity_thats_responsible, is_fatal)
 		
 		end
 
-		EntityLoad( "files/nuke/entities/petrify.xml", x, y )
+		EntityLoad( "mods/nukes_spells/files/nuke/entities/petrify.xml", x, y )
 
 		::avoid::
 
