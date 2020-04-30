@@ -43,7 +43,15 @@ function spawn_potions(x, y) -- we just replace the default function with this o
 
 		EntityLoad( "data/entities/items/pickup/egg_red.xml", x, y-2 )
 
-	else -- 74 percent chance
+	elseif ( rnd >= 71 ) then -- 4 percent
+
+		EntityLoad( "data/entities/items/pickup/broken_wand.xml", x, y-2 )
+
+	elseif (rnd >= 67 ) then
+
+		EntityLoad( "data/entities/items/pickup/brimstone.xml", x, y-2 )
+
+	else -- 66 percent chance
 
 		EntityLoad( "data/entities/items/pickup/potion.xml", x, y-2 )
 
