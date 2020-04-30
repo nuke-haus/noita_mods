@@ -1,0 +1,108 @@
+<Entity tags="hittable,teleportable_NOT,item_physics" >
+
+  <!-- physical presence -->
+  
+  <PhysicsBodyComponent 
+    _tags="enabled_in_world"
+    uid="1" 
+    allow_sleep="1" 
+    angular_damping="0" 
+    fixed_rotation="0" 
+    is_bullet="1" 
+    linear_damping="0"
+    auto_clean="0"
+    on_death_leave_physics_body="1"
+    hax_fix_going_through_ground="1">
+  </PhysicsBodyComponent>
+  
+  <PhysicsImageShapeComponent 
+    body_id="1"
+    centered="1"
+    image_file="mods/nukes_more_stones/files/nuke/items_gfx/stone_skull.png"
+    material="glass_box2d">
+  </PhysicsImageShapeComponent>
+  
+  <PhysicsBodyCollisionDamageComponent 
+	 _tags="enabled_in_world" 
+	 speed_threshold="120.0">
+  </PhysicsBodyCollisionDamageComponent>
+
+  <DamageModelComponent 
+    _tags="enabled_in_world"
+    air_needed="0" 
+    blood_material="" 
+    drop_items_on_death="0" 
+    falling_damages="0" 
+    fire_damage_amount="0" 
+    fire_probability_of_ignition="0" 
+	critical_damage_resistance="1"
+    hp="0.5" 
+    is_on_fire="0" 
+    materials_create_messages="0" 
+    materials_damage="1" 
+    materials_that_damage="lava,acid"
+    materials_how_much_damage="0.001,0.002"
+    ragdoll_filenames_file=""
+    ragdoll_material="">
+  </DamageModelComponent>
+  
+  <PhysicsThrowableComponent
+    max_throw_speed="180"
+    throw_force_coeff="1.5"
+  ></PhysicsThrowableComponent>
+
+  <VelocityComponent
+    _tags="enabled_in_world">
+  </VelocityComponent>
+
+  <LightComponent 
+    _tags="enabled_in_world,enabled_in_hand"
+    _enabled="1" 
+	r=255
+	g=20
+	b=20
+    radius="100" >
+  </LightComponent>
+  
+  <LuaComponent
+    script_source_file="mods/nukes_more_stones/files/nuke/scripts/skull_damaged.lua"
+    script_damage_received="mods/nukes_more_stones/files/nuke/scripts/skull_damaged.lua"
+    execute_on_added="0"
+    execute_times="-1" >
+  </LuaComponent>
+
+  <!-- item crap -->
+
+  <SpriteComponent
+    _tags="enabled_in_hand"
+    _enabled="false"
+    offset_x="4"
+    offset_y="4"
+    image_file="mods/nukes_more_stones/files/nuke/items_gfx/stone_skull.png"
+  ></SpriteComponent>
+
+  <ItemComponent
+    _tags="enabled_in_world"
+    item_name="Glass Skull"
+    max_child_items="0"
+    is_pickable="1"
+    is_equipable_forced="1"
+    ui_sprite="mods/nukes_more_stones/files/nuke/ui_gfx/stone_skull.png"
+    ui_description="A fragile glass skull with glowing eyes."
+    preferred_inventory="QUICK"
+  ></ItemComponent>
+
+  <UIInfoComponent
+    _tags="enabled_in_world"
+    name="Glass Skull">
+  </UIInfoComponent>
+	
+	<AbilityComponent
+		ui_name="Glass Skull"
+		throw_as_item="1"
+		><gun_config
+			deck_capacity="0"
+		></gun_config>
+	</AbilityComponent>
+
+</Entity>
