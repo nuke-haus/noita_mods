@@ -59,9 +59,9 @@
     _tags="enabled_in_world,enabled_in_hand"
     _enabled="1" 
 	r=255
-	g=20
-	b=20
-    radius="100" >
+	g=0
+	b=0
+    radius="80" >
   </LightComponent>
   
   <LuaComponent
