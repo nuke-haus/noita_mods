@@ -21,6 +21,18 @@
     image_file="data/items_gfx/smallgem_03.png"
     material="stone_fire_box2d">
   </PhysicsImageShapeComponent>
+  
+  <GameEffectComponent 
+    _tags="enabled_in_hand"
+    effect="PROTECTION_FIRE"
+    frames="-1"
+  ></GameEffectComponent>
+
+  <GameEffectComponent 
+    _tags="enabled_in_hand"
+    effect="FRIEND_FIREMAGE"
+    frames="-1"
+  ></GameEffectComponent>
 
   <!--image_file="files/nuke/items_gfx/stone_fire.png"
     material="rock_box2d"-->
@@ -86,8 +98,8 @@
     lifetime_max="0.4"
     create_real_particles="1"
     emit_cosmetic_particles="0"
-    emission_interval_min_frames="4"
-    emission_interval_max_frames="6"
+    emission_interval_min_frames="3"
+    emission_interval_max_frames="5"
     is_emitting="1" >
   </ParticleEmitterComponent>
 
@@ -111,8 +123,8 @@
     lifetime_max="0.4"
     create_real_particles="1"
     emit_cosmetic_particles="0"
-    emission_interval_min_frames="20"
-    emission_interval_max_frames="40"
+    emission_interval_min_frames="10"
+    emission_interval_max_frames="30"
     is_emitting="1" >
   </ParticleEmitterComponent>
 
@@ -495,6 +507,26 @@
   </MagicConvertMaterialComponent>
 
   <!-- item crap -->
+  
+  <LightComponent 
+    _tags="enabled_in_hand,enabled_in_world,item_identified"
+    _enabled="1" 
+    radius="130"
+    fade_out_time="1.5" 
+    r="240"
+    g="180"
+    b="120" >
+  </LightComponent>
+
+  <LightComponent 
+    _tags="enabled_in_hand,enabled_in_world,item_identified"
+    _enabled="1" 
+    radius="16"
+    fade_out_time="1.5" 
+    r="255"
+    g="255"
+    b="255" >
+  </LightComponent>
 
   <SpriteComponent
     _tags="enabled_in_hand"
@@ -506,7 +538,7 @@
 
   <ItemComponent
     _tags="enabled_in_world"
-    item_name="Emberstone"
+    item_name="Brimstone"
     max_child_items="0"
     is_pickable="1"
     is_equipable_forced="1"
@@ -517,11 +549,11 @@
 
   <UIInfoComponent
     _tags="enabled_in_world"
-    name="Emberstone">
+    name="Brimstone">
   </UIInfoComponent>
 	
 	<AbilityComponent
-		ui_name="Emberstone"
+		ui_name="Brimstone"
 		throw_as_item="1"
 		><gun_config
 			deck_capacity="0"
