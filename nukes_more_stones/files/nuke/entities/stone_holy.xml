@@ -241,7 +241,7 @@
 
   <SpriteComponent
     _tags="enabled_in_hand"
-    _enabled="false"
+    _enabled="0"
     offset_x="4"
     offset_y="4"
     image_file="mods/nukes_more_stones/files/nuke/items_gfx/stone_holy.png"

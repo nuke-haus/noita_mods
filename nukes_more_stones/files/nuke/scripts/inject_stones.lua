@@ -47,11 +47,29 @@ function spawn_potions(x, y) -- we just replace the default function with this o
 
 		EntityLoad( "data/entities/items/pickup/broken_wand.xml", x, y-2 )
 
-	elseif ( rnd >= 67 ) then
+	elseif ( rnd >= 68 ) then -- 3 percent
 
 		EntityLoad( "mods/nukes_more_stones/files/nuke/entities/stone_skull.xml", x, y-2 )
 
-	else -- 66 percent chance
+	elseif ( rnd >= 67 ) then -- 1 percent
+
+		EntityLoad( "mods/nukes_more_stones/files/nuke/entities/stone_nuke.xml", x, y-2 )
+
+	elseif ( rnd >= 66 ) then -- 1 percent
+
+		local rnd3 = Random(1,2)
+
+		if ( rnd3 == 1 ) then
+
+			EntityLoad( "mods/nukes_more_stones/files/nuke/entities/pot_heal.xml", x, y-2 )
+
+		else
+
+			EntityLoad( "mods/nukes_more_stones/files/nuke/entities/pot_precursor.xml", x, y-2 )
+
+		end
+
+	else -- 65 percent chance
 
 		EntityLoad( "data/entities/items/pickup/potion.xml", x, y-2 )
 

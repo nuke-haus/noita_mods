@@ -18,9 +18,20 @@
   <PhysicsImageShapeComponent 
     body_id="1"
     centered="1"
-    image_file="mods/nukes_more_stones/files/nuke/items_gfx/stone_skull.png"
+    image_file="mods/nukes_more_stones/files/nuke/items_gfx/pot_precursor.png"
     material="glass_box2d">
   </PhysicsImageShapeComponent>
+  
+  <MaterialInventoryComponent 
+    _enabled="1" 
+    drop_as_item="0" 
+    on_death_spill="1"
+    leak_on_damage_percent="0.999"
+    audio_collision_size_modifier_amount="1">
+    <count_per_material_type>
+      <Material material="midas_precursor" count="175" />
+	</count_per_material_type>
+  </MaterialInventoryComponent>
   
   <PhysicsBodyCollisionDamageComponent 
 	 _tags="enabled_in_world" 
@@ -36,7 +47,7 @@
     fire_damage_amount="0" 
     fire_probability_of_ignition="0" 
 	critical_damage_resistance="1"
-    hp="0.5" 
+    hp="0.2" 
     is_on_fire="0" 
     materials_create_messages="0" 
     materials_damage="1" 
@@ -54,15 +65,6 @@
   <VelocityComponent
     _tags="enabled_in_world">
   </VelocityComponent>
-
-  <LightComponent 
-    _tags="enabled_in_world,enabled_in_hand"
-    _enabled="1" 
-	r=255
-	g=0
-	b=0
-    radius="80" >
-  </LightComponent>
   
   <AudioComponent
     _tags="enabled_in_world"
@@ -70,42 +72,35 @@
     event_root="collision/glass_potion"
     set_latest_event_position="1" >
   </AudioComponent>
-  
-  <LuaComponent
-    script_source_file="mods/nukes_more_stones/files/nuke/scripts/skull_damaged.lua"
-    script_damage_received="mods/nukes_more_stones/files/nuke/scripts/skull_damaged.lua"
-    execute_on_added="0"
-    execute_times="-1" >
-  </LuaComponent>
 
   <!-- item crap -->
 
   <SpriteComponent
     _tags="enabled_in_hand"
     _enabled="0"
-    offset_x="1"
-    offset_y="4"
-    image_file="mods/nukes_more_stones/files/nuke/items_gfx/stone_skull.png"
-  ></SpriteComponent>
+    offset_x="0"
+    offset_y="3"
+    image_file="mods/nukes_more_stones/files/nuke/items_gfx/pot_precursor.png">
+  </SpriteComponent>
 
   <ItemComponent
     _tags="enabled_in_world"
-    item_name="Glass Skull"
+    item_name="Precursor Vial"
     max_child_items="0"
     is_pickable="1"
     is_equipable_forced="1"
-    ui_sprite="mods/nukes_more_stones/files/nuke/ui_gfx/stone_skull.png"
-    ui_description="A fragile glass skull with glowing eyes."
-    preferred_inventory="QUICK"
-  ></ItemComponent>
+    ui_sprite="mods/nukes_more_stones/files/nuke/ui_gfx/vial_precursor.png"
+    ui_description="$item_description_potion"
+    preferred_inventory="QUICK">
+  </ItemComponent>
 
   <UIInfoComponent
     _tags="enabled_in_world"
-    name="Glass Skull">
+    name="Precursor Vial">
   </UIInfoComponent>
 	
 	<AbilityComponent
-		ui_name="Glass Skull"
+		ui_name="Precursor Vial"
 		throw_as_item="1"
 		><gun_config
 			deck_capacity="0"

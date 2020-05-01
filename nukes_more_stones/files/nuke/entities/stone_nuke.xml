@@ -18,8 +18,8 @@
   <PhysicsImageShapeComponent 
     body_id="1"
     centered="1"
-    image_file="mods/nukes_more_stones/files/nuke/items_gfx/stone_skull.png"
-    material="glass_box2d">
+    image_file="mods/nukes_more_stones/files/nuke/items_gfx/stone_nuke.png"
+    material="metal_rust">
   </PhysicsImageShapeComponent>
   
   <PhysicsBodyCollisionDamageComponent 
@@ -46,8 +46,41 @@
     ragdoll_material="">
   </DamageModelComponent>
   
+  <ExplodeOnDamageComponent
+    explode_on_death_percent="1"
+    explode_on_damage_percent="0.0"
+    physics_body_modified_death_probability="0.9" 
+    physics_body_destruction_required="0.15">
+    <config_explosion
+      never_cache="1" 
+      camera_shake="60" 
+      explosion_radius="250" 
+      explosion_sprite="data/particles/explosion_032.xml"
+	  load_this_entity="data/entities/particles/particle_explosion/main_large.xml,data/entities/misc/loose_chunks.xml"
+      explosion_sprite_lifetime="0" 
+      create_cell_probability="5" 
+      hole_destroy_liquid="0" 
+      hole_enabled="1" 
+      ray_energy="6700000"
+      damage="10"
+      particle_effect="1" 
+      damage_mortals="1"
+	  physics_explosion_power.min="4.5"
+      physics_explosion_power.max="9" 
+      shake_vegetation="1" 
+      sparks_count_max="1500" 
+      sparks_count_min="1600" 
+      sparks_enabled="1" 
+      stains_enabled="1" 
+      stains_radius="35"
+      background_lightning_count="5" 
+	  max_durability_to_destroy="12"
+      audio_event_name="explosion_nuke">
+    </config_explosion>
+  </ExplodeOnDamageComponent>
+  
   <PhysicsThrowableComponent
-    max_throw_speed="180"
+    max_throw_speed="150"
     throw_force_coeff="1.5"
   ></PhysicsThrowableComponent>
 
@@ -55,57 +88,34 @@
     _tags="enabled_in_world">
   </VelocityComponent>
 
-  <LightComponent 
-    _tags="enabled_in_world,enabled_in_hand"
-    _enabled="1" 
-	r=255
-	g=0
-	b=0
-    radius="80" >
-  </LightComponent>
-  
-  <AudioComponent
-    _tags="enabled_in_world"
-    file="data/audio/Desktop/materials.snd"
-    event_root="collision/glass_potion"
-    set_latest_event_position="1" >
-  </AudioComponent>
-  
-  <LuaComponent
-    script_source_file="mods/nukes_more_stones/files/nuke/scripts/skull_damaged.lua"
-    script_damage_received="mods/nukes_more_stones/files/nuke/scripts/skull_damaged.lua"
-    execute_on_added="0"
-    execute_times="-1" >
-  </LuaComponent>
-
   <!-- item crap -->
 
   <SpriteComponent
     _tags="enabled_in_hand"
-    _enabled="0"
-    offset_x="1"
+    _enabled="false"
+    offset_x="4"
     offset_y="4"
-    image_file="mods/nukes_more_stones/files/nuke/items_gfx/stone_skull.png"
+    image_file="mods/nukes_more_stones/files/nuke/items_gfx/stone_nuke.png"
   ></SpriteComponent>
 
   <ItemComponent
     _tags="enabled_in_world"
-    item_name="Glass Skull"
+    item_name="Warhead"
     max_child_items="0"
     is_pickable="1"
     is_equipable_forced="1"
-    ui_sprite="mods/nukes_more_stones/files/nuke/ui_gfx/stone_skull.png"
-    ui_description="A fragile glass skull with glowing eyes."
+    ui_sprite="mods/nukes_more_stones/files/nuke/ui_gfx/stone_nuke.png"
+    ui_description="What could possibly go wrong?"
     preferred_inventory="QUICK"
   ></ItemComponent>
 
   <UIInfoComponent
     _tags="enabled_in_world"
-    name="Glass Skull">
+    name="Warhead">
   </UIInfoComponent>
 	
 	<AbilityComponent
-		ui_name="Glass Skull"
+		ui_name="Warhead"
 		throw_as_item="1"
 		><gun_config
 			deck_capacity="0"
