@@ -1,0 +1,114 @@
+<Entity tags="teleportable_NOT,item_physics,hittable" >
+
+  <!-- physical presence -->
+  
+  <PhysicsBodyComponent 
+    _tags="enabled_in_world"
+    uid="1" 
+    allow_sleep="1" 
+    angular_damping="0" 
+    fixed_rotation="0" 
+    is_bullet="1" 
+    linear_damping="0"
+    auto_clean="0"
+    on_death_leave_physics_body="1"
+    hax_fix_going_through_ground="1">
+  </PhysicsBodyComponent>
+  
+  <PhysicsImageShapeComponent 
+    body_id="1"
+    centered="1"
+    image_file="mods/nukes_more_stones/files/nuke/items_gfx/chakram.png"
+    material="chakram_box2d">
+  </PhysicsImageShapeComponent>
+  
+  <PhysicsThrowableComponent
+    max_throw_speed="200"
+    throw_force_coeff="1.5"
+  ></PhysicsThrowableComponent>
+
+  <LightComponent 
+    _tags="enabled_in_world,enabled_in_hand"
+    _enabled="1" 
+	r=255
+	g=220
+	b=150
+    radius="80" >
+  </LightComponent>
+  
+  <LuaComponent
+    script_throw_item="mods/nukes_more_stones/files/nuke/scripts/chakram.lua"
+    execute_on_added="0"
+    execute_times="-1" >
+  </LuaComponent>
+
+  <!-- item crap -->
+  
+  <VelocityComponent
+    _tags="enabled_in_world">
+  </VelocityComponent>
+  
+  <SpriteParticleEmitterComponent
+    _tags="enabled_in_world,enabled_in_hand"
+		sprite_file="data/particles/spark_particle.xml"
+		lifetime="2.5"
+		color.r="1.0" color.g="1.0" color.b="0.9" color.a="1.0"
+		color_change.r="0" color_change.g="0" color_change.b="0" color_change.a="-1.0"
+		velocity.x="0" velocity.y="-2"
+		gravity.x="0" gravity.y="0"
+		velocity_slowdown="0"
+		count_min="1" count_max="1"
+		scale.x="1" scale.y="1"
+		scale_velocity.x="0" scale_velocity.y="0"
+		emission_interval_min_frames="15"
+		emission_interval_max_frames="30"
+		randomize_rotation.min="0"
+		randomize_rotation.max="0"
+		randomize_angular_velocity.min="0"
+		randomize_angular_velocity.max="0"
+		randomize_velocity.min_x="0"
+		randomize_velocity.max_x="0"
+		randomize_velocity.min_y="-4"
+		randomize_velocity.max_y="-2"
+		randomize_position.min_x="-5"
+		randomize_position.max_x="5"
+		randomize_position.min_y="-5"
+		randomize_position.max_y="5"
+		velocity_always_away_from_center="0">
+	</SpriteParticleEmitterComponent>
+
+  <SpriteComponent
+    _tags="enabled_in_hand"
+    _enabled="0"
+    offset_x="3.5"
+    offset_y="3.5"
+    image_file="mods/nukes_more_stones/files/nuke/items_gfx/chakram.png"
+  ></SpriteComponent>
+
+  <ItemComponent
+    _tags="enabled_in_world"
+	_enabled="1"
+    item_name="Golden Chakram"
+    max_child_items="0"
+    is_pickable="1"
+    is_equipable_forced="1"
+	play_spinning_animation="0"
+    ui_sprite="mods/nukes_more_stones/files/nuke/ui_gfx/chakram.png"
+    ui_description="A magical golden chakram with incredibly sharp blades."
+    preferred_inventory="QUICK"
+  ></ItemComponent>
+
+  <UIInfoComponent
+    _tags="enabled_in_world"
+    name="Golden Chakram">
+  </UIInfoComponent>
+	
+	<AbilityComponent
+		ui_name="Golden Chakram"
+		throw_as_item="1"
+		><gun_config
+			deck_capacity="0"
+		></gun_config>
+	</AbilityComponent>-->
+
+</Entity>

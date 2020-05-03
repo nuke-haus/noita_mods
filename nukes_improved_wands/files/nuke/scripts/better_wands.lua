@@ -1,3 +1,285 @@
+dofile_once("data/scripts/lib/utilities.lua")
+dofile_once( "data/scripts/gun/gun_enums.lua")
+dofile_once("data/scripts/gun/procedural/wands.lua")
+dofile_once("data/scripts/gun/procedural/gun_action_utils.lua")
+
+function SetItemSprite( entity_id, ability_comp, item_file, r )
+
+	if( r < 1000 ) then item_file = item_file .. "0" end
+	if( r < 100 ) then item_file = item_file .. "0" end
+	if( r < 10 ) then item_file = item_file .. "0" end
+	item_file = item_file .. r .. ".png"	
+
+	if( ability_comp ~= nil ) then
+		ComponentSetValue( ability_comp, "sprite_file", item_file)
+	end
+
+	local sprite_comp = EntityGetFirstComponent( entity_id, "SpriteComponent", "item" )
+	if( sprite_comp ~= nil ) then
+		ComponentSetValue( sprite_comp, "image_file", item_file)
+	end
+end
+
+
+function SetWandSprite( entity_id, ability_comp, item_file, offset_x, offset_y, tip_x, tip_y )
+
+	if( ability_comp ~= nil ) then
+		ComponentSetValue( ability_comp, "sprite_file", item_file)
+	end
+
+	local sprite_comp = EntityGetFirstComponent( entity_id, "SpriteComponent", "item" )
+	if( sprite_comp ~= nil ) then
+		ComponentSetValue( sprite_comp, "image_file", item_file)
+		ComponentSetValue( sprite_comp, "offset_x", offset_x )
+		ComponentSetValue( sprite_comp, "offset_y", offset_y )
+	end
+
+	local hotspot_comp = EntityGetFirstComponent( entity_id, "HotspotComponent", "shoot_pos" )
+	if( hotspot_comp ~= nil ) then
+		ComponentSetValueVector2( hotspot_comp, "offset", tip_x, tip_y )
+	end	
+end
+
+function RandomFromArray( varray )
+	local r = Random( 1, #varray )
+	return varray[ r ]
+end
+
+
+function clamp(val, lower, upper)
+	assert(val and lower and upper, "not very useful error message here")
+	if lower > upper then lower, upper = upper, lower end -- swap if boundaries supplied the wrong way
+	return math.max(lower, math.min(upper, val))
+end
+
+local function shuffleTable( t )
+	assert( t, "shuffleTable() expected a table, got nil" )
+	local iterations = #t
+	local j
+	
+	for i = iterations, 2, -1 do
+		j = Random(1,i)
+		t[i], t[j] = t[j], t[i]
+	end
+end
+
+function init_total_prob( value )
+	value.total_prob = 0
+	for i,v in ipairs(value) do
+		if( v.prob ~= nil ) then
+			value.total_prob = value.total_prob + v.prob
+		end
+	end
+end
+
+function init_gun_probs()
+	for k,v in pairs(gun_probs) do
+		init_total_prob( gun_probs[k] )
+	end
+end
+
+
+function get_gun_probs( what )
+	-- if( what == nil ) then print( "ERROR - director_helpers - spawn() ... what = nil") end
+    if( gun_probs[what] == nil ) then
+		return nil
+    end
+
+	if ( gun_probs[what].total_prob == 0 ) then
+		init_total_prob( gun_probs[what] )
+	end
+
+	local r = Random() * gun_probs[what].total_prob
+	for i,v in pairs(gun_probs[what]) do
+		if( v.prob ~= nil ) then
+			if( r <= v.prob ) then
+				return v
+			end
+			r = r - v.prob
+		end
+	end
+
+	print( "ERROR - gun_procedural.lua - get_gun_probs() shouldn't reach here")
+	return nil
+end
+
+function apply_random_variable( t_gun, variable )
+	-- print( variable )
+	local cost = t_gun["cost"]
+	local probs = get_gun_probs( variable )
+
+	-- deck_capacity = [10-240]
+	-- cost: (60-L2)/5
+	if( variable == "reload_time") then
+		local min = clamp( 60-(cost*5), 1, 240 )
+		local max = 1024
+
+		t_gun[variable] = clamp( RandomDistribution( probs.min, probs.max, probs.mean, probs.sharpness ), min, max )
+		t_gun["cost"] = t_gun["cost"] - ( (60 - t_gun[variable]) / 5 )
+		return
+	end
+
+	-- fire_rate_wait = [1-35] (-50,50)
+	-- cost: 16-P2
+	if( variable == "fire_rate_wait" ) then
+		local min = clamp( 16-(cost), -50, 50 )
+		local max = 50
+		t_gun[variable] = clamp( RandomDistribution( probs.min, probs.max, probs.mean, probs.sharpness ), min, max )
+		t_gun["cost"] = t_gun["cost"] - ( 16 - t_gun[variable] )
+		return
+	end
+
+	-- spread_degrees = [-50,50]
+	-- cost: -1.5 * T2
+	if( variable == "spread_degrees" ) then
+		local min = clamp( cost / -1.5, -35, 35 )
+		local max = 35
+		t_gun[variable] = clamp( RandomDistribution( probs.min, probs.max, probs.mean, probs.sharpness ), min, max )
+		t_gun["cost"] = t_gun["cost"] - ( 16 - t_gun[variable] )
+		return
+	end
+
+	-- speed_multiplier = [0.8, 1.2]
+	-- cost: 0
+	if( variable == "speed_multiplier") then
+		-- t_gun[variable] = Random( 0.8, 1.2 )
+		t_gun[variable] = RandomDistributionf( probs.min, probs.max, probs.mean, probs.sharpness )
+		t_gun["cost"] = t_gun["cost"] - ( 0 )
+		return
+	end
+
+	-- deck_capacity [ 1 - 20 ]
+	-- cost = (deck_capacity-6)*5
+	if( variable == "deck_capacity" ) then
+		local min = 1
+		local max = clamp( (cost/5)+6, 1, 20 )
+
+		if( t_gun["force_unshuffle"] == 1 ) then
+			min = 1
+			max = ((cost-15)/5)
+			if( max > 6 ) then
+				max = 6 + ((cost-(15+6*5))/10)
+			end
+		end			
+
+		max = clamp( max, 1, 20 )
+		t_gun[variable] = clamp( RandomDistribution( probs.min, probs.max, probs.mean, probs.sharpness ), min, max )
+		t_gun["cost"] = t_gun["cost"] - ( (t_gun[variable]-6)*5 )
+		return
+	end
+
+	local deck_capacity = t_gun["deck_capacity"]
+
+	-- shuffle_deck_when_empty [0,1]
+	-- cost: = 15+deck_capacity*5
+	if( variable == "shuffle_deck_when_empty") then
+		local random = Random( 0, 1 )
+		if( t_gun["force_unshuffle"] == 1 ) then 
+			random = 1 
+			if( cost < (15+deck_capacity*5) ) then
+				-- print( "DEBUG THIS SHOULDN'T HAPPEN!")
+			end
+		end
+
+		-- clamped unshuffles to deck capacity 9
+		if( random == 1 and cost >= (15+deck_capacity*5) and deck_capacity <= 9 ) then
+			t_gun[variable] = 0
+			t_gun["cost"] = t_gun["cost"] - ( (15+deck_capacity*5) )
+			-- print("unshuffling the deck ")
+		end
+		return
+	end
+
+	-- actions_per_round: [1-5]
+	-- cost: *
+	if( variable == "actions_per_round" ) then
+		local action_costs = {
+			0, 
+			5+(deck_capacity*2),
+			15+(deck_capacity*3.5),
+			35+(deck_capacity*5),
+			45+(deck_capacity*deck_capacity)
+		}
+
+		local min = 1
+		local max = 1
+		for i,acost in ipairs(action_costs) do
+			if( acost <= cost ) then
+				max = i
+			end
+		end
+		max = clamp( max, 1, deck_capacity )
+
+		t_gun[variable] = math.floor( clamp( RandomDistribution( probs.min, probs.max, probs.mean, probs.sharpness ), min, max ) )
+		local temp_cost = action_costs[ clamp( t_gun[variable] , 1, #action_costs ) ]
+		-- print( "t_gun: ", t_gun[variable] )
+		-- print( "temp_cost: ", temp_cost )
+		t_gun["cost"] = t_gun["cost"] - temp_cost
+		return
+	end
+end
+
+---------------------------------------------------------------------------------
+
+function WandDiff( gun, wand )
+	local score = 0
+	score = score + ( math.abs( gun.fire_rate_wait - wand.fire_rate_wait ) * 2 )
+	score = score + ( math.abs( gun.actions_per_round - wand.actions_per_round ) * 20 )
+	score = score + ( math.abs( gun.shuffle_deck_when_empty - wand.shuffle_deck_when_empty ) * 30 )
+	score = score + ( math.abs( gun.deck_capacity - wand.deck_capacity ) * 5 )
+	score = score + math.abs( gun.spread_degrees - wand.spread_degrees )
+	score = score + math.abs( gun.reload_time - wand.reload_time )
+	return score
+end
+
+function GetWand( gun )
+	local best_wand = nil
+	local best_score = 1000
+	local gun_in_wand_space = {}
+	--[[
+
+	-- convert the values to wand_array space
+	-- fire_rate_wait:            0  -  2   / 1 - 30 (50)
+	-- actions_per_round:         0  -  2 	/  1 - 3	
+	-- shuffle_deck_when_empty:   0  -  1 	/ 
+	-- deck_capacity:             0  -  7 	/ 3 - 10 / 20 
+	-- spread_degrees:            0  -  2 	/ -5 - 10 / -35 - 35
+	-- reload_time:               0  -  2 	/ 5 - 100
+
+		deck_capacity 
+		0 = 3-4
+		1 = 5-6
+		2 = 7-8
+		3 = 8-9
+		4 = 10-12
+		5 = 13-15
+		6 = 15-17
+		7 = 17+
+	]]--
+
+
+	gun_in_wand_space.fire_rate_wait = clamp(((gun["fire_rate_wait"] + 5) / 7)-1, 0, 4)
+	gun_in_wand_space.actions_per_round = clamp(gun["actions_per_round"]-1,0,2)
+	gun_in_wand_space.shuffle_deck_when_empty = clamp(gun["shuffle_deck_when_empty"], 0, 1)
+	gun_in_wand_space.deck_capacity = clamp( (gun["deck_capacity"]-3)/3, 0, 7 ) -- TODO
+	gun_in_wand_space.spread_degrees = clamp( ((gun["spread_degrees"] + 5 ) / 5 ) - 1, 0, 2 )
+	gun_in_wand_space.reload_time = clamp( ((gun["reload_time"]+5)/25)-1, 0, 2 )
+
+	for k,wand in pairs(wands) do
+		local score = WandDiff( gun_in_wand_space, wand )
+		if( score <= best_score ) then
+			best_wand = wand
+			best_score = score
+			-- just randomly return one of them...
+			if( score == 0 and Random(0,100) < 33 ) then
+				return best_wand
+			end
+		end
+	end
+	return best_wand
+end
+
+
 function generate_gun( cost, level, force_unshuffle )
 
 	local entity_id = GetUpdatedEntityID()

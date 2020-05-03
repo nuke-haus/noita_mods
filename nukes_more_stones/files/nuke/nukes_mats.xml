@@ -24,13 +24,36 @@
             color="ff73737f">
         </Graphics>
   </CellData>
+  
+  <CellDataChild
+
+        _parent="aluminium"
+        _inherit_reactions="1"
+        tags="[box2d]"
+        name="chakram_box2d"
+        ui_name="Golden Chakram"
+        requires_oxygen="0"
+        hp="900000" 
+        durability="900000"
+        wang_color="ff2d2769"
+        electrical_conductivity="0"
+        audio_physics_material_wall="metalwall"
+        audio_physics_material_solid="metalwall"
+        audio_size_multiplier="3.0" >
+
+        <Graphics
+            texture_file="data/materials_gfx/steel.png"
+            color="ff2d2dac" >
+        </Graphics>
+
+  </CellDataChild>
 
   <CellDataChild
       _parent="nuke_base"
       _inherit_reactions="1"
       tags="[box2d]"
       name="stone_fire_box2d"
-      ui_name="Emberstone"
+      ui_name="Brimstone"
       platform_type="0"
       hp="30000"
       durability="12"

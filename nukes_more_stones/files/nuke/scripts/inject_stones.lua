@@ -69,10 +69,16 @@ function spawn_potions(x, y) -- we just replace the default function with this o
 
 		end
 
+	elseif ( rnd >= 63 ) then -- 3 percent
+
+		EntityLoad( "mods/nukes_more_stones/files/nuke/entities/chakram_item.xml", x, y-2 )
+
 	else -- 65 percent chance
 
 		EntityLoad( "data/entities/items/pickup/potion.xml", x, y-2 )
 
 	end
+
+	::aids::
 
 end

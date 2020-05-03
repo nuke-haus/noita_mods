@@ -1,0 +1,141 @@
+<Entity tags="projectile_player" >
+
+	<Base file="data/entities/base_projectile.xml">
+		<VelocityComponent
+		  gravity_y="250"
+		  air_friction="0.6"
+		  terminal_velocity="250"
+		  mass="0.04">
+		</VelocityComponent>
+	</Base>
+  
+  <ProjectileComponent 
+    _enabled="1" 
+    lob_min="0.5"
+    lob_max="0.7"
+    speed_min="200"
+    speed_max="500"
+	angular_velocity="9.0"
+    friction="0.05"
+    direction_random_rad="0.03"
+    on_death_explode="1"
+    on_death_gfx_leave_sprite="0" 
+    on_lifetime_out_explode="1"
+    explosion_dont_damage_shooter="1"
+    on_collision_die="0"
+    on_collision_remove_projectile="0"
+    lifetime="1500"
+    damage="0"
+	friendly_fire="1"
+	collide_with_shooter_frames="6"
+    damage_scaled_by_speed="1"
+    lifetime_randomness="0"
+    ragdoll_force_multiplier="0"
+    hit_particle_force_multiplier="0.1"
+    create_shell_casing="0"
+    muzzle_flash_file="data/entities/particles/muzzle_flashes/muzzle_flash_medium.xml"
+    die_on_low_velocity="1"
+    die_on_low_velocity_limit="40"
+    bounce_always="1"
+	bounce_at_any_angle="1"
+    bounces_left="250"
+    bounce_energy="1.25"
+	bounce_fx_file="mods/nukes_more_stones/files/nuke/entities/bounce_sparks.xml"
+    velocity_sets_rotation="0"
+    velocity_updates_animation="0"
+    velocity_sets_scale="0"
+    velocity_sets_scale_coeff="0.6"
+	knockback_force="0.6"
+	ragdoll_fx_on_collision="BLOOD_EXPLOSION"
+	physics_impulse_coeff="600">
+	<damage_by_type
+		slice="1.4">
+	</damage_by_type>
+    <config_explosion
+      never_cache="1" 
+      camera_shake="0" 
+      explosion_radius="1" 
+      explosion_sprite="data/particles/spark_particle.xml"
+      explosion_sprite_lifetime="0" 
+      create_cell_probability="0" 
+      create_cell_material="0" 
+      hole_destroy_liquid="0"
+	  load_this_entity="mods/nukes_more_stones/files/nuke/entities/chakram_item.xml"
+      hole_enabled="0" 
+	  damage="0"
+	  ray_energy="1"
+      particle_effect="1" 
+      damage_mortals="0"
+	  physics_explosion_power.min="0.1" 
+      physics_explosion_power.max="0.1" 
+      physics_throw_enabled="0" 
+      shake_vegetation="0" 
+      sparks_enabled="1" 
+      sparks_count_max="10" 
+      sparks_count_min="5"
+      light_fade_time="0.8" 
+      stains_enabled="0" 
+      stains_image="data/temp/explosion_stain.png"
+      audio_enabled="0" >
+    </config_explosion>
+  </ProjectileComponent>
+
+  <LightComponent 
+    _tags="enabled_in_world,enabled_in_hand"
+    _enabled="1" 
+	r=255
+	g=220
+	b=150
+    radius="80" >
+  </LightComponent>
+  
+   <LuaComponent
+    script_source_file="mods/nukes_more_stones/files/nuke/scripts/chakram_loop.lua"
+    execute_on_added="0"
+	execute_every_n_frame="15"
+    execute_times="-1" >
+  </LuaComponent>
+  
+  <SpriteParticleEmitterComponent
+    _tags="enabled_in_world,enabled_in_hand"
+		sprite_file="data/particles/spark_particle.xml"
+		lifetime="2.5"
+		color.r="1.0" color.g="1.0" color.b="0.9" color.a="1.0"
+		color_change.r="0" color_change.g="0" color_change.b="0" color_change.a="-1.0"
+		velocity.x="0" velocity.y="-2"
+		gravity.x="0" gravity.y="0"
+		velocity_slowdown="0"
+		count_min="1" count_max="1"
+		scale.x="1" scale.y="1"
+		scale_velocity.x="0" scale_velocity.y="0"
+		emission_interval_min_frames="15"
+		emission_interval_max_frames="30"
+		randomize_rotation.min="0"
+		randomize_rotation.max="0"
+		randomize_angular_velocity.min="0"
+		randomize_angular_velocity.max="0"
+		randomize_velocity.min_x="0"
+		randomize_velocity.max_x="0"
+		randomize_velocity.min_y="-4"
+		randomize_velocity.max_y="-2"
+		randomize_position.min_x="-5"
+		randomize_position.max_x="5"
+		randomize_position.min_y="-5"
+		randomize_position.max_y="5"
+		velocity_always_away_from_center="0">
+	</SpriteParticleEmitterComponent>
+	
+	<AudioComponent
+      file="data/audio/Desktop/projectiles.snd"
+      event_root="player_projectiles/bullet_disc">
+    </AudioComponent>
+  
+  <SpriteComponent
+    _tags="enabled_in_world"
+    _enabled="1"
+	offset_x="3.5"
+    offset_y="3.5"
+    image_file="mods/nukes_more_stones/files/nuke/items_gfx/chakram.png"
+  ></SpriteComponent>
+
+</Entity>
