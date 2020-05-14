@@ -1,124 +1,28 @@
-dofile( "data/scripts/lib/utilities.lua" )
 
-local function shoot( who_shot, entity_file, x, y, send_message, herd )
-	local entity_id = EntityLoad( entity_file, x, y )
-	if( send_message == nil ) then send_message = true end
+local function shoot(me, x, y)
 
-	GameShootProjectile( who_shot, x, y, x, y, entity_id, send_message )
+    local portal = EntityLoad("mods/nukes_perks/files/nuke/entities/pixie_portal.xml", x, y)
 
-	edit_component( entity_id, "ProjectileComponent", function(comp,vars)
-		vars.mWhoShot       = who_shot
-		vars.mShooterHerdId = herd
-    end)
-    
-    PhysicsApplyForce( entity_id, 0, -30 )
+    local tbl = {
+        script_source_file="mods/nukes_perks/files/nuke/scripts/pixie_portal.lua",
+        execute_on_added="0",
+        execute_every_n_frame="200",
+        execute_times="1" }
 
-	return entity_id
-end
-
-local function get_genome(player)
-
-	local test = EntityGetFirstComponent(player, "GenomeDataComponent");
-	local herd = ComponentGetMetaCustom(test, "herd_id") or "none"
-
-	if (herd == "rat") then
-
-		return 17
-
-	else
-
-		return 0
-
-	end
+    EntityAddComponent(portal, "LuaComponent", tbl) 
 
 end
 
 local me = GetUpdatedEntityID()
 local x,y = EntityGetTransform(me)
-local genome = get_genome(me)
-local tbl1 = EntityGetWithTag( "pixie_fire" )
-local tbl2 = EntityGetWithTag( "pixie_ice" )
-local tbl3 = EntityGetWithTag( "pixie_electric" )
-local tbl4 = EntityGetWithTag( "pixie_poison" )
-local did, dx, dy = Raytrace( x, y, x, y - 10 )
 
-if (did) then
+local tbl1 = EntityGetWithTag( "pixie_fire" ) or {}
+local tbl2 = EntityGetWithTag( "pixie_ice" ) or {}
+local tbl3 = EntityGetWithTag( "pixie_electric" ) or {}
+local tbl4 = EntityGetWithTag( "pixie_poison" ) or {}
 
-    y = dy + 2
+if (#tbl1 == 0 or #tbl2 == 0 or #tbl3 == 0 or #tbl4 == 0) then
 
-else
-
-    y = y - 10
+    shoot(me, x, y - 2.5)
 
 end
-
-if (Random(1,2) == 1) then
-
-    if (tbl1 == nil or #tbl1 == 0) then
-
-        shoot(me, "mods/nukes_perks/files/nuke/entities/pixie_fire.xml", x, y, nil, genome)
-    
-        return
-    
-    end
-    
-    if (tbl2 == nil or #tbl2 == 0) then
-    
-        shoot(me, "mods/nukes_perks/files/nuke/entities/pixie_ice.xml", x, y, nil, genome)
-    
-        return
-    
-    end
-    
-    if (tbl3 == nil or #tbl3 == 0) then
-    
-        shoot(me, "mods/nukes_perks/files/nuke/entities/pixie_electric.xml", x, y, nil, genome)
-    
-        return
-    
-    end
-    
-    if (tbl4 == nil or #tbl4 == 0) then
-    
-        shoot(me, "mods/nukes_perks/files/nuke/entities/pixie_poison.xml", x, y, nil, genome)
-    
-        return
-    
-    end
-
-else
-
-    if (tbl4 == nil or #tbl4 == 0) then
-    
-        shoot(me, "mods/nukes_perks/files/nuke/entities/pixie_poison.xml", x, y, nil, genome)
-    
-        return
-    
-    end
-
-    if (tbl3 == nil or #tbl3 == 0) then
-    
-        shoot(me, "mods/nukes_perks/files/nuke/entities/pixie_electric.xml", x, y, nil, genome)
-    
-        return
-    
-    end
-
-    if (tbl2 == nil or #tbl2 == 0) then
-    
-        shoot(me, "mods/nukes_perks/files/nuke/entities/pixie_ice.xml", x, y, nil, genome)
-    
-        return
-    
-    end
-
-    if (tbl1 == nil or #tbl1 == 0) then
-
-        shoot(me, "mods/nukes_perks/files/nuke/entities/pixie_fire.xml", x, y, nil, genome)
-    
-        return
-    
-    end
-    
-end
-
