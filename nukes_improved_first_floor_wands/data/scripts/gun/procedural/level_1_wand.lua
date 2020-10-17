@@ -47,8 +47,45 @@ function do_level1( level )
 		"BOUNCY_ORB",
 		"BULLET",
 		"BULLET_TIMER",
-		"AIR_BULLET"
+		"AIR_BULLET",
+		"SLIMEBALL"
 	}	
+
+	-- 0.5
+	if( Random( 1, 100 ) <= 85 ) then
+		table.insert(level_1_cards, "BUBBLESHOT")
+		
+		-- 0.25
+		if( Random( 1, 100 ) <= 70 ) then
+			table.insert(level_1_cards, "SPITTER")
+	
+			-- 0.125
+			if( Random( 1, 100 ) <= 40 ) then
+				table.insert(level_1_cards, "LIGHT_BULLET_TRIGGER")
+				card_count = 1
+
+				-- 0.0625
+				if( Random( 1, 100 ) <= 20 ) then
+					table.insert(level_1_cards, "DISC_BULLET_BIG" )
+					card_count = 1
+					
+					-- 0.00625
+					if( Random( 1, 100 ) <= 10 ) then
+						table.insert(level_1_cards, "TENTACLE_PORTAL" )
+						card_count = 1
+						if( mana_max < 140 ) then mana_max = 140 end
+
+						-- 0.000625
+						if( Random( 1, 100 ) <= 10 ) then
+							table.insert(level_1_cards, "BLACK_HOLE_BIG" )
+							card_count = 1
+							if( mana_max < 240 ) then mana_max = 240 end
+						end
+					end
+				end
+			end
+		end
+	end
 
 	local level_1_mods = 
 	{
@@ -66,11 +103,6 @@ function do_level1( level )
 		"BURST_3",
 		"LIGHT_BULLET_TRIGGER_2",
 		"TORCH_ELECTRIC",
-		"TORCH",
-		"TORCH",
-		"TORCH",
-		"TORCH",
-		"TORCH",
 		"TORCH"
 	}
 
@@ -83,6 +115,7 @@ function do_level1( level )
 			"GRENADE",
 			"DYNAMITE", --new
 			"BOMB",
+			"ROCKET"
 		}
 		
 		card_count =  Random( 1, 2 ) 
@@ -103,9 +136,37 @@ function do_level1( level )
 			"X_RAY",
 			"FREEZE_FIELD",
 			"LEVITATION_FIELD",
+			"SHIELD_FIELD",
 			"SUMMON_ROCK",
 			"BLACK_HOLE"
 		}
+
+		if( Random( 1, 100 ) <= 75 ) then
+			table.insert(level_1_cards, "ELECTROCUTION_FIELD")
+			if( Random( 1, 100 ) <= 50 ) then
+				table.insert(level_1_cards, "DIGGER")
+
+				if( Random( 1, 100 ) <= 50 ) then
+					table.insert(level_1_cards, "EXPLODING_DEER")
+
+					if( Random( 1, 100 ) <= 50 ) then
+						table.insert(level_1_cards, "POWERDIGGER")
+
+						if( Random( 1, 100 ) <= 50 ) then
+							table.insert(level_1_cards, "SOILBALL")
+
+							if( Random( 1, 100 ) <= 50 ) then
+								table.insert(level_1_cards, "LUMINOUS_DRILL")
+
+								if( Random( 1, 100 ) <= 50 ) then
+									table.insert(level_1_cards, "CHAINSAW")
+								end
+							end
+						end
+					end
+				end
+			end
+		end
 		
 		card_count = 1
 		

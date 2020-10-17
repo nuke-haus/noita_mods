@@ -74,6 +74,7 @@ elseif ( gun_action == "RUBBER_BALL" ) then
 
 	deck_capacity = math.max( 2, deck_capacity )
 	action_count = math.max( 2, action_count )
+	gun.reload_time = {15,25}
 
 elseif ( gun_action == "BUBBLESHOT" or gun_action == "BUBBLESHOT_TRIGGER" ) then
 

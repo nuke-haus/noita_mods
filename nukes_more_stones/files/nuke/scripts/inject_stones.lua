@@ -79,6 +79,4 @@ function spawn_potions(x, y) -- we just replace the default function with this o
 
 	end
 
-	::aids::
-
 end
