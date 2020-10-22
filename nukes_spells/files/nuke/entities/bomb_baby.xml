@@ -32,7 +32,7 @@
 		  damage="2.8"
 		  explosion_radius="26" 
 		  explosion_sprite="data/particles/explosion_032.xml" 
-		  audio_event_name="explosion_tnt"
+		  audio_event_name="explosions/tnt"
       ray_energy="4000000"
 		  >
       </config_explosion>

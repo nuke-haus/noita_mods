@@ -270,4 +270,10 @@
       event_root="projectiles/icethrower">
   </AudioComponent>
 
+  <VariableStorageComponent
+        name="projectile_file"
+        value_string="mods/nukes_elemental_spells/files/nuke/iceblast.xml"
+        >
+  </VariableStorageComponent>
+
 </Entity>

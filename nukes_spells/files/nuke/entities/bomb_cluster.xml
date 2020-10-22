@@ -25,7 +25,7 @@
         camera_shake="50" 
         explosion_radius="26" 
 		    explosion_sprite="data/particles/explosion_032.xml" 
-		    audio_event_name="explosion_tnt"
+        audio_event_name="explosions/tnt"
         explosion_sprite_lifetime="0" 
         load_this_entity="mods/nukes_spells/files/nuke/entities/bomb_baby.xml,mods/nukes_spells/files/nuke/entities/bomb_baby.xml,mods/nukes_spells/files/nuke/entities/bomb_baby.xml,mods/nukes_spells/files/nuke/entities/bomb_baby.xml,data/entities/misc/loose_ground.xml"
         create_cell_probability="40" 
@@ -136,5 +136,11 @@
     event_name="projectiles/fuse_burn_slow"
     auto_play="1">
   </AudioLoopComponent>
+
+  <VariableStorageComponent
+        name="projectile_file"
+        value_string="mods/nukes_spells/files/nuke/entities/bomb_cluster.xml"
+        >
+  </VariableStorageComponent>
 
 </Entity>

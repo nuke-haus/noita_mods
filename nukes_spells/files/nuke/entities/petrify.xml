@@ -177,5 +177,11 @@
       radius="1" >
   </MagicConvertMaterialComponent>
 
+  <VariableStorageComponent
+        name="projectile_file"
+        value_string="mods/nukes_spells/files/nuke/entities/petrify.xml"
+        >
+  </VariableStorageComponent>
+
 </Entity>
 

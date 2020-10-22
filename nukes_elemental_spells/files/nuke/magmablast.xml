@@ -137,4 +137,10 @@
       event_root="player_projectiles/bullet_fire_heavy">
   </AudioComponent>
 
+  <VariableStorageComponent
+        name="projectile_file"
+        value_string="mods/nukes_elemental_spells/files/nuke/magmablast.xml"
+        >
+  </VariableStorageComponent>
+
 </Entity>
