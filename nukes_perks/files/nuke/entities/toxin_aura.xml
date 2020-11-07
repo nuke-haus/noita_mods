@@ -63,6 +63,15 @@
         radius="16" >
     </MagicConvertMaterialComponent>
 
+    <MagicConvertMaterialComponent
+        from_material="magic_liquid_unstable_teleportation"
+        to_material="magic_liquid_faster_levitation"
+        steps_per_frame="20"
+        loop="1"
+		is_circle="1"
+        radius="16" >
+    </MagicConvertMaterialComponent>
+
 	<MagicConvertMaterialComponent
         from_material="magic_liquid_polymorph"
         to_material="magic_liquid_invisibility"
@@ -75,6 +84,15 @@
 	<MagicConvertMaterialComponent
         from_material="magic_liquid_random_polymorph"
         to_material="magic_liquid_berserk"
+        steps_per_frame="20"
+        loop="1"
+		is_circle="1"
+        radius="16" >
+    </MagicConvertMaterialComponent>
+
+    <MagicConvertMaterialComponent
+        from_material="magic_liquid_unstable_polymorph"
+        to_material="magic_liquid_faster_levitation_and_movement"
         steps_per_frame="20"
         loop="1"
 		is_circle="1"
