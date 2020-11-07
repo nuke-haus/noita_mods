@@ -8,6 +8,7 @@ function item_pickup( entity_item, player, name )
 	local pu = perk_spawn( x, y, id )
 
 	perk_pickup( pu, player, name, true, false )
+	EntityKill(entity_item)
 	
 end
  
