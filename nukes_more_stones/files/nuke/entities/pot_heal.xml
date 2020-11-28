@@ -29,7 +29,7 @@
     leak_on_damage_percent="0.999"
     audio_collision_size_modifier_amount="1">
     <count_per_material_type>
-      <Material material="magic_liquid_hp_regeneration" count="175" />
+      <Material material="magic_liquid_hp_regeneration" count="190" />
 	</count_per_material_type>
   </MaterialInventoryComponent>
   
@@ -89,8 +89,9 @@
     max_child_items="0"
     is_pickable="1"
     is_equipable_forced="1"
+    always_use_item_name_in_ui="1"
     ui_sprite="mods/nukes_more_stones/files/nuke/ui_gfx/vial_healing.png"
-    ui_description="$item_description_potion"
+    ui_description="A small vial of healing potion. The cork won't budge."
     preferred_inventory="QUICK">
   </ItemComponent>
 

@@ -1,82 +1,68 @@
 
-function spawn_potions(x, y) -- we just replace the default function with this one
-
-	SetRandomSeed( x+425, y-243 )
-
-	local rnd = Random(1,100) -- idk why the fuck they made this a random number between 1 and 84, let's make it nice and simple
-	
-	if ( rnd >= 92 ) then -- 9 percent chance
-
-		local rnd2 = Random(1, 7)
-
-		if (rnd2 <= 2) then
-
-			EntityLoad( "data/entities/items/pickup/thunderstone.xml", x, y-2 )	
-
-		elseif (rnd2 <= 4) then
-
-			EntityLoad( "mods/nukes_more_stones/files/nuke/entities/stone_ice.xml", x, y-2 )
-
-		elseif (rnd2 <= 6) then
-
-			EntityLoad( "mods/nukes_more_stones/files/nuke/entities/stone_fire.xml", x, y-2 )
-
-		else
-
-			EntityLoad( "mods/nukes_more_stones/files/nuke/entities/stone_holy.xml", x, y-2 )
-
-		end
-
-	elseif ( rnd >= 85 ) then -- 7 percent chance
-
-		EntityLoad( "data/entities/items/pickup/egg_monster.xml", x, y-2 )
-
-	elseif ( rnd >= 80 ) then -- 5 percent chance
-
-		EntityLoad( "data/entities/items/pickup/egg_slime.xml", x, y-2 )
-
-	elseif ( rnd >= 77 ) then -- 3 percent chance
-
-		EntityLoad( "data/entities/items/pickup/egg_fire.xml", x, y-2 )
-
-	elseif ( rnd >= 75 ) then -- 2 percent chance
-
-		EntityLoad( "data/entities/items/pickup/egg_red.xml", x, y-2 )
-
-	elseif ( rnd >= 71 ) then -- 4 percent
-
-		EntityLoad( "data/entities/items/pickup/broken_wand.xml", x, y-2 )
-
-	elseif ( rnd >= 68 ) then -- 3 percent
-
-		EntityLoad( "mods/nukes_more_stones/files/nuke/entities/stone_skull.xml", x, y-2 )
-
-	elseif ( rnd >= 67 ) then -- 1 percent
-
-		EntityLoad( "mods/nukes_more_stones/files/nuke/entities/stone_nuke.xml", x, y-2 )
-
-	elseif ( rnd >= 66 ) then -- 1 percent
-
-		local rnd3 = Random(1,2)
-
-		if ( rnd3 == 1 ) then
-
-			EntityLoad( "mods/nukes_more_stones/files/nuke/entities/pot_heal.xml", x, y-2 )
-
-		else
-
-			EntityLoad( "mods/nukes_more_stones/files/nuke/entities/pot_precursor.xml", x, y-2 )
-
-		end
-
-	elseif ( rnd >= 63 ) then -- 3 percent
-
-		EntityLoad( "mods/nukes_more_stones/files/nuke/entities/chakram_item.xml", x, y-2 )
-
-	else -- 65 percent chance
-
-		EntityLoad( "data/entities/items/pickup/potion.xml", x, y-2 )
-
+function register_item(listname, weight, entity, offset) -- use this to register an item in spawn table
+	if ( type( listname ) == "string" ) then
+		local newmin = spawnlists[listname].rnd_max + 1
+		local newmax = newmin + weight
+		local tbl = {
+			value_min = newmin,
+			value_max = newmax,
+			offset_y = offset,
+			load_entity = entity
+		}
+		table.insert(spawnlists[listname].spawns, tbl)
+		spawnlists[listname].rnd_max = newmax
+	elseif ( type( listname ) == "table" ) then
+		local newmin = listname.rnd_max + 1
+		local newmax = newmin + weight
+		local tbl = {
+			value_min = newmin,
+			value_max = newmax,
+			offset_y = offset,
+			load_entity = entity
+		}
+		table.insert(listname.spawns, tbl)
+		listname.rnd_max = newmax
 	end
-
 end
+
+function change_existing_item(listname, entity_path, new_entity_path) -- useful for mods that want to replace existing entries in item table
+	if ( type( listname ) == "string" ) then
+		for k, v in pairs(spawnlists[listname].spawns) do
+			if v.load_entity ~= nil and v.load_entity == entity_path then
+				local tbl = v
+				tbl.load_entity = new_entity_path
+				spawnlists[listname][k] = tbl
+				return
+			end
+		end
+	elseif ( type( listname ) == "table" ) then
+		for k, v in pairs(listname.spawns) do
+			if v.load_entity ~= nil and v.load_entity == entity_path then
+				local tbl = v
+				tbl.load_entity = new_entity_path
+				listname[k] = tbl
+				return
+			end
+		end
+	end
+end
+
+register_item("potion_spawnlist", 1, "mods/nukes_more_stones/files/nuke/entities/pot_heal.xml", -2)
+register_item("potion_spawnlist", 1, "mods/nukes_more_stones/files/nuke/entities/pot_precursor.xml", -2)
+register_item("potion_spawnlist", 3, "mods/nukes_more_stones/files/nuke/entities/chakram_item.xml", -2)
+register_item("potion_spawnlist", 3, "mods/nukes_more_stones/files/nuke/entities/stone_skull.xml", -2)
+register_item("potion_spawnlist", 1, "mods/nukes_more_stones/files/nuke/entities/stone_nuke.xml", -2)
+register_item("potion_spawnlist", 3, "mods/nukes_more_stones/files/nuke/entities/stone_ice.xml", -2)--test
+register_item("potion_spawnlist", 2, "mods/nukes_more_stones/files/nuke/entities/stone_holy.xml", -2)
+change_existing_item("potion_spawnlist", "data/entities/items/pickup/brimstone.xml", "mods/nukes_more_stones/files/nuke/entities/stone_fire.xml")
+
+register_item("potion_spawnlist_liquidcave", 1, "mods/nukes_more_stones/files/nuke/entities/pot_heal.xml", -2)
+register_item("potion_spawnlist_liquidcave", 1, "mods/nukes_more_stones/files/nuke/entities/pot_precursor.xml", -2)
+register_item("potion_spawnlist_liquidcave", 3, "mods/nukes_more_stones/files/nuke/entities/chakram_item.xml", -2)
+register_item("potion_spawnlist_liquidcave", 3, "mods/nukes_more_stones/files/nuke/entities/stone_skull.xml", -2)
+register_item("potion_spawnlist_liquidcave", 1, "mods/nukes_more_stones/files/nuke/entities/stone_nuke.xml", -2)
+register_item("potion_spawnlist_liquidcave", 3, "mods/nukes_more_stones/files/nuke/entities/stone_ice.xml", -2)
+register_item("potion_spawnlist_liquidcave", 2, "mods/nukes_more_stones/files/nuke/entities/stone_holy.xml", -2)
+change_existing_item("potion_spawnlist_liquidcave", "data/entities/items/pickup/brimstone.xml", "mods/nukes_more_stones/files/nuke/entities/stone_fire.xml")
+
+
