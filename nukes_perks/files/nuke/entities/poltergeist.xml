@@ -1,0 +1,190 @@
+<Entity name="Poltergeist" tags="poltergeist,hittable,homing_target">
+
+	<PhysicsAIComponent 
+		target_vec_max_len="8.0"
+		force_coeff="40.0"
+		force_balancing_coeff="0.5"
+		force_max="120"
+		torque_coeff="80"
+		torque_balancing_coeff="0.002"
+		torque_max="80.0"
+		damage_deactivation_probability="40"
+		damage_deactivation_time_min="20"
+		damage_deactivation_time_max="40" >
+	</PhysicsAIComponent>
+
+	<LuaComponent 
+        script_source_file="mods/nukes_perks/files/nuke/scripts/poltergeist_die.lua"
+        execute_on_added="0"
+        execute_every_n_frame="900"
+        execute_times="1" >
+    </LuaComponent>
+
+	<LuaComponent 
+        script_source_file="mods/nukes_perks/files/nuke/scripts/poltergeist_remove_comp.lua"
+        execute_on_added="0"
+        execute_every_n_frame="2"
+        execute_times="1" >
+    </LuaComponent>
+
+	<LuaComponent 
+        script_source_file="mods/nukes_perks/files/nuke/scripts/poltergeist_grab_loop.lua"
+        execute_on_added="0"
+		execute_every_n_frame="1"
+        execute_times="-1" >
+    </LuaComponent>
+
+	<ParticleEmitterComponent
+      emitted_material_name="spark_white"
+	  offset.x="0"
+	  offset.y="0"
+      x_pos_offset_min="-2"
+	  x_pos_offset_max="2"
+	  y_pos_offset_min="-2"
+	  y_pos_offset_max="2"
+	  x_vel_min="-4"
+	  x_vel_max="4"
+	  y_vel_min="-8"
+	  y_vel_max="0"
+	  count_min="2"
+	  count_max="6"
+	  is_trail="1"
+	  trail_gap="1"
+	  lifetime_min="2.8"
+	  lifetime_max="3.8"
+	  fade_based_on_lifetime="1"
+	  create_real_particles="0"
+	  emit_cosmetic_particles="1"
+	  collide_with_grid="0"
+	  emission_interval_min_frames="6"
+	  emission_interval_max_frames="12"
+	  gravity.y="0"
+	  airflow_force="0.36"
+	  airflow_time="1.20"
+	  airflow_scale="0.28"
+	  is_emitting="1" >
+    </ParticleEmitterComponent>
+	
+	<Base file="data/entities/base_enemy_basic.xml" tags="poltergeist" >
+
+		<AnimalAIComponent 
+			_enabled="1" 
+			escape_if_damaged_probability="0"
+			food_material="blood"
+			attack_ranged_enabled="0"
+			attack_ranged_entity_file="mods/nukes_altars/files/nuke/entities/laserbeam_green.xml"
+			attack_ranged_frames_between="280"
+			attack_ranged_min_distance="10" 
+    		attack_ranged_max_distance="160" 
+			attack_ranged_offset_y="5"
+			attack_melee_enabled="1" 
+			attack_melee_max_distance="5"
+			attack_dash_enabled="0"
+			attack_dash_distance="10"
+			attack_dash_damage="0"
+			creature_detection_range_x="650"
+			creature_detection_range_y="650"
+			can_fly="1"
+			needs_food="0"
+			>
+		</AnimalAIComponent>
+
+		<DamageModelComponent 
+			hp="9000"
+			ragdoll_filenames_file="" 
+			fire_probability_of_ignition="0" 
+			ragdoll_material="rock_box2d_nohit"
+			materials_that_damage="blood_cold,acid"
+			materials_how_much_damage="0.0001,0.0001"
+			blood_multiplier="0.4"
+			ragdoll_blood_amount_absolute="0"
+			blood_material="acid"
+			blood_spray_material="acid"
+			blood_sprite_directional="data/particles/bloodsplatters/bloodsplatter_directional_green_$[1-3].xml"
+			blood_sprite_large="data/particles/bloodsplatters/bloodsplatter_green_$[1-3].xml"
+			>
+			<damage_multipliers
+				melee="0.0"
+				fire="0.0" 
+				ice="0.0"
+				>
+			</damage_multipliers>
+		</DamageModelComponent>
+
+		<HitboxComponent 
+			_enabled="1" 
+			aabb_max_x="1" 
+			aabb_max_y="1" 
+			aabb_min_x="-1" 
+			aabb_min_y="-1"
+			>
+		</HitboxComponent>
+
+		<PathFindingGridMarkerComponent 
+			marker_work_flag="16"
+			>
+		</PathFindingGridMarkerComponent>
+
+		<PathFindingComponent
+			frames_to_get_stuck="120"
+			can_jump="0" 
+			can_fly="1"
+			>
+		</PathFindingComponent>
+
+		<SpriteComponent 
+			image_file="mods/nukes_perks/files/nuke/sprites/angry_ghost.xml"
+			offset_x="0"
+			offset_y="0">
+		</SpriteComponent>
+
+		<CharacterPlatformingComponent
+			jump_velocity_y="-90" 
+			run_velocity="57"  
+			fly_speed_max_up="180"
+			fly_speed_max_down="180"
+			fly_velocity_x="180"
+			>
+		</CharacterPlatformingComponent>
+
+		<GenomeDataComponent 
+			herd_id="player"
+			food_chain_rank="20"
+			is_predator="1" >
+		</GenomeDataComponent>
+
+		<CameraBoundComponent
+			max_count="1"
+			distance="160000"
+			>
+		</CameraBoundComponent>
+
+		<ItemChestComponent 
+			enemy_drop="0"
+			item_count_min="0"
+			item_count_max="0"
+			>
+		</ItemChestComponent>
+
+		<CharacterDataComponent 
+			collision_aabb_min_x="-4.0" 
+			collision_aabb_max_x="4.0" 
+			collision_aabb_min_y="-10" 
+			collision_aabb_max_y="3"
+			mass="0.7"
+			>
+		</CharacterDataComponent>
+	</Base>
+
+	<VariableStorageComponent 
+		_tags="no_gold_drop">
+	</VariableStorageComponent>
+
+	<AudioLoopComponent
+		file="data/audio/Desktop/animals.bank"
+		event_name="animals/tiny_ghost/movement_loop"
+		set_speed_parameter="1"
+		auto_play="1">
+	</AudioLoopComponent>
+
+</Entity>

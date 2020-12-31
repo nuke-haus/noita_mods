@@ -1,0 +1,63 @@
+<Entity tags="projectile_player" >
+	
+	<UIInfoComponent
+		name="Poltergeist Portal"
+		>
+	</UIInfoComponent>
+	
+	<SpriteParticleEmitterComponent
+		sprite_file="data/particles/purplewhirl_$[1-3].png"
+		sprite_centered="1"
+		delay="0"
+		lifetime="1.5"
+		color.r="1" color.g="1" color.b="1" color.a="0.75"
+		color_change.r="0" color_change.g="0" color_change.b="0" color_change.a="-0.75"
+		velocity.x="0" velocity.y="0"
+		gravity.x="0" gravity.y="0"
+		velocity_slowdown="0.35"
+		rotation="0"
+		angular_velocity="7.5"
+		render_back="1"
+		use_velocity_as_rotation="0"
+		scale.x="0.001" scale.y="0.001"
+		scale_velocity.x="0.75" scale_velocity.y="0.75"
+		emission_interval_min_frames="2"
+		emission_interval_max_frames="4"
+		count_min="1" count_max="1"
+		randomize_position.min_x="0"
+		randomize_position.max_x="0"
+		randomize_position.min_y="0"
+		randomize_position.max_y="0"
+		randomize_velocity.min_x="-2"
+		randomize_velocity.max_x="2"
+		randomize_velocity.min_y="-2"
+		randomize_velocity.max_y="2"
+		randomize_lifetime.min="-0.2"
+		randomize_lifetime.max="0.2"
+		randomize_angular_velocity.min="-3.0"
+		randomize_angular_velocity.max="3.0"
+		randomize_rotation.min="-90"
+		randomize_rotation.max="90"
+		>
+	</SpriteParticleEmitterComponent>
+	
+	<LifetimeComponent
+		lifetime="120"
+		>
+	</LifetimeComponent>
+	
+	<Base file="data/entities/base_projectile.xml" >
+		<VelocityComponent
+    		gravity_y="0"
+			air_friction="0"
+			mass="0.08"
+			>
+    	</VelocityComponent> 
+	</Base>
+	
+	<AudioComponent
+      file="data/audio/Desktop/animals.snd"
+      event_root="animals/ghost" >
+    </AudioComponent>
+	
+</Entity>

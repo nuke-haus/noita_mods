@@ -132,9 +132,21 @@ if ENABLE_PIXIE_PERK then
 
 end
 
+if ENABLE_POLTERGEIST_PERK then
+
+	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/nukes_perks/files/nuke/scripts/poltergeist.lua" )
+
+end
+
 if ENABLE_ADAPTIVE_RESIST_PERK then
 
 	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/nukes_perks/files/nuke/scripts/adaptive_resist.lua" )
+
+end
+
+if ENABLE_ARSENAL_PERK then
+
+	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/nukes_perks/files/nuke/scripts/arsenal.lua" )
 
 end
 
