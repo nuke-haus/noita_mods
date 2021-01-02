@@ -112,7 +112,6 @@ local function generate_shop_perk(x, y, cheap)
 end
 
 function generate_shop_item( x, y, cheap_item, biomeid_, is_stealable )
-
 	-- this makes the shop items deterministic
 	SetRandomSeed( x, y )
 
@@ -164,7 +163,11 @@ function generate_shop_item( x, y, cheap_item, biomeid_, is_stealable )
 	local biomepixel = math.floor(y / 512)
 	local biomeid = biomes[biomepixel] or 0
 	
-	if (biomes[biomepixel] == nil) then
+	if (biomepixel > 35) then
+		biomeid = 7
+	end
+	
+	if (biomes[biomepixel] == nil) and (biomeid_ == nil) then
 		print("Unable to find biomeid for chunk at depth " .. tostring(biomepixel))
 	end
 	
@@ -179,31 +182,35 @@ function generate_shop_item( x, y, cheap_item, biomeid_, is_stealable )
 	local item = ""
 	local cardcost = 0
 
-	local validcards = {}
-
 	-- Note( Petri ): Testing how much squaring the biomeid for prices affects things
+	local level = biomeid
 	biomeid = biomeid * biomeid
 
-	for i,thisitem in ipairs(actions) do
+	item = GetRandomAction( x, y, level, 0 )
+	cardcost = 0
 
-		local spawnids = thisitem.spawn_level
-		local sid_string = ""
-		local sid_value = -99
-		
-		price = math.max(math.floor( ( (thisitem.price * 0.45) + (70 * biomeid) ) / 10 ) * 10, 10)
-		table.insert(validcards, {string.lower(thisitem.id), price})
-
-	end
-
-	if (#validcards > 0) then
-		local randomcard = Random(1,#validcards)
-		
-		local card = validcards[randomcard]
-		item = card[1]
-		cardcost = card[2]
-		if( cheap_item ) then
-			cardcost = 0.5 * cardcost
+	for i,thisitem in ipairs( actions ) do
+		if ( string.lower( thisitem.id ) == string.lower( item ) ) then
+			price = math.max(math.floor( ( (thisitem.price * 0.30) + (70 * biomeid) ) / 10 ) * 10, 10)
+			cardcost = price
+			
+			if ( thisitem.spawn_requires_flag ~= nil ) then
+				local flag = thisitem.spawn_requires_flag
+				
+				if ( HasFlagPersistent( flag ) == false ) then
+					print( "Trying to spawn " .. tostring( thisitem.id ) .. " even though flag " .. tostring( flag ) .. " not set!!" )
+				end
+			end
 		end
+	end
+	
+	if( cheap_item ) then
+		cardcost = 0.5 * cardcost
+	end
+	
+	if ( biomeid >= 10 ) then
+		price = price * 5.0
+		cardcost = cardcost * 5.0
 	end
 
 	local eid = CreateItemActionEntity( item, x, y )
@@ -214,16 +221,33 @@ function generate_shop_item( x, y, cheap_item, biomeid_, is_stealable )
 
 	-- local x, y = EntityGetTransform( entity_id )
 	-- SetRandomSeed( x, y )
+	
+	local offsetx = 6
+	local text = tostring(cardcost)
+	local textwidth = 0
+	
+	for i=1,#text do
+		local l = string.sub( text, i, i )
+		
+		if ( l ~= "1" ) then
+			textwidth = textwidth + 6
+		else
+			textwidth = textwidth + 3
+		end
+	end
+	
+	offsetx = textwidth * 0.5 - 0.5
 
 	EntityAddComponent( eid, "SpriteComponent", { 
 		_tags="shop_cost,enabled_in_world",
 		image_file="data/fonts/font_pixel_white.xml", 
 		is_text_sprite="1", 
-		offset_x="7", 
+		offset_x=tostring(offsetx), 
 		offset_y="25", 
 		update_transform="1" ,
 		update_transform_rotation="0",
-		text="111",
+		text=tostring(cardcost),
+		z_index="-1",
 		} )
 
 	local stealable_value = "0"
