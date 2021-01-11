@@ -1,7 +1,7 @@
 dofile( "data/scripts/lib/coroutines.lua" )
 dofile( "data/scripts/lib/utilities.lua" )
 
-local RADIUS = 125.0
+local RADIUS = 115.0
 local MAX_STRENGTH = 70.0
 local MIN_STRENGTH = 1.0
 local CUR_X = 0

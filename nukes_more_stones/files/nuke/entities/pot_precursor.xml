@@ -29,7 +29,7 @@
     leak_on_damage_percent="0.999"
     audio_collision_size_modifier_amount="1">
     <count_per_material_type>
-      <Material material="midas_precursor" count="190" />
+      <Material material="midas_precursor" count="100" />
 	</count_per_material_type>
   </MaterialInventoryComponent>
   

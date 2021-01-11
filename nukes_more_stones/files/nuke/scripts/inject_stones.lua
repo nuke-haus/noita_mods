@@ -49,20 +49,20 @@ end
 
 register_item("potion_spawnlist", 1, "mods/nukes_more_stones/files/nuke/entities/pot_heal.xml", -2)
 register_item("potion_spawnlist", 1, "mods/nukes_more_stones/files/nuke/entities/pot_precursor.xml", -2)
-register_item("potion_spawnlist", 3, "mods/nukes_more_stones/files/nuke/entities/chakram_item.xml", -2)
-register_item("potion_spawnlist", 3, "mods/nukes_more_stones/files/nuke/entities/stone_skull.xml", -2)
+register_item("potion_spawnlist", 4, "mods/nukes_more_stones/files/nuke/entities/chakram_item.xml", -2)
+register_item("potion_spawnlist", 5, "mods/nukes_more_stones/files/nuke/entities/stone_skull.xml", -2)
 register_item("potion_spawnlist", 1, "mods/nukes_more_stones/files/nuke/entities/stone_nuke.xml", -2)
-register_item("potion_spawnlist", 3, "mods/nukes_more_stones/files/nuke/entities/stone_ice.xml", -2)--test
-register_item("potion_spawnlist", 2, "mods/nukes_more_stones/files/nuke/entities/stone_holy.xml", -2)
+register_item("potion_spawnlist", 5, "mods/nukes_more_stones/files/nuke/entities/stone_ice.xml", -2)
+register_item("potion_spawnlist", 3, "mods/nukes_more_stones/files/nuke/entities/stone_holy.xml", -2)
 change_existing_item("potion_spawnlist", "data/entities/items/pickup/brimstone.xml", "mods/nukes_more_stones/files/nuke/entities/stone_fire.xml")
 
 register_item("potion_spawnlist_liquidcave", 1, "mods/nukes_more_stones/files/nuke/entities/pot_heal.xml", -2)
 register_item("potion_spawnlist_liquidcave", 1, "mods/nukes_more_stones/files/nuke/entities/pot_precursor.xml", -2)
-register_item("potion_spawnlist_liquidcave", 3, "mods/nukes_more_stones/files/nuke/entities/chakram_item.xml", -2)
-register_item("potion_spawnlist_liquidcave", 3, "mods/nukes_more_stones/files/nuke/entities/stone_skull.xml", -2)
+register_item("potion_spawnlist_liquidcave", 4, "mods/nukes_more_stones/files/nuke/entities/chakram_item.xml", -2)
+register_item("potion_spawnlist_liquidcave", 5, "mods/nukes_more_stones/files/nuke/entities/stone_skull.xml", -2)
 register_item("potion_spawnlist_liquidcave", 1, "mods/nukes_more_stones/files/nuke/entities/stone_nuke.xml", -2)
-register_item("potion_spawnlist_liquidcave", 3, "mods/nukes_more_stones/files/nuke/entities/stone_ice.xml", -2)
-register_item("potion_spawnlist_liquidcave", 2, "mods/nukes_more_stones/files/nuke/entities/stone_holy.xml", -2)
+register_item("potion_spawnlist_liquidcave", 5, "mods/nukes_more_stones/files/nuke/entities/stone_ice.xml", -2)
+register_item("potion_spawnlist_liquidcave", 3, "mods/nukes_more_stones/files/nuke/entities/stone_holy.xml", -2)
 change_existing_item("potion_spawnlist_liquidcave", "data/entities/items/pickup/brimstone.xml", "mods/nukes_more_stones/files/nuke/entities/stone_fire.xml")
 
 
