@@ -8,6 +8,8 @@ table.insert( perk_list,
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/inferno.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/inferno.png",
 	game_effect = "PROTECTION_FIRE",
+	stackable = STACKABLE_NO,
+	usable_by_enemies = true,
 	func = function(perk_item, player, item_name)
 		
 		local x,y = EntityGetTransform(player)

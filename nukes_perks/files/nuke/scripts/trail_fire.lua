@@ -7,6 +7,8 @@ table.insert( perk_list,
 	ui_description = "You leave a trail of magical flames wherever you go.",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/trail_fire.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/trail_fire.png",
+	stackable = STACKABLE_NO,
+	usable_by_enemies = true,
 	func = function(perk_item, player, item_name)
 
 		local tbl = {

@@ -7,6 +7,8 @@ table.insert( perk_list,
 	ui_description = "Poltergeists are summoned to fight for you.",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/polter.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/polter.png",
+	stackable = STACKABLE_NO,
+	usable_by_enemies = false,
 	func = function(perk_item, player, item_name)
 		
 		local tbl = {

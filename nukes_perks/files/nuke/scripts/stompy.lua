@@ -7,12 +7,12 @@ table.insert( perk_list,
 	ui_description = "The earth crumbles beneath your feet.",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/tremor.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/tremor.png",
-	--not_in_default_perk_pool = cfg_disable_wandbuff,
+	stackable = STACKABLE_NO,
+	usable_by_enemies = false,
 	func = function(entity_perk_item, player_entity, item_name)
 	
 		local data = get_data_comp(player_entity)
-		--local data = EntityGetFirstComponent(player_entity, "CharacterDataComponent") 
-		
+	
 		ComponentSetValue(data, "destroy_ground", 100)
 		ComponentSetValue(data, "eff_hg_damage_max", 600)
 		ComponentSetValue(data, "eff_hg_damage_min", 500)

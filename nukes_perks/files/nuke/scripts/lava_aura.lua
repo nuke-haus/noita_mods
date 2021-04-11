@@ -7,6 +7,8 @@ table.insert( perk_list,
 	ui_description = "You convert nearby lava to alcohol.",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/lava_aura.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/lava_aura.png",
+	stackable = STACKABLE_NO,
+	usable_by_enemies = false,
 	func = function(perk_item, player, item_name)
 		
 		local x,y = EntityGetTransform(player)

@@ -1,0 +1,251 @@
+<Entity name="Gorgon Stone" tags="gorgon_stonebaby,hittable,homing_target">
+
+	<PhysicsAIComponent
+		target_vec_max_len="6.0"
+		force_coeff="40.0"
+		force_balancing_coeff="0.8"
+		force_max="120"
+		torque_coeff="80"
+		torque_balancing_coeff="0.002"
+		torque_max="80.0"
+		damage_deactivation_probability="40"
+		damage_deactivation_time_min="20"
+		damage_deactivation_time_max="40" >
+	</PhysicsAIComponent>
+
+	<PhysicsBodyComponent 
+		allow_sleep="1" 
+		angular_damping="0.01" 
+		fixed_rotation="0" 
+		is_bullet="0" 
+		linear_damping="0" 
+		on_death_leave_physics_body="1" >
+	</PhysicsBodyComponent>
+
+	<PhysicsImageShapeComponent 
+		image_file="mods/nukes_perks/files/nuke/sprites/babygorgon.png"
+		centered="0"
+		material="gorgon_box2d_nohit" 
+		offset_x="8"
+		offset_y="8"
+		>
+	</PhysicsImageShapeComponent>
+
+	<LuaComponent
+        script_source_file="mods/nukes_perks/files/nuke/scripts/baby_gorgon_loop.lua"
+		script_damage_received="mods/nukes_perks/files/nuke/scripts/baby_gorgon_loop.lua"
+        execute_on_added="0"
+        execute_every_n_frame="60"
+        execute_times="-1" >
+    </LuaComponent>
+
+	<LuaComponent
+        script_source_file="mods/nukes_perks/files/nuke/scripts/baby_gorgon_die.lua"
+        execute_on_added="0"
+        execute_every_n_frame="2400"
+        execute_times="-1" >
+    </LuaComponent>
+
+	<ParticleEmitterComponent
+      emitted_material_name="spark_green"
+	  offset.x="0"
+	  offset.y="0"
+      x_pos_offset_min="-2"
+	  x_pos_offset_max="2"
+	  y_pos_offset_min="-2"
+	  y_pos_offset_max="2"
+	  x_vel_min="-4"
+	  x_vel_max="4"
+	  y_vel_min="-8"
+	  y_vel_max="0"
+	  count_min="2"
+	  count_max="6"
+	  is_trail="1"
+	  trail_gap="1"
+	  lifetime_min="2.8"
+	  lifetime_max="3.8"
+	  fade_based_on_lifetime="1"
+	  create_real_particles="0"
+	  emit_cosmetic_particles="1"
+	  collide_with_grid="0"
+	  emission_interval_min_frames="6"
+	  emission_interval_max_frames="12"
+	  gravity.y="0"
+	  airflow_force="0.36"
+	  airflow_time="1.20"
+	  airflow_scale="0.28"
+	  is_emitting="1" >
+    </ParticleEmitterComponent>
+
+	<ExplosionComponent
+		trigger="ON_DEATH"
+		><config_explosion
+		  damage="2.2"
+		  never_cache="0" 
+		  camera_shake="0" 
+		  explosion_radius="7" 
+		  explosion_sprite="data/particles/smoke_cloud_green_1.xml"
+		  load_this_entity="mods/nukes_perks/files/nuke/entities/empty.xml"
+		  explosion_sprite_lifetime="0" 
+		  explosion_sprite_random_rotation="0"
+		  create_cell_probability="0" 
+		  hole_destroy_liquid="0"
+		  explosion_sprite_emissive="1"
+		  explosion_sprite_additive="1"
+		  hole_enabled="1" 
+		  hole_image="data/temp/explosion_hole.png" 
+		  particle_effect="0"
+		  physics_explosion_power.min="0" 
+		  physics_explosion_power.max="0" 
+		  physics_throw_enabled="0" 
+		  shake_vegetation="0"  
+		  sparks_enabled="0" 
+		  stains_enabled="0" 
+		  stains_image="data/temp/explosion_stain.png" 
+		  ray_energy="900000">
+		</config_explosion>
+	</ExplosionComponent>
+	
+	<Base file="data/entities/base_enemy_basic.xml" >
+
+		<AnimalAIComponent 
+			_enabled="1" 
+			escape_if_damaged_probability="0"
+			food_material="blood"
+			attack_ranged_enabled="0"
+			attack_melee_enabled="1" 
+			attack_melee_max_distance="20"
+			attack_melee_damage_min="0.2"
+			attack_melee_offset_x="1"
+			attack_dash_enabled="1"
+			attack_dash_distance="30"
+			attack_dash_damage="0.1"
+			creature_detection_range_x="650"
+			creature_detection_range_y="650"
+			can_fly="1"
+			needs_food="0"
+			>
+		</AnimalAIComponent>
+
+		<DamageModelComponent 
+			hp="0.6"
+			ragdoll_filenames_file="" 
+			fire_probability_of_ignition="0" 
+			ragdoll_material="rock_box2d_nohit"
+			materials_that_damage="blood_cold,acid"
+			materials_how_much_damage="0.0001,0.0001"
+			blood_multiplier="0.4"
+			ragdoll_blood_amount_absolute="0"
+			blood_material="acid"
+			blood_spray_material="acid"
+			blood_sprite_directional="data/particles/bloodsplatters/bloodsplatter_directional_green_$[1-3].xml"
+			blood_sprite_large="data/particles/bloodsplatters/bloodsplatter_green_$[1-3].xml"
+			>
+			<damage_multipliers
+				melee="0.0"
+				fire="0.0" 
+				ice="0.0"
+				>
+			</damage_multipliers>
+		</DamageModelComponent>
+
+		<SpriteComponent 
+			image_file="" 
+			offset_x="0"
+			offset_y="0"
+			>
+		</SpriteComponent>
+
+		<PathFindingGridMarkerComponent
+			marker_work_flag="16"
+			>
+		</PathFindingGridMarkerComponent>
+
+		<PathFindingComponent
+			frames_to_get_stuck="120"
+			can_jump="0" 
+			can_fly="1"
+			>
+		</PathFindingComponent>
+
+		<GenomeDataComponent 
+			herd_id="-1"
+			food_chain_rank="9"
+			is_predator="1"
+			>
+		</GenomeDataComponent>
+
+		<CharacterPlatformingComponent 
+			jump_velocity_y="-90" 
+			run_velocity="57"  
+			fly_speed_max_up="180"
+			fly_speed_max_down="180"
+			fly_velocity_x="180"
+			>
+		</CharacterPlatformingComponent>
+
+		<CameraBoundComponent
+			max_count="30"
+			distance="160000"
+			>
+		</CameraBoundComponent>
+
+		<HitboxComponent 
+			_enabled="1" 
+			aabb_max_x="6" 
+			aabb_max_y="6" 
+			aabb_min_x="-6" 
+			aabb_min_y="-7"
+			>
+		</HitboxComponent>
+
+		<ItemChestComponent
+			enemy_drop="0"
+			item_count_min="0"
+			item_count_max="0"
+			>
+		</ItemChestComponent>
+
+		<CharacterDataComponent
+			collision_aabb_min_x="-4.0" 
+			collision_aabb_max_x="4.0" 
+			collision_aabb_min_y="-10" 
+			collision_aabb_max_y="1"
+			mass="0.7"
+			>
+		</CharacterDataComponent>
+	</Base>
+
+	<MaterialInventoryComponent 
+		_enabled="1" 
+		drop_as_item="0" 
+		leak_on_damage_percent="0.999" 
+		>
+		<count_per_material_type>
+			<Material material="acid" count="40"  />
+		</count_per_material_type>
+	</MaterialInventoryComponent>
+
+	<!-- HACK FIX: for some reason pebbles leak the light sprites left by these components -->
+	<!--<LightComponent 
+		_enabled="1" 
+		radius="30" 
+		offset_y="0"
+		r="0"
+		g="140"
+		b="40"
+		>
+	</LightComponent>-->
+
+	<VariableStorageComponent
+		_tags="no_gold_drop">
+	</VariableStorageComponent>
+
+	<AudioLoopComponent
+		file="data/audio/Desktop/animals.snd"
+		event_name="animals/pebble/movement_loop"
+		set_speed_parameter="1"
+		auto_play="1">
+	</AudioLoopComponent>
+
+</Entity>

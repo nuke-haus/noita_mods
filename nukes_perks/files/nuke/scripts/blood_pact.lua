@@ -6,6 +6,8 @@ table.insert( perk_list,
 	ui_description = "You receive four random perks, but your maximum health has been halved.",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/bloodpact.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/bloodpact.png",
+	stackable = STACKABLE_NO,
+	usable_by_enemies = false,
 	func = function(entity_perk_item, player_entity, item_name)
 
 		dofile("data/scripts/perks/perk.lua")

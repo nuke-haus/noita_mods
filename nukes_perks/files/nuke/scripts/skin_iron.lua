@@ -7,7 +7,8 @@ table.insert( perk_list,
 	ui_description = "Physical damage is reduced by 20%. You have become vulnerable to electricity.",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/skin_iron.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/skin_iron.png",
-	--not_in_default_perk_pool = cfg_disable_wandbuff,
+	stackable = STACKABLE_NO,
+	usable_by_enemies = false,
 	func = function( entity_perk_item, entity_who_picked, item_name )
 		
 		local damagemodels = EntityGetComponent( entity_who_picked, "DamageModelComponent" )

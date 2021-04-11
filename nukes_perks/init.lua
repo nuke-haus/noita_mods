@@ -107,12 +107,6 @@ if ENABLE_INFERNO_PERK then
 
 end
 
-if ENABLE_DOUBLE_PERK then
-
-	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/nukes_perks/files/nuke/scripts/double_down.lua" )
-
-end
-
 if ENABLE_BLOODPACT_PERK then
 
 	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/nukes_perks/files/nuke/scripts/blood_pact.lua" )
@@ -129,6 +123,12 @@ end
 if ENABLE_PIXIE_PERK then
 
 	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/nukes_perks/files/nuke/scripts/pixies.lua" )
+
+end
+
+if ENABLE_GORGON_PERK then
+
+	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/nukes_perks/files/nuke/scripts/baby_gorgon.lua" )
 
 end
 

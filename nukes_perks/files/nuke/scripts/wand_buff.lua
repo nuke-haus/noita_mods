@@ -122,7 +122,8 @@ table.insert( perk_list,
 	ui_description = "Wands become more powerful in your hands.",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/wand_buff.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/wand_buff.png",
-	--not_in_default_perk_pool = cfg_disable_wandbuff,
+	stackable = STACKABLE_NO,
+	usable_by_enemies = false,
 	func = function(entity_perk_item, player_entity, item_name)
 
 		local tbl = {

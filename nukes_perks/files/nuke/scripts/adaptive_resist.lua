@@ -7,6 +7,8 @@ table.insert( perk_list,
 	ui_description = "When you take damage, you gain a temporary resistance to that damage type.",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/adaptive.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/adaptive.png",
+	stackable = STACKABLE_NO,
+	usable_by_enemies = false,
 	func = function( entity_perk_item, player, item_name )
 
 		local tbl = {
