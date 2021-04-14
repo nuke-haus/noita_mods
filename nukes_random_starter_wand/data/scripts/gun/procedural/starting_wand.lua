@@ -105,8 +105,8 @@ elseif ( gun_action == "ARROW" ) then
 
 elseif ( gun_action == "AIR_BULLET" ) then
 
-	gun.reload_time = {40,50}
-	gun.fire_rate_wait = {20,30}
+	gun.reload_time = {20,30}
+	gun.fire_rate_wait = {10,30}
 	deck_capacity = Random( 2, 3 )
 	action_count = Random( 1, 2 )
 
