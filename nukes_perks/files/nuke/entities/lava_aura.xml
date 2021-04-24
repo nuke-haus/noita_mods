@@ -33,7 +33,7 @@
         steps_per_frame="22"
         loop="1"
 		is_circle="1"
-        radius="16" >
+        radius="18" >
     </MagicConvertMaterialComponent>
 
 </Entity>

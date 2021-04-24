@@ -35,18 +35,6 @@ if ENABLE_BLEED_BERSERKIUM_PERK then
 
 end
 
-if ENABLE_LAVA_IMMUNE_PERK then
-
-	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/nukes_perks/files/nuke/scripts/prot_lava.lua" )
-
-end
-
-if ENABLE_ACID_IMMUNE_PERK then
-
-	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/nukes_perks/files/nuke/scripts/prot_acid.lua" )
-
-end
-
 if ENABLE_STOMPY_PERK then
 
 	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/nukes_perks/files/nuke/scripts/stompy.lua" )
@@ -62,12 +50,6 @@ end
 if ENABLE_IRONSKIN_PERK then
 
 	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/nukes_perks/files/nuke/scripts/skin_iron.lua" )
-
-end
-
-if ENABLE_ACID_AURA_PERK then
-
-	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/nukes_perks/files/nuke/scripts/acid_aura.lua" )
 
 end
 
@@ -141,12 +123,6 @@ end
 if ENABLE_ADAPTIVE_RESIST_PERK then
 
 	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/nukes_perks/files/nuke/scripts/adaptive_resist.lua" )
-
-end
-
-if ENABLE_ARSENAL_PERK then
-
-	ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/nukes_perks/files/nuke/scripts/arsenal.lua" )
 
 end
 
