@@ -4,7 +4,7 @@ table.insert( perk_list,
 {
 	id = "POLTERGEIST",
 	ui_name = "Poltergeist Summoning",
-	ui_description = "Poltergeists are summoned to fight for you.",
+	ui_description = "$perkdesc_polter",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/polter.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/polter.png",
 	stackable = STACKABLE_NO,

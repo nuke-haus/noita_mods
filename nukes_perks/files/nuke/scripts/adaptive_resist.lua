@@ -4,7 +4,7 @@ table.insert( perk_list,
 {
 	id = "ADAPTIVE_PROTECTION",
 	ui_name = "Adaptive Protection",
-	ui_description = "When you take damage, you gain a temporary resistance to that damage type.",
+	ui_description = "$perkdesc_adaptresist",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/adaptive.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/adaptive.png",
 	stackable = STACKABLE_NO,

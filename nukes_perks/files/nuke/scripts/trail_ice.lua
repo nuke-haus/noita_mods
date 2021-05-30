@@ -4,7 +4,7 @@ table.insert( perk_list,
 {
 	id = "TRAIL_MAGIC_ICE",
 	ui_name = "Freezing Afterimage",
-	ui_description = "You leave a trail of freezing magic wherever you go.",
+	ui_description = "$perkdesc_icetrail",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/trail_ice.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/trail_ice.png",
 	stackable = STACKABLE_NO,

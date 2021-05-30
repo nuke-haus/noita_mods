@@ -4,7 +4,7 @@ table.insert( perk_list,
 {
 	id = "PIXIES",
 	ui_name = "Sprite Summoning",
-	ui_description = "Mischievous sprites are summoned to fight for you.",
+	ui_description = "$perkdesc_pixie",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/pixie.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/pixie.png",
 	stackable = STACKABLE_NO,

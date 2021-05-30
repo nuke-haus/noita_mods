@@ -1,23 +1,24 @@
 
-local function summon(me, x, y, ent)
+dofile_once("data/scripts/lib/utilities.lua")
 
-    local tbl = {
-        script_source_file="mods/nukes_perks/files/nuke/scripts/baby_gorg_portal.lua",
-        execute_on_added="0",
-        execute_every_n_frame="200",
-        execute_times="1" }
+local entity_id = GetUpdatedEntityID()
+local x, y = EntityGetTransform( entity_id )
 
-    local portal = EntityLoad("mods/nukes_perks/files/nuke/entities/gorgonbaby_portal.xml", x, y)
-    EntityAddComponent(portal, "LuaComponent", tbl) 
+local targets = EntityGetInRadiusWithTag( x, y, 160, "homing_target" )
 
-end
+if ( #targets > 0 ) then
+	for i,target_id in ipairs( targets ) do
+		local variablestorages = EntityGetComponent( target_id, "VariableStorageComponent" )
 
-local me = GetUpdatedEntityID()
-local x,y = EntityGetTransform(me)
-local alive = EntityGetWithTag("gorgon_stonebaby") or {}
-
-if (#alive < 1) then
-
-    summon(me, x, y, ent)
-
+        if ( EntityHasTag( target_id, "spawnbabygorgon" ) == false ) and ( EntityHasTag( target_id, "polymorphed") == false) then
+            
+            EntityAddTag( target_id, "spawnbabygorgon" )
+            
+			EntityAddComponent( target_id, "LuaComponent", 
+			{ 
+				script_death = "mods/nukes_perks/files/nuke/scripts/baby_gorg_summon_die.lua",
+				execute_every_n_frame = "-1",
+			} )
+		end
+	end
 end

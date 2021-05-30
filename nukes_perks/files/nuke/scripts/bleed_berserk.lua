@@ -4,7 +4,7 @@ table.insert( perk_list,
 {
 	id = "BLEED_BERSERK",
 	ui_name = "Berserker Blood",
-	ui_description = "You bleed a lot of berserkium.",
+	ui_description = "$perkdesc_berserkb",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/berz_blood.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/berz_blood.png",
 	stackable = STACKABLE_NO,

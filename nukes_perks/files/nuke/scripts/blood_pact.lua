@@ -3,7 +3,7 @@ table.insert( perk_list,
 {
 	id = "BLOOD_PACT",
 	ui_name = "Blood Pact",
-	ui_description = "You receive four random perks, but your maximum health has been halved.",
+	ui_description = "$perkdesc_pact",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/bloodpact.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/bloodpact.png",
 	stackable = STACKABLE_NO,

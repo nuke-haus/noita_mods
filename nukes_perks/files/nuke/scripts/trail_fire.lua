@@ -4,7 +4,7 @@ table.insert( perk_list,
 {
 	id = "TRAIL_MAGIC_FIRE",
 	ui_name = "Burning Afterimage",
-	ui_description = "You leave a trail of magical flames wherever you go.",
+	ui_description = "$perkdesc_firetrail",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/trail_fire.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/trail_fire.png",
 	stackable = STACKABLE_NO,

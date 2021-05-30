@@ -4,7 +4,7 @@ table.insert( perk_list,
 {
 	id = "SKIN_IRON",
 	ui_name = "Ironskin",
-	ui_description = "Physical damage is reduced by 20%. You have become vulnerable to electricity.",
+	ui_description = "$perkdesc_irons",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/skin_iron.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/skin_iron.png",
 	stackable = STACKABLE_NO,

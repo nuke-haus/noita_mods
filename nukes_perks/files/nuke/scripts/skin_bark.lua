@@ -4,7 +4,7 @@ table.insert( perk_list,
 {
 	id = "SKIN_BARK",
 	ui_name = "Barkskin",
-	ui_description = "Physical damage is reduced by 20%. You have become vulnerable to fire.",
+	ui_description = "$perkdesc_bark",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/skin_bark.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/skin_bark.png",
 	stackable = STACKABLE_NO,

@@ -4,7 +4,7 @@ table.insert( perk_list,
 {
 	id = "STOMPY",
 	ui_name = "Tremor Step",
-	ui_description = "The earth crumbles beneath your feet.",
+	ui_description = "$perkdesc_tremor",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/tremor.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/tremor.png",
 	stackable = STACKABLE_NO,

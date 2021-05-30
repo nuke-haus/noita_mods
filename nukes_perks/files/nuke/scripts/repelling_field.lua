@@ -4,7 +4,7 @@ table.insert( perk_list,
 {
 	id = "REPEL_FIELD",
 	ui_name = "Repulsion Field",
-	ui_description = "An invisible field pushes all objects and projectiles away from you.",
+	ui_description = "$perkdesc_field",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/repel_field.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/repel_field.png",
 	stackable = STACKABLE_NO,

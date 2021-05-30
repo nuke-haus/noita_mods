@@ -4,7 +4,7 @@ table.insert( perk_list,
 {
 	id = "INFERNO_AURA",
 	ui_name = "Inferno",
-	ui_description = "You are immune to fire, but you are constantly shrouded in flames.",
+	ui_description = "$perkdesc_inferno",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/inferno.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/inferno.png",
 	game_effect = "PROTECTION_FIRE",

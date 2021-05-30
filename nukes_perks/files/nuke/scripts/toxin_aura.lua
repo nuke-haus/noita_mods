@@ -4,7 +4,7 @@ table.insert( perk_list,
 {
 	id = "TOX_AURA",
 	ui_name = "Alchemical Transmutation",
-	ui_description = "You purify nearby toxins and convert harmful magical liquids to safer magical liquids.",
+	ui_description = "$perkdesc_toxaura",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/toxin_aura.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/toxin_aura.png",
 	stackable = STACKABLE_NO,

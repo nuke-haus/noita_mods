@@ -4,7 +4,7 @@ table.insert( perk_list,
 {
 	id = "LAVA_AURA",
 	ui_name = "Alcoholic Transmutation",
-	ui_description = "You convert nearby acid and lava to alcohol.",
+	ui_description = "$perkdesc_lava",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/lava_aura.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/lava_aura.png",
 	stackable = STACKABLE_NO,

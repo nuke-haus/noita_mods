@@ -119,7 +119,7 @@ table.insert( perk_list,
 {
 	id = "WAND_BUFF",
 	ui_name = "Upgraded Wands",
-	ui_description = "Wands become more powerful in your hands.",
+	ui_description = "$perkdesc_wandb",
 	ui_icon = "mods/nukes_perks/files/nuke/perks_gfx/ui/wand_buff.png",
 	perk_icon = "mods/nukes_perks/files/nuke/perks_gfx/ig/wand_buff.png",
 	stackable = STACKABLE_NO,

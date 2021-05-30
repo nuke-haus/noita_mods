@@ -1,4 +1,4 @@
-<Entity tags="projectile_player" >
+<Entity tags="gorgon_stonebaby,projectile_player" >
 	
 	<UIInfoComponent
 		name="Pixie Portal"
