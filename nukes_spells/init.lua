@@ -22,6 +22,7 @@ ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/nukes_spells/files/n
 ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/nukes_spells/files/nuke/cloud_chaos.lua")
 --ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/nukes_spells/files/nuke/trail_chaos.lua") this spell doesn't always work properly so i'm disabling it
 ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/nukes_spells/files/nuke/bomb_cluster.lua")
+ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/nukes_spells/files/nuke/snowball.lua")
 
 print("More spells mod initialization done.")
 
