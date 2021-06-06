@@ -47,7 +47,7 @@ gun.mana_charge_speed = {25,40}
 gun.mana_max = {100,140}
 gun.actions = { "LIGHT_BULLET", "LIGHT_BULLET_TRIGGER", "LIGHT_BULLET_TIMER", "SPITTER", "SPITTER_TIMER", "RUBBER_BALL", "ARROW", "AIR_BULLET" }
 
-if ( Random(1,3) == 1 ) then
+if ( Random(1, 2) == 1 ) then
 
 	table.insert( gun.actions, "DISC_BULLET" )
 	table.insert( gun.actions, "BOUNCY_ORB" )
@@ -55,6 +55,9 @@ if ( Random(1,3) == 1 ) then
 	table.insert( gun.actions, "LIGHT_BULLET_TRIGGER_2" )
 	table.insert( gun.actions, "BUBBLESHOT" )
 	table.insert( gun.actions, "BUBBLESHOT_TRIGGER" )
+	table.insert( gun.actions, "SNOWBALL" )
+	table.insert( gun.actions, "SNOWBALL_TIMER" )
+	table.insert( gun.actions, "SNOWBALL_TRIGGER" )
 
 end
 
@@ -86,6 +89,18 @@ elseif ( gun_action == "LIGHT_BULLET_TRIGGER" or gun_action == "LIGHT_BULLET_TIM
 	gun.reload_time = {25,35}
 	deck_capacity = math.max( 2, deck_capacity )
 	action_count = math.max( 2, action_count )
+
+elseif ( gun_action == "SNOWBALL" or gun_action == "SNOWBALL_TIMER" or gun_action == "SNOWBALL_TRIGGER" ) then
+
+	gun.reload_time = {35,45}
+	deck_capacity = math.max( 2, deck_capacity )
+	action_count = math.max( 2, action_count )
+
+	if (gun_action == "SNOWBALL") then
+
+		gun.reload_time = {30,40}
+
+	end
 
 elseif ( gun_action == "LIGHT_BULLET" ) then
 
